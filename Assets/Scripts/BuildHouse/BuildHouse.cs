@@ -74,7 +74,6 @@ public class BuildHouse : MonoBehaviour
                 }
             }
         }
-        Debug.Log($"Item {item.name} não encontrado nos requisitos de recursos de nenhuma construção.");
     }
 
     public void hud()
@@ -90,18 +89,7 @@ public class BuildHouse : MonoBehaviour
                     if (requirement.amount > 0)
                     {
                         Debug.Log($"A construção '{component.name}' requer {requirement.amount} de {requirement.item.name}");
-                        constructionCompleted = false;
                     }
-                    else
-                    {
-                        Debug.Log($"Construção '{component.name}' concluída!");
-                    }
-                }
-
-                if (constructionCompleted && !constructionComplete)
-                {
-                    Debug.Log($"Construção '{component.name}' concluída na HUD!");
-                    constructionComplete = true;
                 }
             }
             else
