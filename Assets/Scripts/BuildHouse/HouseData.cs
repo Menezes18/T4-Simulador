@@ -9,7 +9,6 @@ public class HouseData : ScriptableObject
     public struct BuildComponent
     {
         public string name;
-        public GameObject prefab;
         public ResourceRequirement[] resourceRequirements;
     }
     
