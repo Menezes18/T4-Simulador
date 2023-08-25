@@ -21,13 +21,12 @@ public class InventoryItemData : ScriptableObject
     public GameObject ItemPrefab;
     public BuildingData ItemData;
     public bool _building = false;
-    public int durabilidade;
 
-    
+
     public void UseItem()
     {   
-        Debug.LogWarning("aa");
-        if (_building) SetDataBuilding();
+        Debug.LogWarning("aaaa");
+        //if (_building) SetDataBuilding();
     }
 
     public bool buildingUse(bool valor)

@@ -54,6 +54,7 @@ public class HotbarDisplay : StaticInventoryDisplay
         _playerControls.Player.Hotbar9.performed += Hotbar9;
         _playerControls.Player.Hotbar10.performed += Hotbar10;
         _playerControls.Player.UseItem.performed += UseItem;
+
     }
 
     protected override void OnDisable()
@@ -371,17 +372,16 @@ public class HotbarDisplay : StaticInventoryDisplay
 // Método para lidar com o uso de um item da barra de atalho
     public void UseItem(InputAction.CallbackContext obj)
     {
-        
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {   
-            Debug.Log("A");
             itemId = slots[_currentIndex].AssignedInventorySlot.ItemData.ID;
-            Debug.Log(itemId);
-            
-            // Chama o método para verificar e ativar o bool "bater" no ControladorItem associado ao item
-            ActivateBaterOnControladorItem(itemId);
+
+            //slots[_currentIndex].AssignedInventorySlot.ItemData.UseItem();
         }
     }
+
+
+    
     // Verifica se você tem recursos suficientes na barra de atalho para uma construção
     private bool HasSufficientResource(int itemId, int requiredAmount)
     {

@@ -4,11 +4,82 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed613e7-0cd4-442d-9468-dc74c61be055" name="Changes" comment="" />
+    <list default="true" id="6ed613e7-0cd4-442d-9468-dc74c61be055" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Machadoo/Machado.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Machadoo/Machado.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Machadoo/MachadoBatendo.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Machadoo/MachadoBatendo.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildHouse/BuildHouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildHouse/BuildHouse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ControladorItem/ControladorItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ControladorItem/ControladorItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerControls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/PlayerControls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/UseItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/UseItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Item Scripts/InventoryItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Item Scripts/InventoryItemData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OutlineScripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OutlineScripts/MouseSelect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OutlineScripts/MouseSelect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OutlineScripts/OutlineObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OutlineScripts/OutlineObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Readme.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Materials/OutlineFill.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Materials/OutlineFill.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Materials/OutlineMask.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Materials/OutlineMask.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Shaders/OutlineFill.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Shaders/OutlineFill.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Shaders/OutlineMask.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Resources/Shaders/OutlineMask.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Samples/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Samples/Materials/Plane.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Samples/Materials/Plane.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Samples/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Samples/Scenes/QuickOutline.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Samples/Scenes/QuickOutline.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Scripts/Outline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/QuickOutline/Scripts/Outline.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemArruma.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemArruma/ConsertarData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemArruma/ConsertarData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemArruma/ConsertarTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemArruma/ConsertarTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemArruma/New Consertar Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemArruma/New Consertar Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore/RayCast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore/RayCast.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore/TreeControler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore/TreeControler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore/folha.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore/folha.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore/madeira.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/arvore/madeira.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3f268639-cdbf-4f11-ba85-66932d48a402" />
+        <option name="url" value="https://github.com/Menezes18/T4-Simulador.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Movimentação/FirstPersonController/Scripts/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -123,6 +194,9 @@
       <workItem from="1692654010428" duration="5268000" />
       <workItem from="1692659752920" duration="567000" />
       <workItem from="1692664165319" duration="109000" />
+      <workItem from="1692677157061" duration="5034000" />
+      <workItem from="1692933370456" duration="3356000" />
+      <workItem from="1692946765940" duration="3590000" />
     </task>
     <task id="LOCAL-00001" summary="Arquivos">
       <option name="closed" value="true" />

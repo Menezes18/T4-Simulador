@@ -9,8 +9,7 @@ public class BuildHouse : MonoBehaviour
     public HouseData housedata;
     public GameObject prefab;
     public HouseData.BuildComponent[] data;
-    private bool constructionComplete = false;
-    
+
 
     public void Start()
     {
@@ -55,7 +54,7 @@ public class BuildHouse : MonoBehaviour
                             if (component.resourceRequirements[i].amount == 0)
                             {
                                 Debug.Log($"Construção '{component.name}' concluída!");
-                                constructionComplete = true;
+                                //constructionComplete = true;
                                 prefab.SetActive(true);
                             }
                             else
@@ -82,7 +81,7 @@ public class BuildHouse : MonoBehaviour
         {
             if (component.resourceRequirements.Length > 0)
             {
-                bool constructionCompleted = true; // Inicializa como verdadeiro
+                //bool constructionCompleted = true; // Inicializa como verdadeiro
 
                 foreach (ResourceRequirement requirement in component.resourceRequirements)
                 {

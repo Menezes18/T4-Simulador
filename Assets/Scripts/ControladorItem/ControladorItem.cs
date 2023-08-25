@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ControladorItem : MonoBehaviour
 {
@@ -12,8 +13,10 @@ public class ControladorItem : MonoBehaviour
 
         if (itemAnimator != null)
         {
-            // Definir o parâmetro booleano "Bater" como true
-            itemAnimator.SetBool("Bater", true);
+            Debug.Log("Aa");
+            
+                itemAnimator.SetBool("Bater", true);
+
         }
         else
         {

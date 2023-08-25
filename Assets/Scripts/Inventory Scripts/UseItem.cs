@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UseItem : MonoBehaviour
 {
-   public RayCast raycastScript;
+   
 
     // Update is called once per frame
     void Update()

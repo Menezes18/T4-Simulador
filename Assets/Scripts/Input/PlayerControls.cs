@@ -146,7 +146,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Use Item"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""15e8e587-9ab7-45f5-b4eb-e01e27ee585a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
