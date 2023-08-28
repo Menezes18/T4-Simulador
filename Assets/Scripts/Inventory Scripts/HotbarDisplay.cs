@@ -375,7 +375,8 @@ public class HotbarDisplay : StaticInventoryDisplay
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {   
             itemId = slots[_currentIndex].AssignedInventorySlot.ItemData.ID;
-
+            
+            ActivateBaterOnControladorItem(itemId);
             //slots[_currentIndex].AssignedInventorySlot.ItemData.UseItem();
         }
     }

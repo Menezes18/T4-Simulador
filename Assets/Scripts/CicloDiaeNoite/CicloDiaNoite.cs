@@ -28,7 +28,7 @@ public class CicloDiaNoite : MonoBehaviour
     
     public Estacao estacaoAtual = Estacao.Primavera;
     private int anoAtual = 1850;
-   // public int estacaoIndex = 0;
+   
 
     public bool pode2 = false;
     public int diaTest = 0;

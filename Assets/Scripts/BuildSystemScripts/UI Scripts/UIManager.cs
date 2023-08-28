@@ -2,26 +2,40 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
-    public BuildingPanelUI BuildPanel;
+    public Slider Fome;
+    public Slider Energia;
+
+    private PlayerStatus playerStatus;
 
     private void Start()
     {
-        BuildPanel.gameObject.SetActive(false);
-        SetMouseCursorState(BuildPanel.gameObject.activeInHierarchy);
+        playerStatus = FindObjectOfType<PlayerStatus>();
+        
+        
+        playerStatus.OnFomeChanged += AtualizarSliderFome;
+        playerStatus.OnEnergiaChanged += AtualizarSliderEnergia;
+    }
+
+    
+    private void AtualizarSliderFome(float novoValor)
+    {
+        Fome.value = novoValor;
+    }
+
+    
+    private void AtualizarSliderEnergia(float novoValor)
+    {
+        Energia.value = playerStatus.energia; // Aqui estava usando maxfome em vez de maxenergia
     }
 
     private void Update()
     {
-        if (Keyboard.current.tabKey.wasPressedThisFrame)
-        {
-            BuildPanel.gameObject.SetActive(!BuildPanel.gameObject.activeInHierarchy);
-            if (BuildPanel.gameObject.activeInHierarchy) BuildPanel.PopulateButtons();
-            SetMouseCursorState(BuildPanel.gameObject.activeInHierarchy);
-        }
+        
     }
 
     private void SetMouseCursorState(bool newState)

@@ -117,7 +117,7 @@ public class SystemCraft : MonoBehaviour
 
     public void Update()
     {
-        if (Keyboard.current.xKey.wasPressedThisFrame)
+        if (Keyboard.current.xKey.wasReleasedThisFrame)
         {
             CraftItem();
         }
