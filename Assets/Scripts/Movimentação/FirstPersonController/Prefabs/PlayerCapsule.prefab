@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 907408659}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: JogarItem
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4135013735270702856}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: PlayerCameraRoot
   m_TagString: CinemachineTarget
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 5393215578589016654}
   - component: {fileID: 5393215578589016655}
   - component: {fileID: 5393215578589016640}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,8 @@ GameObject:
   - component: {fileID: 2117699097}
   - component: {fileID: 2117699103}
   - component: {fileID: 2117699109}
-  m_Layer: 8
+  - component: {fileID: 2117699101}
+  m_Layer: 11
   m_Name: PlayerCapsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -254,6 +255,7 @@ MonoBehaviour:
   TopClamp: 89
   BottomClamp: -89
   targetSpeed: 0
+  characterWithAnimator: {fileID: 0}
 --- !u!114 &1978471637655604388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,9 +489,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2537741a720b64e9c78cffe8457fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animacao: {fileID: 0}
+  aniamacaomao: {fileID: 0}
   itemAnimator: {fileID: 0}
   aux: {fileID: 0}
+  linePrefab: {fileID: 0}
   valorEnergia: 2
+  bateu: 0
 --- !u!114 &2117699109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,3 +510,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fome: 100
   energia: 100
+--- !u!114 &2117699101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe69c5cfc9b5484cba5270fba8053f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractionPoint: {fileID: 907408659}
+  InteractionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  InteractionPointRadius: 1

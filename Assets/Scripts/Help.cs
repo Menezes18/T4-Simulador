@@ -5,24 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Help : MonoBehaviour
 {
- private bool isOpen = false;
- //public GameObject help;
- public int teste = 0;
-
-    private void Update()
-    {
-        if (Mouse.current.leftButton.wasReleasedThisFrame)
-        {
-            teste++;
-            if (teste >= 1)
-            {
-            Debug.Log("apertei");
-                
-            }
-
-            teste = 0;
-        }
-    }
+ 
 }
             // if (isOpen)
             // {

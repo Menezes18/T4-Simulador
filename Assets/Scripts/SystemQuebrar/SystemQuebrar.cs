@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,32 +14,30 @@ public class SystemQuebrar : MonoBehaviour
 {
     public Opcoes opcoes;
     public int vida = 100;
-
+    public GameObject item;
     public GameObject[] modelos;
-    
-    
-    private ControladorItem _controladorItem;
-    void Start()
+    public ControladorItem cntrlIt;
+
+    public void Start()
     {
-        _controladorItem = FindObjectOfType<ControladorItem>();
+        cntrlIt = FindObjectOfType<ControladorItem>();
     }
 
-    // Update is called once per frame
     public void Quebrar(GameObject obj, Opcoes nenhum, RaycastHit hitInfo)
     {
         
         if (nenhum.Equals(opcoes))
         {
-            Debug.Log("AAA");
-            if (_controladorItem.bateu == true)
+
+            if (cntrlIt.bateu == true)
             {
-                vida = 0;
-                Debug.Log("Bateu");
+                vida = 50;
             }
             
             if (vida == 0)
             {
-                Debug.Log("0");
+                GameObject newItem = Instantiate(item, transform.position, Quaternion.identity);
+                Destroy(this, 2f);
             }
         }
     }

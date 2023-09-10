@@ -64,7 +64,9 @@ namespace StarterAssets
         // timeout deltatime
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
-
+        
+        public GameObject characterWithAnimator; // Essa variável será atribuída no Editor Unity
+        private Animator _animator;
 #if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
 #endif
@@ -95,17 +97,20 @@ namespace StarterAssets
             }
         }
 
-        private void Start()
+        void Start()
         {
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
             _playerInput = GetComponent<PlayerInput>();
 #else
-            Debug.LogError("O pacote Starter Assets está faltando dependências. Use Ferramentas/Starter Assets/Reinstalar Dependências para corrigir");
+    Debug.LogError("O pacote Starter Assets está faltando dependências. Use Ferramentas/Starter Assets/Reinstalar Dependências para corrigir");
 #endif
 
-            // redefina nossos timeouts no início
+            // Obtenha a referência ao Animator do GameObject separado
+            _animator = characterWithAnimator.GetComponent<Animator>();
+    
+            // Redefina nossos timeouts no início
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
         }
@@ -154,8 +159,8 @@ namespace StarterAssets
 
         private void Move()
         {
-            if(targetSpeed <= 0.1f) 
-            // defina a velocidade alvo com base na velocidade de movimento, velocidade de corrida e se a corrida está pressionada
+            if(targetSpeed <= 0.1f)
+                // defina a velocidade alvo com base na velocidade de movimento, velocidade de corrida e se a corrida está pressionada
              targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
             // uma aceleração e desaceleração simplista projetada para ser fácil de remover, substituir ou iterar
@@ -195,7 +200,26 @@ namespace StarterAssets
                 // mova
                 inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
             }
+            if (_input.sprint)
+            {
+                targetSpeed = SprintSpeed;
 
+                // Verifique se o _animator não é nulo (certifique-se de que a referência foi atribuída no Unity Inspector)
+                if (_animator != null)
+                {
+                    _animator.SetBool("Correr", true);
+                }
+            }
+            else
+            {
+                targetSpeed = MoveSpeed;
+
+                // Verifique se o _animator não é nulo (certifique-se de que a referência foi atribuída no Unity Inspector)
+                if (_animator != null)
+                {
+                    _animator.SetBool("Correr", false);
+                }
+            }
             // mova o jogador
             _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
         }

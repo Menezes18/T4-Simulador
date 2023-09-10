@@ -8,9 +8,13 @@ using UnityEngine.InputSystem;
 public class ControladorItem : MonoBehaviour
 {
    
+
+    public GameObject animacao;
+    public Animator aniamacaomao;
+    
     public Animator itemAnimator;
     public GameObject aux;
-
+    public GameObject linePrefab;
     
     public float valorEnergia = 1f;
     private PlayerStatus ps;
@@ -20,7 +24,7 @@ public class ControladorItem : MonoBehaviour
     
     public void Start()
     {
-        
+        aniamacaomao = animacao.GetComponent<Animator>();
         ps = FindObjectOfType<PlayerStatus>();
     }
 
@@ -32,7 +36,8 @@ public class ControladorItem : MonoBehaviour
             if (itemAnimator != null)
             {
                 
-            itemAnimator.SetBool("Bater", false);
+            //itemAnimator.SetBool("Bater", false);
+            aniamacaomao.SetBool("BaterMachado", false);
             
             ps.DescerEnergia(valorEnergia);
             bateu = false;
@@ -52,7 +57,8 @@ public class ControladorItem : MonoBehaviour
         if (itemAnimator != null)
         {
             
-            itemAnimator.SetBool("Bater", true);
+            //itemAnimator.SetBool("Bater", true);
+            aniamacaomao.SetBool("BaterMachado", true);
             bateu = true;
 
         }
