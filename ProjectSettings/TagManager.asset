@@ -15,6 +15,7 @@ TagManager:
   - saircasa
   - SairCasa
   - CasaEntrar
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX

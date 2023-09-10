@@ -380,8 +380,6 @@ public class HotbarDisplay : StaticInventoryDisplay
             //slots[_currentIndex].AssignedInventorySlot.ItemData.UseItem();
         }
     }
-
-
     
     // Verifica se você tem recursos suficientes na barra de atalho para uma construção
     private bool HasSufficientResource(int itemId, int requiredAmount)

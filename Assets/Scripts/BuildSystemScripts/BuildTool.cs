@@ -86,8 +86,19 @@ public class BuildTool : MonoBehaviour
     public bool IsRayHittingSomething(LayerMask layerMask, out RaycastHit hitInfo)
     {
         var ray = new Ray(_rayOrigin.position, _camera.transform.forward * _rayDistance);
-        return Physics.Raycast(ray, out hitInfo, _rayDistance, layerMask);
+        if (Physics.Raycast(ray, out hitInfo, _rayDistance, layerMask))
+        {
+            
+            PlayerStatus playerStatus = FindObjectOfType<PlayerStatus>();
+            if (playerStatus != null)
+            {
+                playerStatus.raycast(hitInfo);
+            }
+            return true;
+        }
+        return false;
     }
+
     
      
     private void DeleteModeLogic()

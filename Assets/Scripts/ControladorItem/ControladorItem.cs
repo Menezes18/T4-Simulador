@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class ControladorItem : MonoBehaviour
 {
+   
     public Animator itemAnimator;
     public GameObject aux;
 
@@ -13,11 +15,16 @@ public class ControladorItem : MonoBehaviour
     public float valorEnergia = 1f;
     private PlayerStatus ps;
 
+    public bool bateu = false;
+
+    
     public void Start()
     {
+        
         ps = FindObjectOfType<PlayerStatus>();
     }
 
+   
     private void Update()
     {
         if (Mouse.current.leftButton.wasReleasedThisFrame)
@@ -25,11 +32,11 @@ public class ControladorItem : MonoBehaviour
             if (itemAnimator != null)
             {
                 
-            itemAnimator = aux.GetComponent<Animator>();
             itemAnimator.SetBool("Bater", false);
-            ps.DescerEnergia(valorEnergia);
             
-           // valorEnergia = 0;
+            ps.DescerEnergia(valorEnergia);
+            bateu = false;
+            // valorEnergia = 0;
 
             }
         }
@@ -46,6 +53,7 @@ public class ControladorItem : MonoBehaviour
         {
             
             itemAnimator.SetBool("Bater", true);
+            bateu = true;
 
         }
         else

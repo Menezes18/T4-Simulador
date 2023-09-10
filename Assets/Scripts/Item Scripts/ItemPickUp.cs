@@ -71,6 +71,8 @@ public class ItemPickUp : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+
 }
 
 [System.Serializable]
