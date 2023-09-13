@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6ed613e7-0cd4-442d-9468-dc74c61be055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ControladorItem/ControladorItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ControladorItem/ControladorItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Help.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Help.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movimentação/FirstPersonController/Prefabs/PlayerCapsule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movimentação/FirstPersonController/Prefabs/PlayerCapsule.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movimentação/FirstPersonController/Scripts/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movimentação/FirstPersonController/Scripts/FirstPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemQuebrar/SystemQuebrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SystemQuebrar/SystemQuebrar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Arm _Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Arm _Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Arm _Running.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Arm _Running.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Mao.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Mao.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +160,8 @@
       <workItem from="1694023574934" duration="942000" />
       <workItem from="1694217686559" duration="2551000" />
       <workItem from="1694370339408" duration="53000" />
-      <workItem from="1694370574304" duration="6546000" />
+      <workItem from="1694370574304" duration="8128000" />
+      <workItem from="1694456051997" duration="591000" />
     </task>
     <task id="LOCAL-00001" summary="Arquivos">
       <option name="closed" value="true" />
@@ -219,6 +217,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
