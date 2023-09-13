@@ -17,7 +17,7 @@ public class ControladorItem : MonoBehaviour
     public GameObject linePrefab;
     
     public float valorEnergia = 1f;
-    private PlayerStatus ps;
+    private PlayerManager ps;
 
     public bool bateu = false;
 
@@ -25,7 +25,7 @@ public class ControladorItem : MonoBehaviour
     public void Start()
     {
         aniamacaomao = animacao.GetComponent<Animator>();
-        ps = FindObjectOfType<PlayerStatus>();
+        ps = FindObjectOfType<PlayerManager>();
     }
 
    

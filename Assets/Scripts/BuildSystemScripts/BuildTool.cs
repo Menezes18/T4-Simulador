@@ -89,7 +89,7 @@ public class BuildTool : MonoBehaviour
         if (Physics.Raycast(ray, out hitInfo, _rayDistance, layerMask))
         {
             
-            PlayerStatus playerStatus = FindObjectOfType<PlayerStatus>();
+            PlayerManager playerStatus = FindObjectOfType<PlayerManager>();
             if (playerStatus != null)
             {
                 playerStatus.raycast(hitInfo);

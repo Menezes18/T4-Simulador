@@ -170,13 +170,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8997996947095583982}
   - component: {fileID: 8616685848737228382}
-  - component: {fileID: 8616685848737228371}
+  - component: {fileID: 2117699083}
   - component: {fileID: 1978471637655604388}
   - component: {fileID: 5420857361349278248}
+  - component: {fileID: 8616685848737228371}
   - component: {fileID: 8616685848737228376}
-  - component: {fileID: 2117699083}
   - component: {fileID: 2117699081}
-  - component: {fileID: 2117699090}
   - component: {fileID: 2117699096}
   - component: {fileID: 2117699097}
   - component: {fileID: 2117699103}
@@ -225,37 +224,19 @@ CharacterController:
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.93, z: 0}
---- !u!114 &8616685848737228371
-MonoBehaviour:
+--- !u!65 &2117699083
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8616685848737228372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 4
-  SprintSpeed: 6
-  RotationSpeed: 1
-  SpeedChangeRate: 10
-  JumpHeight: 1.2
-  Gravity: -15
-  JumpTimeout: 0.1
-  FallTimeout: 0.15
-  Grounded: 1
-  GroundedOffset: -0.14
-  GroundedRadius: 0.5
-  GroundLayers:
-    serializedVersion: 2
-    m_Bits: 513
-  CinemachineCameraTarget: {fileID: 4135013735270702863}
-  TopClamp: 89
-  BottomClamp: -89
-  targetSpeed: 0
-  characterWithAnimator: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.805757, z: 1}
+  m_Center: {x: 0, y: 1.1666014, z: 0}
 --- !u!114 &1978471637655604388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,6 +273,37 @@ MonoBehaviour:
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
+--- !u!114 &8616685848737228371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55919ac34a26952479f3fc91f777b2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 4
+  SprintSpeed: 6
+  RotationSpeed: 1
+  SpeedChangeRate: 10
+  JumpHeight: 1.2
+  Gravity: -15
+  JumpTimeout: 0.1
+  FallTimeout: 0.15
+  Grounded: 1
+  GroundedOffset: -0.14
+  GroundedRadius: 0.5
+  GroundLayers:
+    serializedVersion: 2
+    m_Bits: 513
+  CinemachineCameraTarget: {fileID: 4135013735270702863}
+  TopClamp: 89
+  BottomClamp: -89
+  targetSpeed: 0
+  characterWithAnimator: {fileID: 0}
 --- !u!114 &8616685848737228376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,19 +402,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!65 &2117699083
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616685848737228372}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.805757, z: 1}
-  m_Center: {x: 0, y: 1.1666014, z: 0}
 --- !u!114 &2117699081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,28 +414,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b57e65eb00bc13a4a92be91e8089fb20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventorySize: 10
+  inventorySize: 9
   primaryInventorySystem:
     inventorySlots: []
     _gold: 500
     slotempty: 0
-  offset: 10
+  offset: 9
   _gold: 500
---- !u!114 &2117699090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616685848737228372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4098a387368a8c34ba5821dc91de80da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  housedata: {fileID: 11400000, guid: 09092f5f43186414c8e589227a1da57c, type: 2}
-  prefab: {fileID: 0}
-  data: []
 --- !u!114 &2117699096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +494,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fome: 100
   energia: 100
+  objetoQuebravel: {fileID: 0}
+  systemQuebrarComponent: {fileID: 0}
 --- !u!114 &2117699101
 MonoBehaviour:
   m_ObjectHideFlags: 0

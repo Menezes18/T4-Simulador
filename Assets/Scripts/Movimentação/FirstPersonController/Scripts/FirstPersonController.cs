@@ -204,11 +204,8 @@ namespace StarterAssets
             {
                 targetSpeed = SprintSpeed;
 
-                // Verifique se o _animator não é nulo (certifique-se de que a referência foi atribuída no Unity Inspector)
-                if (_animator != null)
-                {
-                    _animator.SetBool("Correr", true);
-                }
+                _animator.SetBool("Correr", true);
+                
             }
             else
             {

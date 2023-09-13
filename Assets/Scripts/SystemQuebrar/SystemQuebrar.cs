@@ -13,7 +13,7 @@ public enum Opcoes
 public class SystemQuebrar : MonoBehaviour
 {
     public Opcoes opcoes;
-    public int vida = 100;
+    public int vida = 5;
     public GameObject item;
     public GameObject[] modelos;
     public ControladorItem cntrlIt;
@@ -25,19 +25,18 @@ public class SystemQuebrar : MonoBehaviour
 
     public void Quebrar(GameObject obj, Opcoes nenhum, RaycastHit hitInfo)
     {
-        
-        if (nenhum.Equals(opcoes))
+        if (nenhum.Equals(opcoes) && vida > 0) // Verifique se a vida é maior que 0
         {
-
             if (cntrlIt.bateu == true)
             {
-                vida = 50;
+                Debug.Log("AAA");
+                vida--;
             }
             
-            if (vida == 0)
+            if (vida <= 0)
             {
-                GameObject newItem = Instantiate(item, transform.position, Quaternion.identity);
-                Destroy(this, 2f);
+                // Você pode adicionar código aqui para instanciar um novo item ou fazer outras ações
+                Destroy(gameObject);
             }
         }
     }

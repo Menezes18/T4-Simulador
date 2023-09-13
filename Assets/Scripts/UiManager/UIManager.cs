@@ -10,11 +10,11 @@ public class UIManager : MonoBehaviour
     public Slider Fome;
     public Slider Energia;
 
-    private PlayerStatus playerStatus;
+    private PlayerManager playerStatus;
 
     private void Start()
     {
-        playerStatus = FindObjectOfType<PlayerStatus>();
+        playerStatus = FindObjectOfType<PlayerManager>();
         
         
         playerStatus.OnFomeChanged += AtualizarSliderFome;

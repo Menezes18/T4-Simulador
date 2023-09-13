@@ -349,10 +349,10 @@ public class HotbarDisplay : StaticInventoryDisplay
             spawnedObject.transform.rotation = desiredRotation;
 
             Collider colliderDoItem = spawnedObject.GetComponent<Collider>();
-            if (colliderDoItem != null)
-            {
-                colliderDoItem.enabled = false;
-            }
+            SphereCollider sphereCollider = spawnedObject.GetComponent<SphereCollider>();
+            if (sphereCollider != null) sphereCollider.enabled = false;
+            if (colliderDoItem != null) colliderDoItem.enabled = false;
+            
             spawnedObject.transform.SetParent(itemPrefab);
             Rigidbody rb = spawnedObject.GetComponent<Rigidbody>();
             if (rb != null)
