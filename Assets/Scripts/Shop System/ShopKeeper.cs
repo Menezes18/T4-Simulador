@@ -43,10 +43,10 @@ public class ShopKeeper : MonoBehaviour, IInteractable
 
     private void LoadInventory(SaveData data)
     {
-        if (!data._shopKeeperDictionary.TryGetValue(_id, out ShopSaveData shopSaveData)) return;
+       // if (!data._shopKeeperDictionary.TryGetValue(_id, out ShopSaveData shopSaveData)) return;
 
-        _shopSaveData = shopSaveData;
-        _shopSystem = _shopSaveData.ShopSystem;
+        // _shopSaveData = shopSaveData;
+        // _shopSystem = _shopSaveData.ShopSystem;
     }
 
     private void OnDisable()

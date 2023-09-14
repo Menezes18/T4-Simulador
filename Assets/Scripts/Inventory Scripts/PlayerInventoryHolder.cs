@@ -21,13 +21,7 @@ public class PlayerInventoryHolder : InventoryHolder
 
     protected override void LoadInventory(SaveData data)
     {
-        // Check the save data for this specific chests inventory, and if it exists, load it in.
-        if (data.playerInventory.InvSystem != null)
-        {
-            this.primaryInventorySystem = data.playerInventory.InvSystem;
-            OnPlayerInventoryChanged?.Invoke();
-            
-        }
+        
     }
     
 

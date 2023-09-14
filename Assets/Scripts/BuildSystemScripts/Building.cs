@@ -54,7 +54,7 @@ public class Building : MonoBehaviour
         gameObject.name = _assignedData.DisplayName + " - " + transform.position;
 
         if (SaveData == null) SaveData = new BuildingSaveData(gameObject.name, _assignedData, transform.position, transform.rotation);
-        
+        //if (!SaveGameManager.Data.BuildingSaveData.Contains(SaveData)) SaveGameManager.Data.BuildingSaveData.Add(SaveData);
     }
 
     public void UpdateMaterial(Material newMaterial)
@@ -88,6 +88,11 @@ public class Building : MonoBehaviour
     private void OnDestroy()
     {
         Debug.Log("Destroying object");
+        // if (SaveGameManager.Data.BuildingSaveData.Contains(SaveData))
+        // {
+        //     Debug.Log("Found data so removing it");
+        //     SaveGameManager.Data.BuildingSaveData.Remove(SaveData);
+        // }
     }
 }
 
