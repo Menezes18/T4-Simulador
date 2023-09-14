@@ -35,7 +35,7 @@ public class SystemQuebrar : MonoBehaviour
             
             if (vida <= 0)
             {
-                // Você pode adicionar código aqui para instanciar um novo item ou fazer outras ações
+                Instantiate(item, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }
