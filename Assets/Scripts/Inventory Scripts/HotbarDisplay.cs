@@ -19,12 +19,12 @@ public class HotbarDisplay : StaticInventoryDisplay
     public BuildingData ItemData;
     public InventoryItemData _ivItemData;
     public BuildTool _buildTools;
-    private ControladorItem _controladorItem;
+
 
 
     private void Awake()
     {
-        _controladorItem = FindObjectOfType<ControladorItem>();
+        
         _playerControls = new PlayerControls();
         _itemPickUp = FindObjectOfType<ItemPickUp>();
         _buildTools = FindObjectOfType<BuildTool>();
@@ -375,8 +375,7 @@ public class HotbarDisplay : StaticInventoryDisplay
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {   
             itemId = slots[_currentIndex].AssignedInventorySlot.ItemData.ID;
-            
-            ActivateBaterOnControladorItem(itemId);
+            //TODO:
             //slots[_currentIndex].AssignedInventorySlot.ItemData.UseItem();
         }
     }
@@ -400,34 +399,6 @@ public class HotbarDisplay : StaticInventoryDisplay
         }
 
         return false; // Recursos insuficientes
-    }
-
-    // Método para verificar e ativar o bool "bater" no ControladorItem associado ao item
-    private void ActivateBaterOnControladorItem(int itemId)
-    {
-        InventoryItemData itemData = database.GetItem(itemId);
-
-        if (itemData != null)
-        {
-            GameObject itemGameObject = itemData.ItemPrefab;
-
-            if (spawnObject2 != null)
-            {
-                Animator animatorItem = spawnObject2.GetComponent<Animator>();
-                Debug.Log(spawnObject2.name);
-
-
-                if (animatorItem != null)
-                {
-                    
-                    _controladorItem.OnItemUsed(spawnObject2);
-                }
-                else
-                {
-                    Debug.LogWarning("O item não possui um ControladorItem associado.");
-                }
-            }
-        }
     }
 
     /// Verifica se o item com o ID fornecido está na mão.
