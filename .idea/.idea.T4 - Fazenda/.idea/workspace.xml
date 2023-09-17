@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6ed613e7-0cd4-442d-9468-dc74c61be055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ControladorItem.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ControladorItem/ControladorItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ControladorItem/ControladorItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemQuebrar/SystemQuebrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SystemQuebrar/SystemQuebrar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +160,7 @@
       <workItem from="1694629285088" duration="13100000" />
       <workItem from="1694659328012" duration="1262000" />
       <workItem from="1694735166613" duration="1292000" />
+      <workItem from="1694798482265" duration="1017000" />
     </task>
     <task id="LOCAL-00001" summary="Arquivos">
       <option name="closed" value="true" />
