@@ -9,8 +9,6 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: BuildingNegative
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _EMISSION
   - _SURFACE_TYPE_TRANSPARENT
@@ -24,7 +22,6 @@ Material:
   disabledShaderPasses:
   - DepthOnly
   - SHADOWCASTER
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -118,7 +115,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 0.9528302, g: 0.23071665, b: 0.23071665, a: 0.7137255}
-    - _Color: {r: 0.95283014, g: 0.23071662, b: 0.23071662, a: 0.7137255}
+    - _Color: {r: 0.9528302, g: 0.23071665, b: 0.23071665, a: 0.7137255}
     - _EmissionColor: {r: 1.4443887, g: 0.06538385, b: 0.06538385, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ed613e7-0cd4-442d-9468-dc74c61be055" name="Changes" comment="" />
+    <list default="true" id="6ed613e7-0cd4-442d-9468-dc74c61be055" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +31,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildHouse/HouseData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildHouse/VerificadorData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildSystemScripts/BuildTool.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ControladorItem/ControladorItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Input/PlayerControls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/InventorySystem.cs" root0="FORCE_HIGHLIGHTING" />
@@ -157,6 +158,9 @@
       <workItem from="1694370574304" duration="8128000" />
       <workItem from="1694456051997" duration="591000" />
       <workItem from="1694629285088" duration="13100000" />
+      <workItem from="1694659328012" duration="1262000" />
+      <workItem from="1694735166613" duration="1292000" />
+      <workItem from="1694798482265" duration="1017000" />
     </task>
     <task id="LOCAL-00001" summary="Arquivos">
       <option name="closed" value="true" />
