@@ -76,6 +76,9 @@ namespace StarterAssets
 
         private const float _threshold = 0.01f;
         private ManagerPlayer _managerPlayer;
+
+        public AudioSource passosAudioSource;
+        public AudioClip[] passosAudioClip;
         private bool IsCurrentDeviceMouse
         {
             get
@@ -287,5 +290,10 @@ namespace StarterAssets
             // quando selecionado, desenhe um gizmo na posição e raio correspondentes do colisor aterrado
             Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
         }
-    }
+
+        private void Passos()
+        {
+            passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
+        }
+    }       
 }
