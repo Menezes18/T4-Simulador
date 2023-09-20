@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ed613e7-0cd4-442d-9468-dc74c61be055" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Modelos/bracoTI4.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modelos/bracoTI4.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modelos/textures/Braco.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modelos/textures/Braco.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Game 3 Teste Braco.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Game 3 Teste Braco.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/material/Texturas/Tex_BracoCampones.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/material/Texturas/Tex_BracoCampones.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Arm _Running.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Arm _Running.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Mao.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Mao.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerPrincipal.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerPrincipal.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/bracoTI4Adapt.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/bracoTI4Adapt.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildSystemScripts/BuildTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildSystemScripts/BuildTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movimentação/FirstPersonController/Scripts/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movimentação/FirstPersonController/Scripts/FirstPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemQuebrar/SystemQuebrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SystemQuebrar/SystemQuebrar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
