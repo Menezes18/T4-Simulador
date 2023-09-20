@@ -6,6 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="6ed613e7-0cd4-442d-9468-dc74c61be055" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.T4 - Fazenda/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Arm _Running.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Arm _Running.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Mao.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Mao.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PlayerPrincipal.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/PlayerPrincipal.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/bracoTI4Adapt.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/bracoTI4Adapt.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game 3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BuildSystemScripts/BuildTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BuildSystemScripts/BuildTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory Scripts/HotbarDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movimentação/FirstPersonController/Scripts/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movimentação/FirstPersonController/Scripts/FirstPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemQuebrar/SystemQuebrar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SystemQuebrar/SystemQuebrar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +39,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1332c534a8a44623b2e5cc943a0b790e157400/73/acf3db8a/UnityAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b8be267d809e4320a19ada90c7fbae111a000/4f/90ec9dcd/RaycastHit.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Audio.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildHouse/BuildHouse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildHouse/HouseData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BuildHouse/VerificadorData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -161,6 +175,12 @@
       <workItem from="1694659328012" duration="1262000" />
       <workItem from="1694735166613" duration="1292000" />
       <workItem from="1694798482265" duration="1017000" />
+      <workItem from="1694993615883" duration="659000" />
+      <workItem from="1695154825635" duration="1320000" />
+      <workItem from="1695165019984" duration="3115000" />
+      <workItem from="1695169478883" duration="873000" />
+      <workItem from="1695171111692" duration="2538000" />
+      <workItem from="1695236356543" duration="1735000" />
     </task>
     <task id="LOCAL-00001" summary="Arquivos">
       <option name="closed" value="true" />

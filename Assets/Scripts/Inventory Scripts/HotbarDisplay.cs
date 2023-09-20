@@ -4,6 +4,7 @@ using System;
 
 public class HotbarDisplay : StaticInventoryDisplay
 {
+    public static HotbarDisplay Display;
     private int _maxIndexSize = 9;
     private int _currentIndex = 0;
     public Database database;
@@ -16,6 +17,7 @@ public class HotbarDisplay : StaticInventoryDisplay
     public bool buildingUse = false;
 
     private ItemPickUp _itemPickUp;
+    private PlayerManager _playerManager;
     public BuildingData ItemData;
     public InventoryItemData _ivItemData;
     public BuildTool _buildTools;
@@ -24,10 +26,11 @@ public class HotbarDisplay : StaticInventoryDisplay
 
     private void Awake()
     {
-        
+        _playerManager = FindObjectOfType<PlayerManager>();
         _playerControls = new PlayerControls();
         _itemPickUp = FindObjectOfType<ItemPickUp>();
         _buildTools = FindObjectOfType<BuildTool>();
+        
     }
 
     protected override void Start()
@@ -372,11 +375,16 @@ public class HotbarDisplay : StaticInventoryDisplay
 // Método para lidar com o uso de um item da barra de atalho
     public void UseItem(InputAction.CallbackContext obj)
     {
+       
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {   
-            itemId = slots[_currentIndex].AssignedInventorySlot.ItemData.ID;
-            //TODO:
-            //slots[_currentIndex].AssignedInventorySlot.ItemData.UseItem();
+            _playerManager.bater(itemId);
+            
+        }
+        else
+        {
+            itemId = -1;
+            _playerManager.bater(itemId);
         }
     }
     

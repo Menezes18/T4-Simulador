@@ -11,6 +11,7 @@ namespace StarterAssets
 #endif
     public class FirstPersonController : MonoBehaviour
     {
+        
         [Header("Jogador")]
         [Tooltip("Velocidade de movimento do personagem em m/s")]
         public float MoveSpeed = 4.0f;
@@ -79,6 +80,7 @@ namespace StarterAssets
 
         public AudioSource passosAudioSource;
         public AudioClip[] passosAudioClip;
+        
         private bool IsCurrentDeviceMouse
         {
             get
@@ -291,8 +293,9 @@ namespace StarterAssets
             Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
         }
 
-        private void Passos()
+        public void Passos()
         {
+            
             passosAudioSource.PlayOneShot(passosAudioClip[Random.Range(0, passosAudioClip.Length)]);
         }
     }       

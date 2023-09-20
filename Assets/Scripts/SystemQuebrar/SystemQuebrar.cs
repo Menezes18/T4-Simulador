@@ -27,12 +27,9 @@ public class SystemQuebrar : MonoBehaviour
     {
         if (nenhum.Equals(opcoes) && vida > 0) // Verifique se a vida é maior que 0
         {
-            // if (cntrlIt.bateu == true)
-            // {
-            //     Debug.Log("AAA");
-            //     vida--;
-            // }
-            
+            Debug.Log("AAA");
+            vida--;
+
             if (vida <= 0)
             {
                 Instantiate(item, transform.position, Quaternion.identity);

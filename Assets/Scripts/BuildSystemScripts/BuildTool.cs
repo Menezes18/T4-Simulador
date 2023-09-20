@@ -167,7 +167,7 @@ public class BuildTool : MonoBehaviour
         {
             var gridPosition = WorldGrid.GridPositionFromWorldPoint3D(hitInfo.point, 1f);
             _spawnedBuilding.transform.position = gridPosition;
-            
+    
             if (Mouse.current.leftButton.wasPressedThisFrame && !_spawnedBuilding.IsOverlapping)
             {
                 _spawnedBuilding.PlaceBuilding();
@@ -176,6 +176,11 @@ public class BuildTool : MonoBehaviour
                 ChoosePart(dataCopy);
             }   
         }
+        else
+        {
+            // TODO: ROQUE AJUDA
+        }
+
     }
     private void OnDrawGizmos()
     {
