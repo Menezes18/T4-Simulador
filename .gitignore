@@ -123,3 +123,5 @@ ProjectSettings/UnityConnectSettings.asset
 
 # Ficheiros específicos do Visual Studio Code
 .vscode/
+
+Packages/packages-lock.json
