@@ -27,7 +27,7 @@ public class PlayerManager : MonoBehaviour
         if (energia > 10)
         {
             animator.SetTrigger("Bater");
-            DescerEnergia(10f);
+            //DescerEnergia(10f);
             if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
         }
     }

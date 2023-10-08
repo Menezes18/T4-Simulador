@@ -9,16 +9,6 @@ ColoredHeaderCreator.csproj
 ColoredHeaderCreator.Editor.csproj
 PPv2URPConverters.csproj
 Ti-Simulador3P.sln
-Unity.RenderPipeline.Universal.ShaderLibrary.csproj
-Unity.RenderPipelines.Core.Editor.csproj
-Unity.RenderPipelines.Core.Runtime.csproj
-Unity.RenderPipelines.Core.ShaderLibrary.csproj
-Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj
-Unity.RenderPipelines.Universal.Editor.csproj
-Unity.RenderPipelines.Universal.Runtime.csproj
-Unity.RenderPipelines.Universal.Shaders.csproj
-Unity.ShaderGraph.Editor.csproj
-Unity.ShaderGraph.Utilities.csproj
 UnityEditor.UI.csproj
 UnityEngine.UI.csproj
 
