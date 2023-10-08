@@ -42,6 +42,7 @@ public class CicloDiaNoite : MonoBehaviour
 
     void Start()
     {
+        
         Primavera.SetActive(true);
         multiplacador = 86400 / duracaoDoDia;
         diaAtual = 1;

@@ -7,9 +7,10 @@ public class PlayerManager : MonoBehaviour
 {
     
     public float fome = 100f;
-    public const float maxfome = 100f;
+    public float maxfome = 100f;
     public const float taxaDecaimentoFome = 0.16f;
     public float energia = 100f;
+    public float maxEnergia = 100f;
 
     private RaycastHit hitInfo;
     
@@ -23,11 +24,19 @@ public class PlayerManager : MonoBehaviour
 
     public void bater(int id)
     {
-       
+        if (energia > 10)
+        {
         animator.SetTrigger("Bater");
+        DescerEnergia(10f);
         if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
+        }
 
+    
+    }
 
+    private void Start()
+    {
+        InvokeRepeating("RegenerarEnergia", 5.0f, 5.0f);
     }
 
     private void Update()
@@ -41,11 +50,28 @@ public class PlayerManager : MonoBehaviour
         fome = Mathf.Clamp(fome, 0f, maxfome);
         OnFomeChanged?.Invoke(fome); // Chama o evento quando a fome é alterada
     }
+    private void RegenerarEnergia()
+    {
+        energia += 5f;
 
+        // Limite a energia ao valor máximo.
+        energia = Mathf.Clamp(energia, 0f, maxEnergia);
+
+        // Chame o evento de energia alterada.
+        OnEnergiaChanged?.Invoke(energia);
+    }
     public void DescerEnergia(float perder)
     {
-        energia -= perder;
-        OnEnergiaChanged?.Invoke(energia); // Chama o evento quando a energia é alterada
+        if (energia - perder >= 0)
+        {
+            energia -= perder;
+            OnEnergiaChanged?.Invoke(energia); // Chama o evento quando a energia é alterada
+        }
+        else
+        {
+            energia = 0;
+            Debug.LogWarning("Energia não pode ser negativa.");
+        }
     }
 
     public void raycast(RaycastHit hitInforay)

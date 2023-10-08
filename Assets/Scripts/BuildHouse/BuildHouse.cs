@@ -13,6 +13,7 @@ public class BuildHouse : MonoBehaviour
 
     public void Start()
     {
+        
         if (housedata != null)
         {
             data = new HouseData.BuildComponent[housedata.build.Length];

@@ -76,7 +76,7 @@ namespace StarterAssets
         private GameObject _mainCamera;
 
         private const float _threshold = 0.01f;
-        private ManagerPlayer _managerPlayer;
+
 
         public AudioSource passosAudioSource;
         public AudioClip[] passosAudioClip;

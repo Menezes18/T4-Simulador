@@ -29,7 +29,7 @@ public class PlantTrigger : MonoBehaviour
    private bool plantaInstanciada = false;
    private bool ciclo1 = true;
    private bool ciclo2 = false;
-   private bool ciclo3 = false;
+private bool ciclo3 = false;
    public int diaciclo = 0;
    public GameObject droppedItem;
    public GameObject previousPrefab;
@@ -39,8 +39,9 @@ public class PlantTrigger : MonoBehaviour
    public bool acabou = false;
 
     private void Start()
-    {
-      droppedItem = plantedPlant.item;
+    { 
+       
+       droppedItem = plantedPlant.item;
       playerLayer = LayerMask.GetMask("Player");
       t = transform;
       
