@@ -1,54 +1,135 @@
-
 Library/
-
 Temp/
-
 UserSettings/
-
-Logs/
-
 .vscode/
-
 obj/
-
 Assembly-CSharp-Editor.csproj
-
 Assembly-CSharp.csproj
-
 ColoredHeaderCreator.csproj
-
 ColoredHeaderCreator.Editor.csproj
-
 PPv2URPConverters.csproj
-
 Ti-Simulador3P.sln
-
 Unity.RenderPipeline.Universal.ShaderLibrary.csproj
-
 Unity.RenderPipelines.Core.Editor.csproj
-
 Unity.RenderPipelines.Core.Runtime.csproj
-
 Unity.RenderPipelines.Core.ShaderLibrary.csproj
-
 Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj
-
 Unity.RenderPipelines.Universal.Editor.csproj
-
 Unity.RenderPipelines.Universal.Runtime.csproj
-
 Unity.RenderPipelines.Universal.Shaders.csproj
-
 Unity.ShaderGraph.Editor.csproj
-
 Unity.ShaderGraph.Utilities.csproj
-
 UnityEditor.UI.csproj
-
 UnityEngine.UI.csproj
 
-UserSettings/Layouts/default-2021.dwlt
+UserSettings/Layouts/
+    default-2021.dwlt
+    CurrentMaximizeLayout.dwlt
 
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]serSettings/
+/.vscode/
 
+# Metadados de ativos só devem ser ignorados quando o ativo correspondente também é ignorado
+!/[Aa]ssets/**/*.meta
 
-UserSettings/Layouts/CurrentMaximizeLayout.dwlt
+# Descomente esta linha se desejar ignorar o plugin de ferramentas da asset store
+# /[Aa]ssets/AssetStoreTools*
+
+# Plugin JetBrains Rider autogerado
+[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Diretório de cache do Visual Studio
+.vs/
+
+.vsconfig
+.gradle/
+.idea
+Assembly-CSharp
+Assembly-CSharp-Editor
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Arquivos meta gerados pelo Unity3D
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Arquivo gerado pelo Unity3D em relatórios de falhas
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+T4-Simulador.sln
+# Arquivo gerado pelo Crashlytics
+crashlytics-build.properties
+# Arquivos temporários Unity
+Library/
+Temp/
+UnityGenerated/
+
+# Ficheiros de registo Unity
+Logs/
+
+# Pasta para builds executáveis
+Builds/
+
+# Ficheiros gerados pelo Visual Studio
+.vscode/
+.vs/
+
+# Arquivos gerados por ferramentas de terceiros
+*.pidb
+*.suo
+*.user
+*.userprefs
+
+# Arquivos de configuração Unity
+ProjectSettings/ProjectVersion.txt
+ProjectSettings/UnityConnectSettings.asset
+
+# Arquivos gerados automaticamente
+*.booproj
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.sln.meta
+*.suo.meta
+*.userprefs.meta
+*.pidb.meta
+
+# Ficheiros específicos do Rider (um ambiente de desenvolvimento)
+.idea/
+*.sln.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/vcs.xml
+.idea/misc.xml
+
+# Ficheiros específicos do Visual Studio Code
+.vscode/

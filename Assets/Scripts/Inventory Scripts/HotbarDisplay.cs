@@ -205,7 +205,18 @@ public class HotbarDisplay : StaticInventoryDisplay
         // Caso não haja slots vazios disponíveis na hotbar, você pode tomar alguma ação ou exibir uma mensagem de erro.
         Debug.LogWarning("Não há slots disponíveis na hotbar para adicionar o item.");
     }
-    
+    public InventoryItemData GetItemData()
+    {
+        InventorySlot selectedSlot = slots[_currentIndex].AssignedInventorySlot;
+        return selectedSlot.ItemData;
+    }
+
+    public int GetQuantidade()
+    {
+        InventorySlot selectedSlot = slots[_currentIndex].AssignedInventorySlot;
+        return selectedSlot.StackSize;
+    }
+
     // Obtém o item atualmente na mão
     public void GetItemInHand()
     {
@@ -242,10 +253,14 @@ public class HotbarDisplay : StaticInventoryDisplay
     // Remove um item específico da barra de atalho por ID e quantidade
     public void RemoveItem(int itemId, int quantity)
     {
+        InventorySlot currentSlot = slots[_currentIndex].AssignedInventorySlot;
+
         foreach (InventorySlot_UI slotUI in slots)
         {
             InventorySlot slot = slotUI.AssignedInventorySlot;
-            if (slot.ItemData != null && slot.ItemData.ID == itemId)
+
+            // Verifica se o slot contém o item desejado e não é o item atual na mão
+            if (slot.ItemData != null && slot.ItemData.ID == itemId && slot != currentSlot)
             {
                 int removedQuantity = slot.RemoveStack(quantity); // Remove a quantidade especificada do stack do item
                 slotUI.UpdateUISlot();
@@ -260,6 +275,35 @@ public class HotbarDisplay : StaticInventoryDisplay
             }
         }
     }
+    public void RemoveItemFromInventory(int itemId, int quantity)
+    {
+        // Percorre todos os slots do inventário (incluindo a hotbar)
+        for (int i = 0; i < slots.Length; i++)
+        {
+            InventorySlot_UI slotUI = slots[i];
+            InventorySlot slot = slotUI.AssignedInventorySlot;
+
+            // Verifica se o slot contém o item desejado
+            if (slot.ItemData != null && slot.ItemData.ID == itemId)
+            {
+                int removedQuantity = slot.RemoveStack(Mathf.Min(quantity, slot.StackSize));
+                slotUI.UpdateUISlot();
+
+                // Atualiza a quantidade restante a ser removida
+                quantity -= removedQuantity;
+
+                // Verifica se já removeu a quantidade desejada
+                if (quantity <= 0)
+                {
+                    return;
+                }
+            }
+        }
+    }
+
+
+
+
 
     // Verifica se um item específico existe na barra de atalho
     public bool CheckItemInHotbar(int itemId)

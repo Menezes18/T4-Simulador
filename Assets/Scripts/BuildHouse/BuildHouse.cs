@@ -9,11 +9,12 @@ public class BuildHouse : MonoBehaviour
     public HouseData housedata;
     public GameObject prefab;
     public HouseData.BuildComponent[] data;
+    public HotbarDisplay hotbarDisplay;
 
 
     public void Start()
     {
-        
+        hotbarDisplay = FindObjectOfType<HotbarDisplay>();
         if (housedata != null)
         {
             data = new HouseData.BuildComponent[housedata.build.Length];
@@ -40,6 +41,7 @@ public class BuildHouse : MonoBehaviour
 
     public void removeritem(InventoryItemData item, int quantidade)
     {
+        Debug.Log("AA");
         foreach (HouseData.BuildComponent component in data)
         {
             if (component.resourceRequirements.Length > 0)
@@ -51,6 +53,7 @@ public class BuildHouse : MonoBehaviour
                         if (component.resourceRequirements[i].amount >= quantidade)
                         {
                             component.resourceRequirements[i].amount -= quantidade;
+                            hotbarDisplay.RemoveItemFromInventory(item.ID, quantidade);
 
                             if (component.resourceRequirements[i].amount == 0)
                             {

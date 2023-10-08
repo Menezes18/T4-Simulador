@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 using Cinemachine;
 public class BuildTool : MonoBehaviour
 {
-    [SerializeField] private float _rotateSnapAngle = 90f;
+    [SerializeField] private float _rotateSnapAngle = 10f;
     [SerializeField] private float _rayDistance;
     [SerializeField] public LayerMask _buildModeLayerMask;
     [SerializeField] private LayerMask _deleteModeLayerMask;
@@ -66,7 +66,7 @@ public class BuildTool : MonoBehaviour
     private void Update()
     {
         if (_spawnedBuilding && Keyboard.current.escapeKey.wasPressedThisFrame) DeleteObjectPreview();
-        if (Keyboard.current.qKey.wasPressedThisFrame) _deleteModeEnabled = !_deleteModeEnabled;
+        if (Keyboard.current.pKey.wasPressedThisFrame) _deleteModeEnabled = !_deleteModeEnabled;
         
         if (_deleteModeEnabled) DeleteModeLogic();
         else BuildModeLogic();
@@ -99,7 +99,14 @@ public class BuildTool : MonoBehaviour
         return false;
     }
 
-    
+    private void DisableObjectPreview()
+    {
+        if (_spawnedBuilding != null)
+        {
+            Destroy(_spawnedBuilding.gameObject);
+            _spawnedBuilding = null;
+        }
+    }
      
     private void DeleteModeLogic()
     {
@@ -157,16 +164,23 @@ public class BuildTool : MonoBehaviour
     {
         _spawnedBuilding.UpdateMaterial(_spawnedBuilding.IsOverlapping ? _buildingMatNegative : _buildingMatPositive);
         
-        if (Keyboard.current.rKey.wasPressedThisFrame)
+        if (Keyboard.current.qKey.isPressed)
         {
-            _spawnedBuilding.transform.Rotate(0,_rotateSnapAngle,0);
+            // Girar continuamente para a esquerda (sentido anti-horário)
+            _spawnedBuilding.transform.Rotate(0, -_rotateSnapAngle * Time.deltaTime, 0);
+            _lastRotation = _spawnedBuilding.transform.rotation;
+        }
+    
+        if (Keyboard.current.eKey.isPressed)
+        {
+            // Girar continuamente para a direita (sentido horário)
+            _spawnedBuilding.transform.Rotate(0, _rotateSnapAngle * Time.deltaTime, 0);
             _lastRotation = _spawnedBuilding.transform.rotation;
         }
 
         if (IsRayHittingSomething(_buildModeLayerMask, out RaycastHit hitInfo))
         {
-            var gridPosition = WorldGrid.GridPositionFromWorldPoint3D(hitInfo.point, 1f);
-            _spawnedBuilding.transform.position = gridPosition;
+            _spawnedBuilding.transform.position = hitInfo.point;
     
             if (Mouse.current.leftButton.wasPressedThisFrame && !_spawnedBuilding.IsOverlapping)
             {
@@ -174,14 +188,12 @@ public class BuildTool : MonoBehaviour
                 var dataCopy = _spawnedBuilding.AssignedData;
                 _spawnedBuilding = null;
                 ChoosePart(dataCopy);
+                DisableObjectPreview();
             }   
         }
-        else
-        {
-            // TODO: ROQUE AJUDA
-        }
-
     }
+
+
     private void OnDrawGizmos()
     {
         if (_camera == null || _rayOrigin == null)

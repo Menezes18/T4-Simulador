@@ -15,6 +15,6 @@ MonoBehaviour:
   DisplayName: Floor Sign
   Icon: {fileID: 21300000, guid: 4f69ac63294c66d4f9643eb8cc273d4b, type: 3}
   GridSnapSize: 3
-  Prefab: {fileID: 7144620961804486646, guid: 8a4cb85a212bf4b4c812d6de4efb4872, type: 3}
+  Prefab: {fileID: 7144620961804486646, guid: 879ff7788e9423c42877937e1637efa8, type: 3}
   BuildingSize: {x: 0.45, y: 0.9, z: 0.35}
   PartType: 2
