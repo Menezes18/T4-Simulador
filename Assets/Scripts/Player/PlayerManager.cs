@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour
     public event Action<float> OnEnergiaChanged; // Evento para a energia
     public GameObject objetoQuebravel;
     public SystemQuebrar systemQuebrarComponent;
+    public TerraArada terraArada;
 
     public Animator animator;
     public HotbarDisplay hotbarDisplay;
@@ -28,6 +29,8 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetTrigger("Bater");
             //DescerEnergia(10f);
+
+            if (id.Equals(4) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
         }
     }
@@ -41,17 +44,16 @@ public class PlayerManager : MonoBehaviour
     private void Update()
     {
         DescerFome();
-
-        // Verifique se o jogador pressionou a tecla "E" nesta atualização do frame
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             InteragirComObjeto();
         }
     }
 
+    // Chama no update quando apertar E
     private void InteragirComObjeto()
     {
-        // Verifique se o objeto atingido possui o componente BuildHouse ou em um de seus filhos
+        
         BuildHouse buildHouseComponent = hitInfo.collider.gameObject.GetComponentInChildren<BuildHouse>();
 
         if (buildHouseComponent != null)
@@ -59,24 +61,6 @@ public class PlayerManager : MonoBehaviour
             InventoryItemData itemData = GetItemData(); // Substitua pelo método adequado para obter os dados do item
             int quantidade = GetQuantidade(); // Substitua pelo método adequado para obter a quantidade
             buildHouseComponent.removeritem(itemData, quantidade);
-        }
-        else
-        {
-            // Verifique se o objeto atingido possui o componente SystemQuebrar
-            systemQuebrarComponent = hitInfo.collider.gameObject.GetComponent<SystemQuebrar>();
-            if (systemQuebrarComponent != null)
-            {
-                objetoQuebravel = hitInfo.collider.gameObject;
-
-                if (hitInfo.collider.gameObject.tag.Equals("Tree"))
-                {
-                    // Faça algo relacionado à árvore aqui
-                }
-                else if (hitInfo.collider.gameObject.tag.Equals("Rocha"))
-                {
-                    systemQuebrarComponent.Quebrar(hitInfo.collider.gameObject, Opcoes.rock, hitInfo);
-                }
-            }
         }
     }
 
@@ -117,39 +101,19 @@ public class PlayerManager : MonoBehaviour
         hitInfo = hitInforay;
         string obj = hitInfo.collider.gameObject.name;
 
-        // Verifique se o objeto atingido possui o componente BuildHouse ou em um de seus filhos
+        
         BuildHouse buildHouseComponent = hitInfo.collider.gameObject.GetComponentInChildren<BuildHouse>();
-
+        systemQuebrarComponent = hitInfo.collider.gameObject.GetComponent<SystemQuebrar>();
+        terraArada = hitInfo.collider.gameObject.GetComponent<TerraArada>();
         if (buildHouseComponent != null)
         {
             buildHouseComponent.hud();
         }
-        else
-        {
-            // Verifique se o objeto atingido possui o componente SystemQuebrar
-            systemQuebrarComponent = hitInfo.collider.gameObject.GetComponent<SystemQuebrar>();
-            if (systemQuebrarComponent != null)
-            {
-                objetoQuebravel = hitInfo.collider.gameObject;
-
-                if (hitInfo.collider.gameObject.tag.Equals("Tree"))
-                {
-                    // Faça algo relacionado à árvore aqui
-                }
-                else if (hitInfo.collider.gameObject.tag.Equals("Rocha"))
-                {
-                    systemQuebrarComponent.Quebrar(hitInfo.collider.gameObject, Opcoes.rock, hitInfo);
-                }
-            }
-        }
-
-        // Resto do seu código do método raycast
+        
     }
 
     public InventoryItemData GetItemData()
     {
-        // Substitua esta lógica pelo código necessário para obter os dados do item da barra de atalho.
-        // Por exemplo, você pode usar uma referência ao HotbarDisplay para obter os dados do item selecionado.
         if (hotbarDisplay != null)
         {
             return hotbarDisplay.GetItemData();
@@ -162,8 +126,6 @@ public class PlayerManager : MonoBehaviour
 
     public int GetQuantidade()
     {
-        // Substitua esta lógica pelo código necessário para obter a quantidade do item da barra de atalho.
-        // Por exemplo, você pode usar uma referência ao HotbarDisplay para obter a quantidade do item selecionado.
         if (hotbarDisplay != null)
         {
             return hotbarDisplay.GetQuantidade();

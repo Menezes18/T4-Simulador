@@ -20,11 +20,17 @@ public class BuildTool : MonoBehaviour
 
     public Camera _camera;
 
+    private List<Vector3> fencePositions = new List<Vector3>();
+
+    private BuildingData placedata;
     private Building _spawnedBuilding;
     private Building _targetBuilding;
     private Quaternion _lastRotation;
     private CinemachineVirtualCamera _cinemachineVirtualCamera;
-
+    
+    public Material materialTerraArada;
+    public Material materialTerraNormal;
+    public Material materialTerraPronta;
     private void Start()
     {
         _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
@@ -59,8 +65,10 @@ public class BuildTool : MonoBehaviour
         };
 
         _spawnedBuilding = go.AddComponent<Building>();
+        placedata = data;
         _spawnedBuilding.Init(data);
         _spawnedBuilding.transform.rotation = _lastRotation;
+        Debug.Log("Selected part: " + data.name);
     }
 
     private void Update()
@@ -180,17 +188,73 @@ public class BuildTool : MonoBehaviour
 
         if (IsRayHittingSomething(_buildModeLayerMask, out RaycastHit hitInfo))
         {
+            var gridPosition = WorldGrid.GridPositionFromWorldPoint3D(hitInfo.point, 0.1f);
+           // _spawnedBuilding.transform.position = gridPosition;
             _spawnedBuilding.transform.position = hitInfo.point;
-    
+
             if (Mouse.current.leftButton.wasPressedThisFrame && !_spawnedBuilding.IsOverlapping)
             {
                 _spawnedBuilding.PlaceBuilding();
                 var dataCopy = _spawnedBuilding.AssignedData;
                 _spawnedBuilding = null;
                 ChoosePart(dataCopy);
-                DisableObjectPreview();
-            }   
+        
+                if (dataCopy.name == "Cerca")
+                {
+                    Debug.Log("Cerca colocada.");
+
+                    // Adicione a posição da cerca à lista
+                    fencePositions.Add(hitInfo.point);
+
+                    if (fencePositions.Count >= 4)
+                    {
+                        
+                        InstantiateCubeforFence();
+                        DisableObjectPreview();
+                        fencePositions.Clear(); // Limpar a lista após a criação do cercamento
+                    }
+                }
+                else
+                {
+                    DisableObjectPreview();
+                }
+            }
         }
+    }
+
+    private void InstantiateCubeforFence()
+    {
+        if (fencePositions.Count != 4)
+        {
+            Debug.LogWarning("Não há posições de cerca suficientes para criar o cercamento.");
+            return;
+        }
+
+        Mesh mesh = new Mesh();
+        GameObject fence = new GameObject("Fence");
+        fence.AddComponent<MeshFilter>().mesh = mesh;
+        fence.AddComponent<MeshRenderer>().material.SetFloat("_Cull", 0);
+
+        Vector3[] vertices = new Vector3[4];
+        int[] triangles = new int[] { 0, 1, 2, 0, 2, 3 };
+
+        for (int i = 0; i < 4; i++)
+        {
+            Vector3 edgeVector = fencePositions[(i + 1) % 4] - fencePositions[i];
+            vertices[i] = fencePositions[i] + new Vector3(0, 0.010f, 0) + edgeVector * 0.010f;
+        }
+
+        mesh.vertices = vertices;
+        mesh.triangles = triangles;
+
+        // Adicione o script ao objeto "Fence" quando ele é criado
+        var customFenceScript = fence.AddComponent<TerraArada>();
+        customFenceScript.tipoDeTextura = TerraArada.TipoDeTextura.TerraNormal;
+        customFenceScript.TexturaEdit(materialTerraArada, materialTerraNormal, materialTerraPronta);
+        
+        BoxCollider boxCollider = fence.AddComponent<BoxCollider>();
+        
+        Debug.Log("Custom fence created.");
     }
 
 
