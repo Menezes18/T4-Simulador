@@ -394,9 +394,11 @@ public class HotbarDisplay : StaticInventoryDisplay
             Quaternion desiredRotation = Quaternion.Euler(0, cameraRotation.eulerAngles.y + 60, 0);
         
             spawnedObject.transform.rotation = desiredRotation;
-
+            MeshCollider MeshcolliderItem = spawnedObject.GetComponentInChildren<MeshCollider>();
             Collider colliderDoItem = spawnedObject.GetComponent<Collider>();
             SphereCollider sphereCollider = spawnedObject.GetComponent<SphereCollider>();
+            
+            Destroy(MeshcolliderItem);
             if (sphereCollider != null) sphereCollider.enabled = false;
             if (colliderDoItem != null) colliderDoItem.enabled = false;
             
