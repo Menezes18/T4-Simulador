@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
      public string nomeDoLevelDeJogo;
      public GameObject panelMenuInicial;
      public GameObject panelOptions;
+     public GameObject panelTutorial;
      public GameObject panelCredits;
 
 
@@ -23,6 +24,12 @@ public class MenuController : MonoBehaviour
         panelOptions.SetActive(true);
     }
 
+    public void OpenTutorial()
+        {
+            panelMenuInicial.SetActive(false);
+            panelTutorial.SetActive(true);
+        }
+    
     public void CloseOptions()
     {
         panelOptions.SetActive(false);
