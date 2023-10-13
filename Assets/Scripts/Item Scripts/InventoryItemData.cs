@@ -20,6 +20,7 @@ public class InventoryItemData : ScriptableObject
     public int GoldValue;
     public GameObject ItemPrefab;
     public BuildingData ItemData;
+    public Building data;
     public bool _building = false;
 
 

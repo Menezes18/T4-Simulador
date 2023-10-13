@@ -20,34 +20,41 @@ public class PlayerManager : MonoBehaviour
     public SystemQuebrar systemQuebrarComponent;
     public TerraArada terraArada;
 
+    public BuildTool build;
     public Animator animator;
     public HotbarDisplay hotbarDisplay;
 
-    public void bater(int id)
+    public void bater(int id, BuildingData item, Building itemdata)
     {
         if (energia > 10)
         {
             animator.SetTrigger("Bater");
-            //DescerEnergia(10f);
-
             if (id.Equals(4) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
+            if (id.Equals(17))
+            {
+                
+            }
         }
     }
 
+
     private void Start()
     {
+        build = FindObjectOfType<BuildTool>();
         hotbarDisplay = FindObjectOfType<HotbarDisplay>();
         InvokeRepeating("RegenerarEnergia", 5.0f, 5.0f);
     }
 
     private void Update()
     {
+        
         DescerFome();
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             InteragirComObjeto();
         }
+        
     }
 
     // Chama no update quando apertar E
@@ -62,6 +69,9 @@ public class PlayerManager : MonoBehaviour
             int quantidade = GetQuantidade(); // Substitua pelo método adequado para obter a quantidade
             buildHouseComponent.removeritem(itemData, quantidade);
         }
+        
+        
+        
     }
 
     public void DescerFome()

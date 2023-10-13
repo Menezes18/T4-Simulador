@@ -15,20 +15,20 @@ public class HotbarDisplay : StaticInventoryDisplay
     public bool hasSpawned = true;
     private int itemId = -2;
     public bool buildingUse = false;
-
-    private ItemPickUp _itemPickUp;
-    private PlayerManager _playerManager;
     public BuildingData ItemData;
     public InventoryItemData _ivItemData;
     public BuildTool _buildTools;
+    
 
+    private PlayerManager _playerManager;
+    
 
 
     private void Awake()
     {
         _playerManager = FindObjectOfType<PlayerManager>();
         _playerControls = new PlayerControls();
-        _itemPickUp = FindObjectOfType<ItemPickUp>();
+       // _itemPickUp = FindObjectOfType<ItemPickUp>();
         _buildTools = FindObjectOfType<BuildTool>();
         
     }
@@ -318,7 +318,7 @@ public class HotbarDisplay : StaticInventoryDisplay
         }
         return false; // O item não foi encontrado na hotbar
     }
-
+    
     private void Update()
     {
         ShowItemInHotbar();
@@ -421,16 +421,18 @@ public class HotbarDisplay : StaticInventoryDisplay
 // Método para lidar com o uso de um item da barra de atalho
     public void UseItem(InputAction.CallbackContext obj)
     {
-       
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
-        {   
-            _playerManager.bater(itemId);
+        {
+            int current = 0;
+            InventoryItemData item = slots[_currentIndex].AssignedInventorySlot.ItemData;
+            
+            //_playerManager.bater(itemId, item.ItemData, item.);
             
         }
         else
         {
             itemId = -1;
-            _playerManager.bater(itemId);
+            _playerManager.bater(itemId,null, null);
         }
     }
     
@@ -467,15 +469,7 @@ public class HotbarDisplay : StaticInventoryDisplay
             return true; // O item está na mão
         }
 
-        return false; // O item não está na mão
-    }
-
-
-    public void SetDataBuilding()
-    {
-        
-        slots[_currentIndex].AssignedInventorySlot.ItemData.UseItem();
-        //ItemData.SetDataBuilding();
+        return false; 
     }
 
     private void ChangeIndex(int direction)

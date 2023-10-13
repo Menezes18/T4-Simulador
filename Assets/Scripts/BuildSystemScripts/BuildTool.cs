@@ -22,8 +22,8 @@ public class BuildTool : MonoBehaviour
 
     private List<Vector3> fencePositions = new List<Vector3>();
 
-    private BuildingData placedata;
-    private Building _spawnedBuilding;
+    public BuildingData placedata;
+    public Building _spawnedBuilding;
     private Building _targetBuilding;
     private Quaternion _lastRotation;
     private CinemachineVirtualCamera _cinemachineVirtualCamera;
@@ -31,6 +31,8 @@ public class BuildTool : MonoBehaviour
     public Material materialTerraArada;
     public Material materialTerraNormal;
     public Material materialTerraPronta;
+
+    public bool test;
     private void Start()
     {
         _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
@@ -47,7 +49,7 @@ public class BuildTool : MonoBehaviour
         BuildingPanelUI.OnPartChosen -= ChoosePart;
     }
 
-    private void ChoosePart(BuildingData data)
+    public void ChoosePart(BuildingData data)
     {
         if (_deleteModeEnabled)
         {
@@ -78,8 +80,6 @@ public class BuildTool : MonoBehaviour
         
         if (_deleteModeEnabled) DeleteModeLogic();
         else BuildModeLogic();
-
-        
     }
 
     private void DeleteObjectPreview()
@@ -96,10 +96,10 @@ public class BuildTool : MonoBehaviour
         var ray = new Ray(_rayOrigin.position, _camera.transform.forward * _rayDistance);
         if (Physics.Raycast(ray, out hitInfo, _rayDistance, layerMask))
         {
-            
             PlayerManager playerStatus = FindObjectOfType<PlayerManager>();
             if (playerStatus != null)
             {
+            Debug.Log("AAA");
                 playerStatus.raycast(hitInfo);
             }
             return true;
@@ -155,7 +155,7 @@ public class BuildTool : MonoBehaviour
     }
 
 
-    private void BuildModeLogic()
+    public void BuildModeLogic()
     {
         if (_targetBuilding != null && _targetBuilding.FlaggedForDelete)
         {
@@ -168,13 +168,12 @@ public class BuildTool : MonoBehaviour
         PositionBuildingPreview();
     }
 
-    private void PositionBuildingPreview()
+    public void PositionBuildingPreview()
     {
         _spawnedBuilding.UpdateMaterial(_spawnedBuilding.IsOverlapping ? _buildingMatNegative : _buildingMatPositive);
         
         if (Keyboard.current.qKey.isPressed)
         {
-            // Girar continuamente para a esquerda (sentido anti-horário)
             _spawnedBuilding.transform.Rotate(0, -_rotateSnapAngle * Time.deltaTime, 0);
             _lastRotation = _spawnedBuilding.transform.rotation;
         }
@@ -247,7 +246,7 @@ public class BuildTool : MonoBehaviour
         mesh.vertices = vertices;
         mesh.triangles = triangles;
 
-        // Adicione o script ao objeto "Fence" quando ele é criado
+        
         var customFenceScript = fence.AddComponent<TerraArada>();
         customFenceScript.tipoDeTextura = TerraArada.TipoDeTextura.TerraNormal;
         customFenceScript.TexturaEdit(materialTerraArada, materialTerraNormal, materialTerraPronta);
@@ -256,7 +255,7 @@ public class BuildTool : MonoBehaviour
         
         Debug.Log("Custom fence created.");
     }
-
+    
 
     private void OnDrawGizmos()
     {

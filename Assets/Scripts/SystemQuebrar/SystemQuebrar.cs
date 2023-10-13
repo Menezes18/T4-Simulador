@@ -27,7 +27,7 @@ public class SystemQuebrar : MonoBehaviour
     {
         if (nenhum.Equals(opcoes) && vida > 0) // Verifique se a vida é maior que 0
         {
-            Debug.Log("AAA");
+            Debug.Log("Batendo");
             vida--;
 
             if (vida <= 0)

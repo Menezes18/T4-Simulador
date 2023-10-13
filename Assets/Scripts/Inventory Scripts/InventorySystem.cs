@@ -66,7 +66,7 @@ public class InventorySystem
         {
             freeSlot.UpateInventorySlot(itemToAdd, amountToAdd);
             slotempty = InventorySlots.IndexOf(freeSlot) + 1;
-            Debug.Log(slotempty);
+            //Debug.Log(slotempty);
             OnInventorySlotChanged?.Invoke(freeSlot);
             return true;
         }
