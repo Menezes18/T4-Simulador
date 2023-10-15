@@ -32,7 +32,8 @@ public class SystemQuebrar : MonoBehaviour
 
             if (vida <= 0)
             {
-                Instantiate(item, transform.position, Quaternion.identity);
+                Vector3 novaPosicao = transform.position + new Vector3(0, 10, 0);
+                Instantiate(item, novaPosicao, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

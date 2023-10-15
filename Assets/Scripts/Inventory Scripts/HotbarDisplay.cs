@@ -423,6 +423,7 @@ public class HotbarDisplay : StaticInventoryDisplay
             Collider colliderDoItem = spawnedObject.GetComponent<Collider>();
             SphereCollider sphereCollider = spawnedObject.GetComponent<SphereCollider>();
             
+            
             Destroy(MeshcolliderItem);
             if (sphereCollider != null) sphereCollider.enabled = false;
             if (colliderDoItem != null) colliderDoItem.enabled = false;
