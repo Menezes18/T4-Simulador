@@ -71,13 +71,20 @@ public class ChickenController : MonoBehaviour
     }
     private void HandleWalkingState()
     {
-       
         int randomvalue = Random.Range(0, 200);
         Debug.Log(randomvalue);
-        if (randomvalue < 1)
+        if (randomvalue < 2)
         {
            Debug.Log("entrou"); 
             currentState = ChickenState.nenhum;
+        }
+
+        if (randomvalue < 1)
+        {
+            Debug.Log("cansei desse lado");
+            
+            
+            transform.Rotate(0, Random.Range(90, 180), 0);
         }
         RaycastHit hit;
         if (Physics.Raycast(raycastOrigin.position, transform.forward, out hit, 1.0f))
