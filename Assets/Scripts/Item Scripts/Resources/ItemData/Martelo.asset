@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Martelo
   m_EditorClassIdentifier: 
   ID: 5
-  DisplayName: Martelo
+  DisplayName: Madeira
   Description: Martelo.
-  Icon: {fileID: 21300000, guid: 997aa3e7e86e90c499c7d4a90104efa4, type: 3}
-  MaxStackSize: 1
+  Icon: {fileID: 21300000, guid: d10d3c77f27b214428fd4f1266a01782, type: 3}
+  MaxStackSize: 4
   GoldValue: 150
   ItemPrefab: {fileID: 2079361290821738425, guid: 38d2675ca9cce3c47b5aa765dd10a65b, type: 3}
-  ItemData: {fileID: 0}
-  _building: 0
+  ItemData: {fileID: 11400000, guid: 68005260831057f4a8d429ff54134879, type: 2}
+  data: {fileID: 0}
+  _building: 1
+  semente: 0

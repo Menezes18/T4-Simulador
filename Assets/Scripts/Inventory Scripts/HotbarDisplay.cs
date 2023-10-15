@@ -340,15 +340,26 @@ public class HotbarDisplay : StaticInventoryDisplay
             ChangeIndex(-1);
             pegaritem();
         }
-        if (slots[_currentIndex].AssignedInventorySlot.ItemData == null)
+        if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {
-            
+            Debug.Log("Item");
+            InventoryItemData item = slots[_currentIndex].AssignedInventorySlot.ItemData;
 
-           // _buildBuilding.UpdateMaterial(_buildTools._buildingMatInv);
-
+            if (item._building)
+            {
+                _buildTools.placedata = item.ItemData;
+                _buildTools.data = item.ItemData;
+                _buildTools.buildAtivar = true;
+            }
+        }
+        else
+        {
+           _buildTools.data = null;
+           _buildTools.DisableObjectPreview();
         }
 
     }
+    
     public void FixedUpdate()
     {
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
@@ -374,6 +385,20 @@ public class HotbarDisplay : StaticInventoryDisplay
                 hasSpawned = false;
             }
         }
+    }
+    
+    public bool ItemSemente()
+    {
+
+        if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
+        {
+            InventoryItemData item = slots[_currentIndex].AssignedInventorySlot.ItemData;
+            if (item.semente)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     // Instancia o item na mão com base em seu ID
@@ -425,8 +450,11 @@ public class HotbarDisplay : StaticInventoryDisplay
         {
             int current = 0;
             InventoryItemData item = slots[_currentIndex].AssignedInventorySlot.ItemData;
-            
-            //_playerManager.bater(itemId, item.ItemData, item.);
+             if (item._building = true)
+             {
+                 
+             }
+            _playerManager.bater(itemId, item.ItemData, item.data);
             
         }
         else

@@ -23,9 +23,13 @@ public class Building : MonoBehaviour
 
     private BuildingSaveData SaveData;
 
-    public void Init(BuildingData data, BuildingSaveData saveData = null)
+    public void Init(BuildingData data)
     {
-        _assignedData = data;
+        if(data == null) return;
+        
+        
+        
+            _assignedData = data;
         
         _boxCollider = GetComponent<BoxCollider>();
         _boxCollider.size = _assignedData.BuildingSize;
@@ -42,7 +46,7 @@ public class Building : MonoBehaviour
         _colliders = _graphic.transform.Find("Colliders");
         if (_colliders != null) _colliders.gameObject.SetActive(false);
 
-        if (saveData != null) SaveData = saveData;
+        
     }
     
     public void PlaceBuilding()

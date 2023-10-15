@@ -10,21 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
-  m_Name: Enxada
+  m_Name: Martelo 1
   m_EditorClassIdentifier: 
-  ID: 4
-  DisplayName: Enxada
-  Description: 'Enxada.
-
-'
-  Icon: {fileID: -522571837, guid: 7261f47298e72cb4b99842539625c62f, type: 3}
-  MaxStackSize: 1
-  GoldValue: 100
-  ItemPrefab: {fileID: 2079361290821738425, guid: a2555613bf652fe43bbb568fab5db0cb, type: 3}
-  ItemData: {fileID: 0}
+  ID: 5
+  DisplayName: Martelo
+  Description: Martelo.
+  Icon: {fileID: 21300000, guid: 8d563070c7554af4fb15578d1e15911e, type: 3}
+  MaxStackSize: 4
+  GoldValue: 150
+  ItemPrefab: {fileID: 946473707396887638, guid: 537c162a332a45440b9103194690abb3, type: 3}
+  ItemData: {fileID: 11400000, guid: 68005260831057f4a8d429ff54134879, type: 2}
   data: {fileID: 0}
-  layer:
-    serializedVersion: 2
-    m_Bits: 0
-  _building: 0
-  semente: 1
+  _building: 1
+  semente: 0

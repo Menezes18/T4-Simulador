@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fd0ee0fc5cc3574d91706f3380f2e78, type: 3}
-  m_Name: Cerca
+  m_Name: FloorSign
   m_EditorClassIdentifier: 
-  DisplayName: cerca
-  Icon: {fileID: 21300000, guid: 5bc9c037d64034e40941a7b00fffad3d, type: 3}
+  DisplayName: FloorSign
+  Icon: {fileID: 21300000, guid: 4f69ac63294c66d4f9643eb8cc273d4b, type: 3}
   GridSnapSize: 3
-  Prefab: {fileID: 3265762425217822097, guid: 0af71a4b521aa0544bb2fb1bb851bf47, type: 3}
+  Prefab: {fileID: 7144620961804486646, guid: 879ff7788e9423c42877937e1637efa8, type: 3}
   BuildingSize: {x: 0.45, y: 0.9, z: 0.35}
   PartType: 2

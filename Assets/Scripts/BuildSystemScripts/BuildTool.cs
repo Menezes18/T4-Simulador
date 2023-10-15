@@ -11,6 +11,7 @@ public class BuildTool : MonoBehaviour
     [SerializeField] private float _rayDistance;
     [SerializeField] public LayerMask _buildModeLayerMask;
     [SerializeField] private LayerMask _deleteModeLayerMask;
+    [SerializeField] private LayerMask FarmLayer;
     [SerializeField] private int _defaultLayerInt = 8;
     [SerializeField] private Transform _rayOrigin;
     [SerializeField] private Material _buildingMatPositive;
@@ -18,10 +19,15 @@ public class BuildTool : MonoBehaviour
 
     private bool _deleteModeEnabled;
 
+    public bool buildAtivar = false;
+
     public Camera _camera;
 
     private List<Vector3> fencePositions = new List<Vector3>();
-
+    
+    
+    public LayerMask terraArada;
+    public BuildingData data;
     public BuildingData placedata;
     public Building _spawnedBuilding;
     private Building _targetBuilding;
@@ -31,12 +37,14 @@ public class BuildTool : MonoBehaviour
     public Material materialTerraArada;
     public Material materialTerraNormal;
     public Material materialTerraPronta;
+    
 
-    public bool test;
+    public bool plantio;
     private void Start()
     {
         _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         _camera = Camera.main;
+        ChoosePart(placedata);
     }
 
     private void OnEnable()
@@ -71,10 +79,19 @@ public class BuildTool : MonoBehaviour
         _spawnedBuilding.Init(data);
         _spawnedBuilding.transform.rotation = _lastRotation;
         Debug.Log("Selected part: " + data.name);
+        if (data.name == "FloorSign")
+        {
+            
+        }
     }
-
+    
     private void Update()
     {
+        
+        if (buildAtivar)
+        {
+            ChoosePart(data);
+        }
         if (_spawnedBuilding && Keyboard.current.escapeKey.wasPressedThisFrame) DeleteObjectPreview();
         if (Keyboard.current.pKey.wasPressedThisFrame) _deleteModeEnabled = !_deleteModeEnabled;
         
@@ -96,18 +113,27 @@ public class BuildTool : MonoBehaviour
         var ray = new Ray(_rayOrigin.position, _camera.transform.forward * _rayDistance);
         if (Physics.Raycast(ray, out hitInfo, _rayDistance, layerMask))
         {
+            if(hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("terraArada"))
+            {
+                Debug.Log("Farming");
+                plantio = true;
+               // PositionBuildingPreview();
+            }
+            else
+            {
+                //PositionBuildingPreviewFarm();
+                plantio = false;
+            }
             PlayerManager playerStatus = FindObjectOfType<PlayerManager>();
             if (playerStatus != null)
             {
-            Debug.Log("AAA");
                 playerStatus.raycast(hitInfo);
             }
             return true;
         }
         return false;
     }
-
-    private void DisableObjectPreview()
+    public void DisableObjectPreview()
     {
         if (_spawnedBuilding != null)
         {
@@ -162,22 +188,27 @@ public class BuildTool : MonoBehaviour
             _targetBuilding.RemoveDeleteFlag();
             _targetBuilding = null;
         }
-        
-        if (_spawnedBuilding == null) return;
 
+        if (_spawnedBuilding == null) return;
+        
         PositionBuildingPreview();
+        
+        
     }
 
     public void PositionBuildingPreview()
     {
+        InventoryItemData Item = FindObjectOfType<InventoryItemData>();
+        HotbarDisplay hotbarDisplay = FindObjectOfType<HotbarDisplay>();
+
         _spawnedBuilding.UpdateMaterial(_spawnedBuilding.IsOverlapping ? _buildingMatNegative : _buildingMatPositive);
-        
+
         if (Keyboard.current.qKey.isPressed)
         {
             _spawnedBuilding.transform.Rotate(0, -_rotateSnapAngle * Time.deltaTime, 0);
             _lastRotation = _spawnedBuilding.transform.rotation;
         }
-    
+
         if (Keyboard.current.eKey.isPressed)
         {
             // Girar continuamente para a direita (sentido horário)
@@ -185,19 +216,21 @@ public class BuildTool : MonoBehaviour
             _lastRotation = _spawnedBuilding.transform.rotation;
         }
 
-        if (IsRayHittingSomething(_buildModeLayerMask, out RaycastHit hitInfo))
+        if (IsRayHittingSomething(_buildModeLayerMask, out RaycastHit hitInfo) && !hotbarDisplay.ItemSemente())
         {
             var gridPosition = WorldGrid.GridPositionFromWorldPoint3D(hitInfo.point, 0.1f);
-           // _spawnedBuilding.transform.position = gridPosition;
+            // _spawnedBuilding.transform.position = gridPosition;
             _spawnedBuilding.transform.position = hitInfo.point;
+
+               
 
             if (Mouse.current.leftButton.wasPressedThisFrame && !_spawnedBuilding.IsOverlapping)
             {
+
                 _spawnedBuilding.PlaceBuilding();
                 var dataCopy = _spawnedBuilding.AssignedData;
                 _spawnedBuilding = null;
                 ChoosePart(dataCopy);
-        
                 if (dataCopy.name == "Cerca")
                 {
                     Debug.Log("Cerca colocada.");
@@ -207,7 +240,6 @@ public class BuildTool : MonoBehaviour
 
                     if (fencePositions.Count >= 4)
                     {
-                        
                         InstantiateCubeforFence();
                         DisableObjectPreview();
                         fencePositions.Clear(); // Limpar a lista após a criação do cercamento
@@ -217,35 +249,64 @@ public class BuildTool : MonoBehaviour
                 {
                     DisableObjectPreview();
                 }
+
+                hotbarDisplay.ClearSelectedItem();
+
+                DisableObjectPreview();
+            }
+        }else if (IsRayHittingSomething(FarmLayer, out RaycastHit hit) && hotbarDisplay.ItemSemente())
+        {
+            var gridPosition = WorldGrid.GridPositionFromWorldPoint3D(hitInfo.point, 0.1f);
+            // _spawnedBuilding.transform.position = gridPosition;
+            _spawnedBuilding.transform.position = hitInfo.point;
+
+               
+                Debug.Log("Farming");
+            if (Mouse.current.leftButton.wasPressedThisFrame && !_spawnedBuilding.IsOverlapping)
+            {
+
+                _spawnedBuilding.PlaceBuilding();
+                var dataCopy = _spawnedBuilding.AssignedData;
+                _spawnedBuilding = null;
+                ChoosePart(dataCopy);
+                hotbarDisplay.ClearSelectedItem();
+
+                DisableObjectPreview();
             }
         }
+        else
+        {
+            _spawnedBuilding.transform.position = hitInfo.point;
+            _spawnedBuilding.UpdateMaterial(_buildingMatNegative);
+        }
+
     }
 
-    private void InstantiateCubeforFence()
+    public void InstantiateCubeforFence()
     {
         if (fencePositions.Count != 4)
         {
             Debug.LogWarning("Não há posições de cerca suficientes para criar o cercamento.");
             return;
         }
-
+    
         Mesh mesh = new Mesh();
         GameObject fence = new GameObject("Fence");
         fence.AddComponent<MeshFilter>().mesh = mesh;
         fence.AddComponent<MeshRenderer>().material.SetFloat("_Cull", 0);
-
+    
         Vector3[] vertices = new Vector3[4];
         int[] triangles = new int[] { 0, 1, 2, 0, 2, 3 };
-
+    
         for (int i = 0; i < 4; i++)
         {
             Vector3 edgeVector = fencePositions[(i + 1) % 4] - fencePositions[i];
-            vertices[i] = fencePositions[i] + new Vector3(0, 0.010f, 0) + edgeVector * 0.010f;
+            vertices[i] = fencePositions[i] + new Vector3(0, 0.01f, 0) + edgeVector * 0.010f;
         }
-
+    
         mesh.vertices = vertices;
         mesh.triangles = triangles;
-
+    
         
         var customFenceScript = fence.AddComponent<TerraArada>();
         customFenceScript.tipoDeTextura = TerraArada.TipoDeTextura.TerraNormal;
@@ -255,7 +316,6 @@ public class BuildTool : MonoBehaviour
         
         Debug.Log("Custom fence created.");
     }
-    
 
     private void OnDrawGizmos()
     {
