@@ -3,19 +3,6 @@ Temp/
 UserSettings/
 .vscode/
 obj/
-Assembly-CSharp-Editor.csproj
-Assembly-CSharp.csproj
-ColoredHeaderCreator.csproj
-ColoredHeaderCreator.Editor.csproj
-PPv2URPConverters.csproj
-Ti-Simulador3P.sln
-UnityEditor.UI.csproj
-UnityEngine.UI.csproj
-
-UserSettings/Layouts/
-    default-2021.dwlt
-    CurrentMaximizeLayout.dwlt
-
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -41,24 +28,7 @@ UserSettings/Layouts/
 .vsconfig
 .gradle/
 .idea
-Assembly-CSharp
-Assembly-CSharp-Editor
-ExportedObj/
-.consulo/
-*.csproj
-*.unityproj
-*.sln
-*.suo
-*.tmp
-*.user
-*.userprefs
-*.pidb
-*.booproj
-*.svd
-*.pdb
-*.mdb
-*.opendb
-*.VC.db
+
 
 # Arquivos meta gerados pelo Unity3D
 *.pidb.meta
@@ -95,9 +65,6 @@ Builds/
 *.user
 *.userprefs
 
-# Arquivos de configuração Unity
-ProjectSettings/ProjectVersion.txt
-ProjectSettings/UnityConnectSettings.asset
 
 # Arquivos gerados automaticamente
 *.booproj
@@ -124,5 +91,4 @@ T4-Simulador.sln
 # Ficheiros específicos do Visual Studio Code
 .vscode/
 
-Packages/packages-lock.json
 
