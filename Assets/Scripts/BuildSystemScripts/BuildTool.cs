@@ -34,14 +34,13 @@ public class BuildTool : MonoBehaviour
     private CinemachineVirtualCamera _cinemachineVirtualCamera;
     
     public Material materialTerraArada;
-    public Material materialTerraNormal;g
+    public Material materialTerraNormal;
     public Material materialTerraPronta;
     
 
     public bool plantio;
     private void Start()
     {
-        print(_rotateSnapAngle);
         _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         _camera = Camera.main;
         ChoosePart(placedata);
@@ -84,10 +83,16 @@ public class BuildTool : MonoBehaviour
             
         }
     }
-    
+    private bool cursorAtivo = true;
     private void Update()
     {
-        
+        if(Keyboard.current.jKey.wasPressedThisFrame)
+        {
+            cursorAtivo = !cursorAtivo; // Inverte o estado do cursor (ativo ou inativo)
+            Cursor.visible = cursorAtivo;
+            Cursor.lockState = CursorLockMode.None;
+            
+        }
         if (buildAtivar)
         {
             ChoosePart(data);

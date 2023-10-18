@@ -120,8 +120,9 @@ ProjectSettings/UnityConnectSettings.asset
 .idea/tasks.xml
 .idea/vcs.xml
 .idea/misc.xml
-
+T4-Simulador.sln
 # Ficheiros específicos do Visual Studio Code
 .vscode/
 
 Packages/packages-lock.json
+
