@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
@@ -35,13 +34,14 @@ public class BuildTool : MonoBehaviour
     private CinemachineVirtualCamera _cinemachineVirtualCamera;
     
     public Material materialTerraArada;
-    public Material materialTerraNormal;
+    public Material materialTerraNormal;g
     public Material materialTerraPronta;
     
 
     public bool plantio;
     private void Start()
     {
+        print(_rotateSnapAngle);
         _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         _camera = Camera.main;
         ChoosePart(placedata);
