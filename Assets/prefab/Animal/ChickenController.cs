@@ -75,13 +75,13 @@ public class ChickenController : MonoBehaviour
         Debug.Log(randomvalue);
         if (randomvalue < 2)
         {
-           Debug.Log("entrou"); 
+           
             currentState = ChickenState.nenhum;
         }
 
         if (randomvalue < 1)
         {
-            Debug.Log("cansei desse lado");
+           
             
             
             transform.Rotate(0, Random.Range(90, 180), 0);
@@ -92,7 +92,7 @@ public class ChickenController : MonoBehaviour
             Obstaculo obstaculo = hit.collider.GetComponent<Obstaculo>();
             if (obstaculo != null)
             {
-                Debug.Log("VIREI VIU");
+                
                 transform.Rotate(0, Random.Range(90, 180), 0);
                 
             }

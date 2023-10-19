@@ -58,6 +58,10 @@ public class BuildTool : MonoBehaviour
 
     public void ChoosePart(BuildingData data)
     {
+        if (data == null)
+        {
+            return;
+        }
         if (_deleteModeEnabled)
         {
             if (_targetBuilding != null && _targetBuilding.FlaggedForDelete) _targetBuilding.RemoveDeleteFlag();

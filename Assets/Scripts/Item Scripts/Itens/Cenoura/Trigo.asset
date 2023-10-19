@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 17
   DisplayName: Cenoura
-  Description: Cenoura
+  Description: 
   Icon: {fileID: 21300000, guid: 35c5ec7c1bb57804da8fa905a3d81b25, type: 3}
   MaxStackSize: 8
   GoldValue: 18

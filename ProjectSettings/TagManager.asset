@@ -16,6 +16,7 @@ TagManager:
   - SairCasa
   - CasaEntrar
   - CinemachineTarget
+  - CanvasInfo
   layers:
   - Default
   - TransparentFX

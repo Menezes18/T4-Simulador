@@ -30,8 +30,9 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         playerManager = FindObjectOfType<PlayerManager>();
+       // SetMouseCursorState(BuildPanel.gameObject.activeInHierarchy);
+        if(BuildPanel == null) return;
         BuildPanel.gameObject.SetActive(false);
-        SetMouseCursorState(BuildPanel.gameObject.activeInHierarchy);
     }
 
     private void Update()

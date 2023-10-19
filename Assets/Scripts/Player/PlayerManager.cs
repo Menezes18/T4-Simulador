@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static PlayerManager playerManager;
     public float fome = 100f;
     public float maxfome = 100f;
     public const float taxaDecaimentoFome = 0.16f;
@@ -23,6 +24,8 @@ public class PlayerManager : MonoBehaviour
     public BuildTool build;
     public Animator animator;
     public HotbarDisplay hotbarDisplay;
+
+    public GameObject prefabCanvasInfo;
 
     public void bater(int id, BuildingData item, Building itemdata)
     {
@@ -44,6 +47,7 @@ public class PlayerManager : MonoBehaviour
         build = FindObjectOfType<BuildTool>();
         hotbarDisplay = FindObjectOfType<HotbarDisplay>();
         InvokeRepeating("RegenerarEnergia", 5.0f, 5.0f);
+        
     }
 
     private void Update()
@@ -110,7 +114,7 @@ public class PlayerManager : MonoBehaviour
     {
         hitInfo = hitInforay;
         string obj = hitInfo.collider.gameObject.name;
-
+        CanvasInfo(hitInfo);
         
         BuildHouse buildHouseComponent = hitInfo.collider.gameObject.GetComponentInChildren<BuildHouse>();
         systemQuebrarComponent = hitInfo.collider.gameObject.GetComponent<SystemQuebrar>();
@@ -122,6 +126,28 @@ public class PlayerManager : MonoBehaviour
         
     }
 
+    private GameObject prefab;
+    public void CanvasInfo(RaycastHit hitInforay)
+    {
+        if(hitInforay.collider.gameObject.tag.Equals("CanvasInfo"))
+        {
+            
+            Canvas canvas = hitInforay.collider.gameObject.GetComponentInChildren<Canvas>();
+            if (canvas == null)
+            {
+                Debug.Log("Canvas"); 
+            prefab = Instantiate(prefabCanvasInfo, hitInforay.collider.gameObject.transform.position, Quaternion.identity);
+            prefab.transform.parent = hitInforay.collider.gameObject.transform;
+            }
+        }
+        else if (prefab != null)
+        {
+            Destroy(prefab);
+        }
+        
+        
+
+    }
     public InventoryItemData GetItemData()
     {
         if (hotbarDisplay != null)
