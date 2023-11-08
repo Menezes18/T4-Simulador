@@ -9,24 +9,33 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager playerManager;
     public float fome = 100f;
     public float maxfome = 100f;
-    public const float taxaDecaimentoFome = 0.16f;
+    private const float taxaDecaimentoFome = 0.16f;
     public float energia = 100f;
     public float maxEnergia = 100f;
-
     private RaycastHit hitInfo;
-
-    public event Action<float> OnFomeChanged;   // Evento para a fome
-    public event Action<float> OnEnergiaChanged; // Evento para a energia
-    public GameObject objetoQuebravel;
+    private event Action<float> OnFomeChanged;   // Evento para a fome
+    private event Action<float> OnEnergiaChanged; // Evento para a energia
+    [SerializeField] private GameObject objetoQuebravel;
     public SystemQuebrar systemQuebrarComponent;
     public TerraArada terraArada;
-
     public BuildTool build;
     public Animator animator;
-    public HotbarDisplay hotbarDisplay;
 
-    public GameObject prefabCanvasInfo;
+    [SerializeField] private GameObject prefabCanvasInfo;
 
+    private void Awake()
+    {
+        if (playerManager != null && playerManager != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            playerManager = this;
+        }
+        
+        DontDestroyOnLoad(gameObject);
+    }
     public void bater(int id, BuildingData item, Building itemdata)
     {
         if (energia > 10)
@@ -44,8 +53,9 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+    
         build = FindObjectOfType<BuildTool>();
-        hotbarDisplay = FindObjectOfType<HotbarDisplay>();
+       // hotbarDisplay = FindObjectOfType<HotbarDisplay>();
         InvokeRepeating("RegenerarEnergia", 5.0f, 5.0f);
         
     }
@@ -150,9 +160,9 @@ public class PlayerManager : MonoBehaviour
     }
     public InventoryItemData GetItemData()
     {
-        if (hotbarDisplay != null)
+        if (HotbarDisplay.Display != null)
         {
-            return hotbarDisplay.GetItemData();
+            return HotbarDisplay.Display.GetItemData();
         }
         else
         {
@@ -162,9 +172,9 @@ public class PlayerManager : MonoBehaviour
 
     public int GetQuantidade()
     {
-        if (hotbarDisplay != null)
+        if (HotbarDisplay.Display != null)
         {
-            return hotbarDisplay.GetQuantidade();
+            return HotbarDisplay.Display.GetQuantidade();
         }
         else
         {

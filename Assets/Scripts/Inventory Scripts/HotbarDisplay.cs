@@ -30,6 +30,16 @@ public class HotbarDisplay : StaticInventoryDisplay
         _playerControls = new PlayerControls();
        // _itemPickUp = FindObjectOfType<ItemPickUp>();
         _buildTools = FindObjectOfType<BuildTool>();
+        if (Display != null && Display != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Display = this;
+        }
+        
+        DontDestroyOnLoad(gameObject);
         
     }
 

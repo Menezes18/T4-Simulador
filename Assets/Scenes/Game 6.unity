@@ -13074,12 +13074,12 @@ MonoBehaviour:
   estacaoAtual: 0
   pode2: 0
   diaTest: 0
-  sol: {fileID: 1415297544}
-  lua: {fileID: 356151342}
-  Primavera: {fileID: 184368355}
-  Verao: {fileID: 1927546019}
-  Outono: {fileID: 1092206736}
-  Inverno: {fileID: 2008376271}
+  sol: {fileID: 0}
+  lua: {fileID: 0}
+  Primavera: {fileID: 0}
+  Verao: {fileID: 0}
+  Outono: {fileID: 0}
+  Inverno: {fileID: 0}
 --- !u!4 &1103675052
 Transform:
   m_ObjectHideFlags: 0

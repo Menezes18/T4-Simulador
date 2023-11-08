@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     public Slider EnergiaSlider;
     public TextMeshProUGUI FomeTextMeshPro;
     public TextMeshProUGUI EnergiaTextMeshPro;
-    private PlayerManager playerManager;
+    //private PlayerManager playerManager;
 
     public GameObject menu;
     public CinemachineBrain cinemachineBrain; // Referência para o CinemachineBrain
@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        playerManager = FindObjectOfType<PlayerManager>();
+        //playerManager = FindObjectOfType<PlayerManager>();
        // SetMouseCursorState(BuildPanel.gameObject.activeInHierarchy);
         if(BuildPanel == null) return;
         BuildPanel.gameObject.SetActive(false);
@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if(playerManager != null) UpdateUI();
+        if(PlayerManager.playerManager != null) UpdateUI();
         if (Keyboard.current.tabKey.wasPressedThisFrame)
         {
             menu.SetActive(!menu.activeSelf);
@@ -54,12 +54,12 @@ public class UIManager : MonoBehaviour
     
     private void UpdateUI()
     {
-        FomeSlider.value = playerManager.fome / playerManager.maxfome;
-        EnergiaSlider.value = playerManager.energia / 100f; // Supondo que a energia máxima é 100.
+        FomeSlider.value = PlayerManager.playerManager.fome / PlayerManager.playerManager.maxfome;
+        EnergiaSlider.value = PlayerManager.playerManager.energia / 100f; // Supondo que a energia máxima é 100.
 
         // Atualiza os TextMeshPro de Porcentagem.
-        FomeTextMeshPro.text = Mathf.RoundToInt(playerManager.fome) + "%";
-        EnergiaTextMeshPro.text = Mathf.RoundToInt(playerManager.energia) + "%";
+        FomeTextMeshPro.text = Mathf.RoundToInt(PlayerManager.playerManager.fome) + "%";
+        EnergiaTextMeshPro.text = Mathf.RoundToInt(PlayerManager.playerManager.energia) + "%";
     }
 
     private void SetMouseCursorState(bool newState)
