@@ -13,37 +13,38 @@ public enum Estacao
 }
 public class CicloDiaNoite : MonoBehaviour
 {
+    public static CicloDiaNoite ciclo;
     [SerializeField] private Transform luzDirecional;
     [SerializeField] [Tooltip("Duração do dia em segundos")] public int duracaoDoDia;
     [SerializeField] private TextMeshProUGUI horarioText;
     [SerializeField] private TextMeshProUGUI estadoText;
     [SerializeField] private TextMeshProUGUI anoText;
-    //[SerializeField] public EstacaoDoAno estacaoAtual;
-
-    public float segundos;
+    [SerializeField] private int diaAtual = 1;
+    [SerializeField] public Estacao estacaoAtual = Estacao.Primavera;
+    [Header("Estações")]
+    [Header("0 - Primavera, 1 - Verao, 2 - Outono, 3 - Inverno")]
+    [SerializeField] private GameObject[] gameObjectsEstacao;
+    [SerializeField] private GameObject[] SoleDia;
+    private float segundos;
     public float multiplacador;
-    public float soma = 86400f;
+    private float soma = 86400f;
 
-    public int diaAtual = 1;
-    
-    public Estacao estacaoAtual = Estacao.Primavera;
-    private int anoAtual = 1850;
-   
-
-    public bool pode2 = false;
-    public int diaTest = 0;
-
-    public GameObject sol;
-    public GameObject lua;
-    public GameObject Primavera;
-    public GameObject Verao;
-    public GameObject Outono;
-    public GameObject Inverno;
-
+    private void Awake()
+    {
+        if (ciclo != null && ciclo != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            ciclo = this;
+        }
+        
+    }
     void Start()
     {
         
-        Primavera.SetActive(true);
+        gameObjectsEstacao[0].SetActive(true);
         multiplacador = 86400 / duracaoDoDia;
         diaAtual = 1;
         segundos = 0;
@@ -54,28 +55,21 @@ public class CicloDiaNoite : MonoBehaviour
 
     void Update()
     {
+        
         segundos += Time.deltaTime * multiplacador;
        
         if (segundos >= soma)
         {
-            
             segundos = 0;
-            diaAtual++;
-            if(pode2)
-            {
-                diaTest++;
-            }            
+            diaAtual++;        
             if (diaAtual == 10)
             {
                 
                 diaAtual = 1;
                 estacaoAtual = (Estacao)(((int)estacaoAtual + 1) % Enum.GetValues(typeof(Estacao)).Length);
                 estadoText.text = estacaoAtual.ToString();
-                if(estacaoAtual == Estacao.Primavera)
-                {
-                    anoAtual++;
-                }
                 AtualizarEstacao();
+                SubjectPlant.inst.NotifyPlantaAll();
             }
 
 
@@ -93,15 +87,14 @@ public class CicloDiaNoite : MonoBehaviour
 
         if (horarioAtual >= inicioNoite || horarioAtual <= fimNoite)
         {
-            lua.SetActive(true);
-            sol.SetActive(false);
-            //Debug.Log("noite");
+            SoleDia[0].SetActive(false);
+            SoleDia[1].SetActive(true);
         }
         else if (horarioAtual >= inicioDia && horarioAtual <= fimDia)
         {
-            lua.SetActive(false);
-            sol.SetActive(true);
-            //Debug.Log("dia");
+            SoleDia[0].SetActive(true);
+            SoleDia[1].SetActive(false);
+           
         }
 
 
@@ -115,35 +108,30 @@ public class CicloDiaNoite : MonoBehaviour
 
     public void AtualizarEstacao()
     {
-        switch (estacaoAtual)
+        int indiceEstacaoAtual = (int)estacaoAtual;
+
+        for (int i = 0; i < 4; i++)
         {
-            case Estacao.Primavera:
-            Primavera.SetActive(true);
-            Verao.SetActive(false);
-            Outono.SetActive(false);
-            Inverno.SetActive(false);
-            break;
-            case Estacao.Verao:
-            Primavera.SetActive(false);
-            Verao.SetActive(true);
-            Outono.SetActive(false);
-            Inverno.SetActive(false);
-            break;
-            case Estacao.Outono:
-            Primavera.SetActive(false);
-            Verao.SetActive(false);
-            Outono.SetActive(true);
-            Inverno.SetActive(false);
-            break;
-            case Estacao.Inverno:
-            Primavera.SetActive(false);
-            Verao.SetActive(false);
-            Outono.SetActive(false);
-            Inverno.SetActive(true);
-            break;
+            gameObjectsEstacao[i].SetActive(false);
         }
+
+        gameObjectsEstacao[indiceEstacaoAtual].SetActive(true);
     }
 
+    public void AtivarEstacaoAtual()
+    {
+       
+        Estacao estacaoAtual = (Estacao)this.estacaoAtual;
+        gameObjectsEstacao[(int)estacaoAtual].SetActive(true);
+
+        for (int i = 0; i < 4; i++)
+        {
+            if (i != (int)estacaoAtual)
+            {
+                gameObjectsEstacao[i].SetActive(false);
+            }
+        }
+    }
     private void CalcularHorario()
     {
         horarioText.text = TimeSpan.FromSeconds(segundos).ToString(@"hh\:mm");

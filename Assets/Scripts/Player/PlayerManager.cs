@@ -34,7 +34,6 @@ public class PlayerManager : MonoBehaviour
             playerManager = this;
         }
         
-        DontDestroyOnLoad(gameObject);
     }
     public void bater(int id, BuildingData item, Building itemdata)
     {

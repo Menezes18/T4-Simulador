@@ -108,10 +108,12 @@
     <Compile Include="Assets\Scripts\Craft\CraftSlot_UI.cs" />
     <Compile Include="Assets\Scripts\BuildSystemScripts\UI Scripts\BuildingPanelUI.cs" />
     <Compile Include="Assets\Scripts\BuildSystemScripts\BuildTool.cs" />
+    <Compile Include="Assets\Scripts\IObeserver\IObserverPlanta.cs" />
     <Compile Include="Assets\Scripts\BuildHouse\BuildHouse.cs" />
     <Compile Include="Assets\Scripts\-MUDAR-SystemArruma\ConsertarData.cs" />
     <Compile Include="Assets\Scripts\BuildSystemScripts\BaseManager.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\ShopSlotUI.cs" />
+    <Compile Include="Assets\Scripts\IObeserver\SubjectPlant.cs" />
     <Compile Include="Assets\Scripts\Shop System\ShopSlot.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\SerializableDictionary.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\ItemSlot.cs" />

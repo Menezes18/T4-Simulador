@@ -2,15 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TipoEstacao
-{
-    Nenhum,
-    Outono,
-    Inverno,
-    Primavera,
-    Verao
-}
-
 public enum Prefabs
 {
     PrefabEstagio1,
@@ -23,11 +14,11 @@ public enum Prefabs
 public class Plant : ScriptableObject
 {
     public string Name;
-    public TipoEstacao TipoEstacao;
+    public Estacao Estacao;
     public float quantidadeAgua;
     public bool morte;
     public List<GameObject> prefabs;
-    public int dias;
+    public int dias; //10
     public GameObject mortePrefab;
     public GameObject item;
     [Tooltip("Transform em Y")]

@@ -39,7 +39,6 @@ public class HotbarDisplay : StaticInventoryDisplay
             Display = this;
         }
         
-        DontDestroyOnLoad(gameObject);
         
     }
 

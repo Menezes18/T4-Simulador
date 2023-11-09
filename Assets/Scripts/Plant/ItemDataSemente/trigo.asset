@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: trigo
   m_EditorClassIdentifier: 
   Name: Trigo
-  TipoEstacao: 1
+  Estacao: 1
   quantidadeAgua: 0
   morte: 0
   prefabs:
