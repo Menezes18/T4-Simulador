@@ -90,6 +90,7 @@ public class BuildTool : MonoBehaviour
     private bool cursorAtivo = true;
     private void Update()
     {
+        IsRayHittingSomething(_buildModeLayerMask, out RaycastHit hitInfo);
         if(Keyboard.current.jKey.wasPressedThisFrame)
         {
             cursorAtivo = !cursorAtivo; // Inverte o estado do cursor (ativo ou inativo)
@@ -124,7 +125,7 @@ public class BuildTool : MonoBehaviour
         {
             if(hitInfo.collider.gameObject.layer == LayerMask.NameToLayer("terraArada"))
             {
-                Debug.Log("Farming");
+                //Debug.Log("Farming");
                 plantio = true;
                // PositionBuildingPreview();
             }
@@ -136,6 +137,7 @@ public class BuildTool : MonoBehaviour
             PlayerManager playerStatus = FindObjectOfType<PlayerManager>();
             if (playerStatus != null)
             {
+                //print("raycast");
                 playerStatus.raycast(hitInfo);
             }
             return true;

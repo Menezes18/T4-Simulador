@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerManager : MonoBehaviour
     public TerraArada terraArada;
     public BuildTool build;
     public Animator animator;
+    public CraftSystem craft;
+    public int item;
 
     [SerializeField] private GameObject prefabCanvasInfo;
 
@@ -42,10 +45,7 @@ public class PlayerManager : MonoBehaviour
             animator.SetTrigger("Bater");
             if (id.Equals(4) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
-            if (id.Equals(17))
-            {
-                
-            }
+            if (id.Equals(17)) {}
         }
     }
 
@@ -53,7 +53,7 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
     
-        build = FindObjectOfType<BuildTool>();
+        
        // hotbarDisplay = FindObjectOfType<HotbarDisplay>();
         InvokeRepeating("RegenerarEnergia", 5.0f, 5.0f);
         
@@ -69,24 +69,38 @@ public class PlayerManager : MonoBehaviour
         }
         
     }
-
+    private bool isItemInHand = false;
+    private int itemInHandId;
     // Chama no update quando apertar E
     private void InteragirComObjeto()
     {
-        
-        BuildHouse buildHouseComponent = hitInfo.collider.gameObject.GetComponentInChildren<BuildHouse>();
-
-        if (buildHouseComponent != null)
+        if (hitInfo.collider != null)
         {
-            InventoryItemData itemData = GetItemData(); // Substitua pelo método adequado para obter os dados do item
-            int quantidade = GetQuantidade(); // Substitua pelo método adequado para obter a quantidade
-            buildHouseComponent.removeritem(itemData, quantidade);
-        }
-        
-        
-        
-    }
+            craft = hitInfo.collider.transform.parent.gameObject.GetComponent<CraftSystem>();
 
+            if (hitInfo.collider.gameObject.tag.Equals("slot1"))
+            {
+                item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);
+                // Item do slot Debug.Log(item);
+                craft.HandleSlotInteraction(1,item, 1);
+                craft.slot1 = item;
+            }
+            else if (hitInfo.collider.gameObject.tag.Equals("slot2"))
+            {
+                item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);
+
+                craft.HandleSlotInteraction(2,item, 2);
+                craft.slot2 = item;
+            }
+            else if (hitInfo.collider.gameObject.tag.Equals("slot3"))
+            {
+                item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);
+
+                craft.HandleSlotInteraction(3,item, 3);
+                craft.slot3 = item;
+            }
+        }
+    }
     public void DescerFome()
     {
         fome -= taxaDecaimentoFome * Time.deltaTime;
@@ -128,11 +142,12 @@ public class PlayerManager : MonoBehaviour
         BuildHouse buildHouseComponent = hitInfo.collider.gameObject.GetComponentInChildren<BuildHouse>();
         systemQuebrarComponent = hitInfo.collider.gameObject.GetComponent<SystemQuebrar>();
         terraArada = hitInfo.collider.gameObject.GetComponent<TerraArada>();
+        craft = hitInfo.collider.gameObject.GetComponent<CraftSystem>();
         if (buildHouseComponent != null)
         {
             buildHouseComponent.hud();
         }
-        
+         
     }
 
     private GameObject prefab;

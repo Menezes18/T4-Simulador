@@ -1,0 +1,4 @@
+repository "T4-Simulador@Menezes18@cloud"
+  path "/"
+    br "/main"
+    co "/main"

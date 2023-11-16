@@ -214,6 +214,23 @@ public class HotbarDisplay : StaticInventoryDisplay
         // Caso não haja slots vazios disponíveis na hotbar, você pode tomar alguma ação ou exibir uma mensagem de erro.
         Debug.LogWarning("Não há slots disponíveis na hotbar para adicionar o item.");
     }
+    
+    public void AddItemToInventoryById(int itemId, int quantity)
+    {
+        var db = Resources.Load<Database>("Database");
+        InventoryItemData itemData = db.GetItem(itemId);
+
+        if (itemData != null)
+        {
+            AddItemToHotbar(itemData, quantity);
+        }
+        else
+        {
+            Debug.LogWarning("Item not found in the database. ID: " + itemId);
+        }
+    }
+
+
     public InventoryItemData GetItemData()
     {
         InventorySlot selectedSlot = slots[_currentIndex].AssignedInventorySlot;
@@ -257,6 +274,12 @@ public class HotbarDisplay : StaticInventoryDisplay
         }
 
         return itemCount;
+    }
+    public int GetCurrentItemId(int item)
+    {
+        InventoryItemData itemData = slots[_currentIndex].AssignedInventorySlot.ItemData;
+
+         return (itemData != null) ? itemData.ID : -1;
     }
     
     // Remove um item específico da barra de atalho por ID e quantidade
