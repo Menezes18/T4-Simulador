@@ -15,9 +15,9 @@ public class CraftSystem : MonoBehaviour
     private bool slotOcupado3 = false;
 
     [SerializeField] private Transform[] itemTransforms;
-    private InventoryItemData itemdata2;
-    private Database data;
-    private GameObject[] prefabitem = new GameObject[3];
+    public InventoryItemData itemdata2;
+    public Database data;
+    public GameObject[] prefabitem = new GameObject[3];
     private float velocidadeRotacao = 30.0f;
     void FixedUpdate()
     {
