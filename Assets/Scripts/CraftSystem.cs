@@ -9,16 +9,16 @@ public class CraftSystem : MonoBehaviour
     public int slot1 = 0;
     public int slot2 = 0;
     public int slot3 = 0;
+    [SerializeField] private int receitas;
     private bool slotOcupado1 = false;
     private bool slotOcupado2 = false;
     private bool slotOcupado3 = false;
 
-    public Transform[] itemTransforms;
-    public InventoryItemData itemdata2;
-    public Database data;
-    public GameObject[] prefabitem = new GameObject[3];
-    public int receitas;
-    public float velocidadeRotacao = 30.0f;
+    [SerializeField] private Transform[] itemTransforms;
+    private InventoryItemData itemdata2;
+    private Database data;
+    private GameObject[] prefabitem = new GameObject[3];
+    private float velocidadeRotacao = 30.0f;
     void FixedUpdate()
     {
         slot1 = (slot1 == -1) ? 0 : slot1;

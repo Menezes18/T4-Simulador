@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IObserverPlanta 
 {
-   public void NotifyPlanta(){
+   public void NotifyPlanta(Estacao estacao){
      
    }
 }

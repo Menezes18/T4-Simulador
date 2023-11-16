@@ -16,10 +16,10 @@ public class SubjectPlant : MonoBehaviour
         list.Add(observer);
     }
 
-    public void NotifyPlantaAll(){
+    public void NotifyPlantaAll(Estacao estacaoAtual){
         foreach (IObserverPlanta b in list)
         {
-            b.NotifyPlanta();
+            b.NotifyPlanta(estacaoAtual);
         }
     }
 }

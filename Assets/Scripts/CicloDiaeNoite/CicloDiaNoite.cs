@@ -69,7 +69,7 @@ public class CicloDiaNoite : MonoBehaviour
                 estacaoAtual = (Estacao)(((int)estacaoAtual + 1) % Enum.GetValues(typeof(Estacao)).Length);
                 estadoText.text = estacaoAtual.ToString();
                 AtualizarEstacao();
-                SubjectPlant.inst.NotifyPlantaAll();
+                SubjectPlant.inst.NotifyPlantaAll(estacaoAtual);
             }
 
 

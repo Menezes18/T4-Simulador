@@ -29,13 +29,13 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
       estacaoPlanta = plant.Estacao;
       SubjectPlant.inst.Add(this);
    }
-   public void NotifyPlanta()
+   public void NotifyPlanta(Estacao estacaoAtual)
    {
-      if(estacaoPlanta == CicloDiaNoite.ciclo.estacaoAtual)
+      if(estacaoPlanta == estacaoAtual)
       {
          EstaEstacao = true;
       }  
-      else if(estacaoPlanta != CicloDiaNoite.ciclo.estacaoAtual)
+      else if(estacaoPlanta != estacaoAtual)
       {
          EstaEstacao = false;
       }
