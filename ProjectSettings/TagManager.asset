@@ -12,14 +12,17 @@ TagManager:
   - ' Farming'
   - madeira
   - Casa
-  - saircasa
-  - SairCasa
-  - CasaEntrar
   - CinemachineTarget
   - CanvasInfo
   - slot1
   - slot2
   - slot3
+  - SlotFinal
+  - SlotGraveto
+  - CraftArvore
+  - receita1
+  - ArvoreCraft
+  - SlotLenha
   layers:
   - Default
   - TransparentFX

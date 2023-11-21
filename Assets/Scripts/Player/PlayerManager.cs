@@ -22,6 +22,8 @@ public class PlayerManager : MonoBehaviour
     public BuildTool build;
     public Animator animator;
     public CraftSystem craft;
+    public CraftArvore craftArvore;
+    public CraftArvore quebrarArvore;
     public int item;
 
     [SerializeField] private GameObject prefabCanvasInfo;
@@ -44,12 +46,65 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetTrigger("Bater");
             if (id.Equals(4) && terraArada != null) terraArada.ArarTerra();
-            if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
-            if (id.Equals(17)) {}
+            //if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
+            if (id.Equals(6) && hitInfo.collider.gameObject.tag.Equals("ArvoreCraft")) 
+            {
+
+              quebrarArvore = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftArvore>();
+                
+                    quebrarArvore.Quebrar();
+                
+               
+
+            }
+
         }
     }
+void VerificarScriptNoAvoo(GameObject objeto, int id)
+    {
+        
+        CraftArvore scriptDoObjeto = objeto.GetComponent<CraftArvore>();
 
+        if (scriptDoObjeto != null)
+        {
+            
+            if(id.Equals(1))
+            {
+                scriptDoObjeto.receitas = 1;
+                scriptDoObjeto.vidaMadeira();
+            }else if(id.Equals(2))
+            {
+                scriptDoObjeto.receitas = 2;
+                scriptDoObjeto.vidaMadeira();
+            }
+            return; // Sai da função se o script for encontrado no objeto atual
+        }
 
+        // Obtém o pai do objeto atual
+        Transform pai = objeto.transform.parent;
+
+        // Verifica se há um pai (evita erro se o objeto não tiver pai)
+        if (pai != null)
+        {
+            // Obtém o avô (pai do pai) do objeto atual
+            Transform avo = pai.parent;
+
+            // Verifica se há um avô (evita erro se o pai não tiver pai)
+            if (avo != null)
+            {
+                // Chama recursivamente a função para o avô
+                VerificarScriptNoAvoo(avo.gameObject, id);
+            }
+            else
+            {
+                Debug.Log("O script do avô NÃO foi encontrado.");
+            }
+        }
+        else
+        {
+            Debug.Log("O script do pai NÃO foi encontrado.");
+        }
+    }
     private void Start()
     {
     
@@ -76,29 +131,60 @@ public class PlayerManager : MonoBehaviour
     {
         if (hitInfo.collider != null)
         {
-            craft = hitInfo.collider.transform.parent.gameObject.GetComponent<CraftSystem>();
-
+            craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
+            craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
             if (hitInfo.collider.gameObject.tag.Equals("slot1"))
             {
                 item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);
                 // Item do slot Debug.Log(item);
                 craft.HandleSlotInteraction(1,item, 1);
-                craft.slot1 = item;
+                
             }
             else if (hitInfo.collider.gameObject.tag.Equals("slot2"))
             {
                 item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);
 
                 craft.HandleSlotInteraction(2,item, 2);
-                craft.slot2 = item;
+                
             }
             else if (hitInfo.collider.gameObject.tag.Equals("slot3"))
             {
                 item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);
 
                 craft.HandleSlotInteraction(3,item, 3);
-                craft.slot3 = item;
+                
+            }else if(hitInfo.collider.gameObject.tag.Equals("SlotFinal"))
+            {
+               if(craft.VerificaItemFinal())
+               {
+
+                HotbarDisplay.Display.AddItemToInventoryById(craft.receitas, 1);
+                craft.LimparTodosSlots(true, true, true);
+                craft.receitas = 0;
+                craft.slotOcupado = true;
+                craft.slotsOcupado[0] = false;
+                craft.slotsOcupado[1] = false;
+                craft.slotsOcupado[2] = false;
+               }
             }
+            if(hitInfo.collider.gameObject.tag.Equals("CraftArvore"))
+            {
+                
+                item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);
+                
+                    
+                craftArvore.HandleSlotInteraction(1, item, 1);
+                
+                
+            }
+                if(hitInfo.collider.gameObject.tag.Equals("SlotGraveto"))
+                {
+                    VerificarScriptNoAvoo(hitInfo.collider.gameObject, 1);
+                }
+                if(hitInfo.collider.gameObject.tag.Equals("SlotLenha"))
+                {
+                    VerificarScriptNoAvoo(hitInfo.collider.gameObject, 2);
+                }
         }
     }
     public void DescerFome()

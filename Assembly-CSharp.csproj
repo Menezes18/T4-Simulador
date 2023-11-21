@@ -73,9 +73,9 @@
     <Compile Include="Assets\Scripts\SaveLoad\SaveLoad.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Inventory Scripts\MouseItemData.cs" />
-    <Compile Include="Assets\Scripts\CraftSystem.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\UIController.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\InventoryItemData.cs" />
+    <Compile Include="Assets\Scripts\Missao\MissaoEdicaoWindow.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\InventoryUIController.cs" />
     <Compile Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Scripts\ReactiveRider.cs" />
     <Compile Include="Assets\LPHorse_Version_2_9\Version_2_9\Saddle\Scripts\SaddleBind.cs" />
@@ -89,13 +89,14 @@
     <Compile Include="Assets\Scripts\BuildSystemScripts\ProceduralMesh.cs" />
     <Compile Include="Assets\Scripts\Inventory Scripts\HotbarDisplay.cs" />
     <Compile Include="Assets\Scripts\SystemQuebrar\SystemQuebrar.cs" />
-    <Compile Include="Assets\Scripts\Craft\CraftingSystem.cs" />
+    <Compile Include="Assets\Scripts\Craft\CraftSystem.cs" />
     <Compile Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Scripts\RRSetIK.cs" />
     <Compile Include="Assets\Scripts\Movimentação\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\Scripts\ItemInfoCanvas.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\InventorySlot_UI.cs" />
     <Compile Include="Assets\Scripts\BuildSystemScripts\BuildingData.cs" />
     <Compile Include="Assets\Scripts\-MUDAR-SystemArruma\ConsertarTrigger.cs" />
+    <Compile Include="Assets\Scripts\Missao\MinhaJanelaDeMissao.cs" />
     <Compile Include="Assets\Scripts\Inventory Scripts\InventoryHolder.cs" />
     <Compile Include="Assets\Scripts\Input\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\OptionsMenu.cs" />
@@ -106,7 +107,6 @@
     <Compile Include="Assets\Scripts\Movimentação\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\UniqueID.cs" />
     <Compile Include="Assets\Scripts\Inventory Scripts\HotbarSelector.cs" />
-    <Compile Include="Assets\Scripts\Craft\CraftSlot_UI.cs" />
     <Compile Include="Assets\Scripts\BuildSystemScripts\UI Scripts\BuildingPanelUI.cs" />
     <Compile Include="Assets\Scripts\BuildSystemScripts\BuildTool.cs" />
     <Compile Include="Assets\Scripts\IObeserver\IObserverPlanta.cs" />
@@ -125,6 +125,7 @@
     <Compile Include="Assets\Scripts\BuildSystemScripts\TerraArada.cs" />
     <Compile Include="Assets\Scripts\Plant\PlantTrigger.cs" />
     <Compile Include="Assets\Scripts\Inventory Scripts\UseItem.cs" />
+    <Compile Include="Assets\Scripts\Missao\GerenciadorDeMissaoEditor.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\SaveData.cs" />
     <Compile Include="Assets\Scripts\Inventory Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Inventory Scripts\ChestInventory.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Assets\Scripts\Interfaces\MenuPause.cs" />
     <Compile Include="Assets\prefab\Animal\ChickenController.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\ReadOnlyAttribute.cs" />
+    <Compile Include="Assets\Scripts\Craft\CraftArvore.cs" />
     <Compile Include="Assets\Scripts\BuildSystemScripts\Building.cs" />
     <Compile Include="Assets\Scripts\Inventory Scripts\Interactor.cs" />
     <Compile Include="Assets\prefab\Animal\HorseController.cs" />
@@ -141,6 +143,7 @@
     <Compile Include="Assets\menu.cs" />
     <Compile Include="Assets\Scripts\Plant\Plant.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\InventoryDisplay.cs" />
+    <Compile Include="Assets\Scripts\Missao\GerenciadorDeMissao.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\LPHorse_Version_2_9\Version_2_31\READ_ME.txt" />

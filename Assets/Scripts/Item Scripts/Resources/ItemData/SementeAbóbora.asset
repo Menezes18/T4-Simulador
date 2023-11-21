@@ -15,10 +15,11 @@ MonoBehaviour:
   ID: 10
   DisplayName: "Semente de Ab\xF3bora"
   Description: "Semente de Ab\xF3bora."
-  Icon: {fileID: 21300000, guid: 0e77d4399d3d106479252f95c4b8578c, type: 3}
+  Icon: {fileID: 21300000, guid: 465ecd62f4870984d91102caa2dc99dd, type: 3}
   MaxStackSize: 8
   GoldValue: 120
   ItemPrefab: {fileID: 2211517109068419072, guid: c560399fb76128c469f08282f251ffff, type: 3}
   ItemData: {fileID: 11400000, guid: 453ec7056bf9cc54eb4746a8a1878de3, type: 2}
+  data: {fileID: 0}
   _building: 1
-  durabilidade: 0
+  semente: 1
