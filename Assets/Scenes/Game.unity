@@ -6409,7 +6409,9 @@ MonoBehaviour:
   plant: {fileID: 11400000, guid: 8387a7099ddc28348a66429735b565ef, type: 2}
   estacaoPlanta: 0
   EstaEstacao: 0
-  aguas: 
+  agua: 0
+  limitediasemagua: 3
+  diascemAgua: 0
   idadePlanta: 0
   ciclodia: 0
   previousPrefab: {fileID: 0}
@@ -9857,6 +9859,10 @@ PrefabInstance:
     - target: {fileID: 2211517109068419072, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
       propertyPath: m_Name
       value: SementeTrigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130034538686964676, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
+      propertyPath: agua
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5130034538686964676, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
       propertyPath: plant
