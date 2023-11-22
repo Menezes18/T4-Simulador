@@ -22,4 +22,11 @@ public class SubjectPlant : MonoBehaviour
             b.NotifyPlanta(estacaoAtual);
         }
     }
+    public void NotifyPlantaAguaAll(int agua)
+    {
+        foreach (IObserverPlanta observer in list)
+        {
+            observer.AdicionarAgua(agua);
+        }
+    }
 }

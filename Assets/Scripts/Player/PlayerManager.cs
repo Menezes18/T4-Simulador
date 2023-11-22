@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour
     public CraftArvore craftArvore;
     public CraftArvore quebrarArvore;
     public int item;
+    public PlantTrigger plantT;
 
     [SerializeField] private GameObject prefabCanvasInfo;
 
@@ -45,6 +46,10 @@ public class PlayerManager : MonoBehaviour
         if (energia > 10)
         {
             animator.SetTrigger("Bater");
+            if (id.Equals(15) && plantT != null)
+            {
+                // if(plantT.a)
+            }
             if (id.Equals(4) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
             if (id.Equals(6) && hitInfo.collider.gameObject.tag.Equals("ArvoreCraft")) 
@@ -53,14 +58,11 @@ public class PlayerManager : MonoBehaviour
               quebrarArvore = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftArvore>();
                 
                     quebrarArvore.Quebrar();
-                
-               
-
             }
 
         }
     }
-void VerificarScriptNoAvoo(GameObject objeto, int id)
+    void VerificarScriptNoAvoo(GameObject objeto, int id)
     {
         
         CraftArvore scriptDoObjeto = objeto.GetComponent<CraftArvore>();
@@ -126,13 +128,13 @@ void VerificarScriptNoAvoo(GameObject objeto, int id)
     }
     private bool isItemInHand = false;
     private int itemInHandId;
-    // Chama no update quando apertar E
     private void InteragirComObjeto()
     {
         if (hitInfo.collider != null)
         {
             craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
             craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
+            plantT = hitInfo.collider.gameObject.GetComponent<PlantTrigger>();
             if (hitInfo.collider.gameObject.tag.Equals("slot1"))
             {
                 item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);
@@ -153,8 +155,7 @@ void VerificarScriptNoAvoo(GameObject objeto, int id)
 
                 craft.HandleSlotInteraction(3,item, 3);
                 
-            }else if(hitInfo.collider.gameObject.tag.Equals("SlotFinal"))
-            {
+            }else if(hitInfo.collider.gameObject.tag.Equals("SlotFinal")) {
                if(craft.VerificaItemFinal())
                {
 
@@ -177,14 +178,14 @@ void VerificarScriptNoAvoo(GameObject objeto, int id)
                 
                 
             }
-                if(hitInfo.collider.gameObject.tag.Equals("SlotGraveto"))
-                {
+            if(hitInfo.collider.gameObject.tag.Equals("SlotGraveto"))
+            {
                     VerificarScriptNoAvoo(hitInfo.collider.gameObject, 1);
-                }
-                if(hitInfo.collider.gameObject.tag.Equals("SlotLenha"))
-                {
+            }
+            if(hitInfo.collider.gameObject.tag.Equals("SlotLenha"))
+            {
                     VerificarScriptNoAvoo(hitInfo.collider.gameObject, 2);
-                }
+            }
         }
     }
     public void DescerFome()

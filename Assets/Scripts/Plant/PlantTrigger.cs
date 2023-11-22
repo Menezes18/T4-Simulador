@@ -16,7 +16,9 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
    private float multiplacador;
    private float soma = 86400f;
 
-   public int[] aguas;
+   public bool agua;
+   public int limitediasemagua = 3;
+   public int diascemAgua;
    [SerializeField] private int idadePlanta = 0;
 
    private int diaPlanta;
@@ -39,6 +41,7 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
    }
    public void NotifyPlanta(Estacao estacaoAtual)
    {
+      // diascemAgua += agua;
       if(estacaoPlanta == estacaoAtual)
       {
          EstaEstacao = true;
@@ -47,6 +50,11 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
       {
          EstaEstacao = false;
       }
+   }
+   
+   public void AdicionarAgua(int agua)
+   {
+      diascemAgua += agua;
    }
 
    private void FixedUpdate() {
@@ -59,12 +67,13 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
 
    public void ciclodiaPlant()
    {
-      segundos += Time.deltaTime * multiplacador;
+      
+         segundos += Time.deltaTime * multiplacador;
          
          if (segundos >= soma)
          {
-               segundos = 0;
-               idadePlanta++;
+            segundos = 0;
+            idadePlanta++;
          }
    }
 

@@ -61,6 +61,7 @@ public class CicloDiaNoite : MonoBehaviour
         if (segundos >= soma)
         {
             segundos = 0;
+            SubjectPlant.inst.NotifyPlantaAguaAll(1);
             diaAtual++;        
             if (diaAtual == 10)
             {

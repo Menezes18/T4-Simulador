@@ -31,62 +31,64 @@ public class InventoryItemEditorWindow : EditorWindow
 
     private string searchQuery = "";
 
-private void OnGUI()
-{
-    GUILayout.Label("Inventory Item Editor", EditorStyles.boldLabel);
-
-    EditorGUILayout.Separator(); // Linha de divisão
-
-    // Campo de pesquisa
-    searchQuery = EditorGUILayout.TextField("Search by Name:", searchQuery);
-
-    scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
-
-    // Mostra todos os itens existentes
-    if (allItems != null && allItems.Length > 0)
+    private void OnGUI()
     {
-        foreach (var item in allItems)
+        GUILayout.Label("Inventory Item Editor", EditorStyles.boldLabel);
+
+        EditorGUILayout.Separator(); // Linha de divisão
+
+        // Campo de pesquisa
+        searchQuery = EditorGUILayout.TextField("Search by Name:", searchQuery);
+
+        scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+
+        // Mostra todos os itens existentes
+        if (allItems != null && allItems.Length > 0)
         {
-            // Filtra os itens com base na pesquisa
-            if (string.IsNullOrEmpty(searchQuery) || item.DisplayName.ToLower().Contains(searchQuery.ToLower()))
+            foreach (var item in allItems)
             {
-                EditorGUILayout.BeginHorizontal();
-                GUILayout.Label(item.DisplayName, EditorStyles.boldLabel, GUILayout.Width(150));
-                
+                // Filtra os itens com base na pesquisa
+                if (string.IsNullOrEmpty(searchQuery) || item.DisplayName.ToLower().Contains(searchQuery.ToLower()))
+                {
+                    EditorGUILayout.BeginHorizontal();
 
-                // Exibe o ícone do item
-                if (item.Icon != null)
-                {
-                    GUILayout.Label(item.Icon.texture, GUILayout.Width(50), GUILayout.Height(50));
-                }
+                    // Modificação para mostrar o ID junto com o nome
+                    GUILayout.Label($"ID: {item.ID} - {item.DisplayName}", EditorStyles.boldLabel, GUILayout.Width(200));
 
-                if (GUILayout.Button("Edit", GUILayout.Width(50)))
-                {
-                    OpenEditWindow(item);
+                    // Exibe o ícone do item
+                    if (item.Icon != null)
+                    {
+                        GUILayout.Label(item.Icon.texture, GUILayout.Width(50), GUILayout.Height(50));
+                    }
+
+                    if (GUILayout.Button("Edit", GUILayout.Width(50)))
+                    {
+                        OpenEditWindow(item);
+                    }
+                    if (GUILayout.Button("Delete", GUILayout.Width(50)))
+                    {
+                        DeleteInventoryItem(item);
+                    }
+                    EditorGUILayout.EndHorizontal();
                 }
-                if (GUILayout.Button("Delete", GUILayout.Width(50)))
-                {
-                    DeleteInventoryItem(item);
-                }
-                EditorGUILayout.EndHorizontal();
             }
+        }
+
+        EditorGUILayout.EndScrollView();
+
+        // Botão para abrir o menu de criação de item
+        if (GUILayout.Button("Create New Item"))
+        {
+            ShowCreateItemMenu();
+        }
+
+        // Mostra a janela de edição se um item estiver selecionado
+        if (selectedItem != null)
+        {
+            ShowEditWindow();
         }
     }
 
-    EditorGUILayout.EndScrollView();
-
-    // Botão para abrir o menu de criação de item
-    if (GUILayout.Button("Create New Item"))
-    {
-        ShowCreateItemMenu();
-    }
-
-    // Mostra a janela de edição se um item estiver selecionado
-    if (selectedItem != null)
-    {
-        ShowEditWindow();
-    }
-}
 
     public void CreateInventoryItem()
     {
@@ -216,6 +218,7 @@ public class InventoryItemEditWindow : EditorWindow
         {
             GUILayout.Label("Edit Inventory Item", EditorStyles.boldLabel);
 
+            currentItem.ID = EditorGUILayout.IntField("Id", currentItem.ID);
             currentItem.DisplayName = EditorGUILayout.TextField("Display Name:", currentItem.DisplayName);
             currentItem.Description = EditorGUILayout.TextArea(currentItem.Description, GUILayout.Height(60));
             currentItem.Icon = (Sprite)EditorGUILayout.ObjectField("Icon:", currentItem.Icon, typeof(Sprite), false);
