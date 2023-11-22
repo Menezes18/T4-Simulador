@@ -20,6 +20,7 @@ public class Plant : ScriptableObject
     public List<GameObject> prefabs;
     public int dias; //10
     public GameObject mortePrefab;
+
     public GameObject item;
     [Tooltip("Transform em Y")]
     public float transform; // mudar a transform em y das plantas quando vao ser instanciadas 

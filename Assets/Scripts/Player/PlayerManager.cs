@@ -46,7 +46,7 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetTrigger("Bater");
             if (id.Equals(4) && terraArada != null) terraArada.ArarTerra();
-            //if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
+            if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
             if (id.Equals(6) && hitInfo.collider.gameObject.tag.Equals("ArvoreCraft")) 
             {
 

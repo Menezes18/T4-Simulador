@@ -67,18 +67,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea1b7760eda72842a99b32c8374405d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantedPlant: {fileID: 11400000, guid: 8387a7099ddc28348a66429735b565ef, type: 2}
-  cicloDiaNoite: {fileID: 0}
-  estacaoAtual: 0
-  tipoEstacao: 0
-  t: {fileID: 0}
-  diaciclo: 0
-  droppedItem: {fileID: 0}
+  plant: {fileID: 11400000, guid: a4630a3de92e75d4e92e70b8fb8b4f2a, type: 2}
+  estacaoPlanta: 0
+  EstaEstacao: 0
+  aguas: 
+  idadePlanta: 0
+  ciclodia: 0
   previousPrefab: {fileID: 0}
-  dropDistance: 2
-  tagBloco: Player
-  distancialimit: 2
-  acabou: 0
 --- !u!1001 &437100810767294654
 PrefabInstance:
   m_ObjectHideFlags: 0

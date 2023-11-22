@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 7702318068215651154}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: SlotFinal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,8 +343,8 @@ Transform:
   m_GameObject: {fileID: 7599989747287112875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.321, y: 0.5304, z: -0.0035}
-  m_LocalScale: {x: 0.19896634, y: 0.03897413, z: 0.06743833}
+  m_LocalPosition: {x: -0.34, y: 0.569, z: -0.009}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 743331448829884747}
@@ -364,7 +364,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7599989747287112875}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -418,8 +418,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.0478892, y: 1.5627414, z: 1}
+  m_Center: {x: 0.07099509, y: 0.28137058, z: 0}
 --- !u!1001 &747108481843994589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1425804964575310, guid: 5da2d8875d58bc649b45623b6841c604, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Anvil_01 Variant
+      value: Craft
       objectReference: {fileID: 0}
     - target: {fileID: 4111310620960406, guid: 5da2d8875d58bc649b45623b6841c604, type: 3}
       propertyPath: m_LocalPosition.x
@@ -517,10 +517,8 @@ MonoBehaviour:
   slot1: 0
   slot2: 0
   slot3: 0
-  itemTransforms:
-  - {fileID: 592844462588429631}
-  - {fileID: 9147808529356744412}
-  - {fileID: 3292767288430562612}
+  receitas: 0
+  slotsOcupado: 000000
   itemdata2: {fileID: 0}
   data: {fileID: 11400000, guid: e087749b39940e84b940a11d44a21b36, type: 2}
   prefabitem:
@@ -528,5 +526,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  receitas: 0
-  velocidadeRotacao: 30
+  FinalItem: {fileID: 7599989747287112875}
+  itemTransforms:
+  - {fileID: 592844462588429631}
+  - {fileID: 9147808529356744412}
+  - {fileID: 3292767288430562612}
+  slotOcupado: 0

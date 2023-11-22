@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
-  m_Name: Batata
+  m_Name: Cenoura
   m_EditorClassIdentifier: 
-  ID: 11
-  DisplayName: "Ab\xF3bora"
-  Description: "Ab\xF3bora"
-  Icon: {fileID: 21300000, guid: c06f1c2589a1dcc41b385388110af23f, type: 3}
+  ID: 17
+  DisplayName: Cenoura
+  Description: 
+  Icon: {fileID: 21300000, guid: 35c5ec7c1bb57804da8fa905a3d81b25, type: 3}
   MaxStackSize: 8
-  GoldValue: 15
-  ItemPrefab: {fileID: 2079361290821738425, guid: 6662caf9043853b4d98f0c4f040e945c, type: 3}
-  ItemData: {fileID: 0}
+  GoldValue: 18
+  ItemPrefab: {fileID: 6924754152639487277, guid: 8d3c75adcdddf8f439158139afb2105a, type: 3}
+  ItemData: {fileID: 11400000, guid: a2ca7abc510219c419952e1f1e327169, type: 2}
   data: {fileID: 0}
-  _building: 0
+  _building: 1
   semente: 1

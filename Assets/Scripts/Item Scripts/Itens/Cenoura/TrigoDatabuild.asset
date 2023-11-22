@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd0ee0fc5cc3574d91706f3380f2e78, type: 3}
   m_Name: TrigoDatabuild
   m_EditorClassIdentifier: 
-  DisplayName: Trigo
-  Icon: {fileID: 21300000, guid: c4c8e2468a4dc8e4b942c32023caba4b, type: 3}
+  DisplayName: sementeCenoura
+  Icon: {fileID: 21300000, guid: 4191e6a7008c7ac49957f0bdbdb5cb50, type: 3}
   GridSnapSize: 1
   Prefab: {fileID: 2211517109068419072, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
   BuildingSize: {x: 0, y: 0, z: 0}

@@ -26,7 +26,7 @@ public class CraftArvore : MonoBehaviour
             
             if (receitas.Equals(1))
             {
-                Instantiate(itens[0], new Vector3(itemTransform.position.x, itemTransform.position.y + 5f, itemTransform.position.z), Quaternion.identity);
+                Instantiate(itens[0], new Vector3(itemTransform.position.x, itemTransform.position.y + 2f, itemTransform.position.z), Quaternion.identity);
                 arvore.SetActive(false);
                 receitas = 0;
                 slotsOcupados = false;
@@ -34,7 +34,7 @@ public class CraftArvore : MonoBehaviour
             }
            if (receitas.Equals(2))
             {
-                Instantiate(itens[1], new Vector3(itemTransform.position.x, itemTransform.position.y + 5f, itemTransform.position.z), Quaternion.identity);
+                Instantiate(itens[1], new Vector3(itemTransform.position.x, itemTransform.position.y + 2f, itemTransform.position.z), Quaternion.identity);
                 arvore.SetActive(false);
                 receitas = 0;
                 slotsOcupados = false;

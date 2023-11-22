@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
-  m_Name: Batata
+  m_Name: Balde
   m_EditorClassIdentifier: 
-  ID: 11
-  DisplayName: "Ab\xF3bora"
-  Description: "Ab\xF3bora"
-  Icon: {fileID: 21300000, guid: c06f1c2589a1dcc41b385388110af23f, type: 3}
-  MaxStackSize: 8
-  GoldValue: 15
-  ItemPrefab: {fileID: 2079361290821738425, guid: 6662caf9043853b4d98f0c4f040e945c, type: 3}
+  ID: 15
+  DisplayName: Balde
+  Description: 
+  Icon: {fileID: 21300000, guid: a988339394a12614ba947e50533bd088, type: 3}
+  MaxStackSize: 1
+  GoldValue: 122
+  ItemPrefab: {fileID: 100000, guid: 6a0462221a6bfb44c87b72c0cf8afcb6, type: 3}
   ItemData: {fileID: 0}
   data: {fileID: 0}
-  _building: 0
-  semente: 1
+  _building: 1
+  semente: 0

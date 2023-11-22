@@ -15,6 +15,8 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
    private float segundos = 0;
    private float multiplacador;
    private float soma = 86400f;
+
+   public int[] aguas;
    [SerializeField] private int idadePlanta = 0;
 
    private int diaPlanta;
@@ -23,7 +25,13 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
    public GameObject previousPrefab;
    public void Start()
    {
+      
       t = this.transform;
+      if (plant == null)
+      {
+         return;
+      }
+
       diaPlanta = plant.dias;
       multiplacador = 86400f / CicloDiaNoite.ciclo.duracaoDoDia;
       estacaoPlanta = plant.Estacao;

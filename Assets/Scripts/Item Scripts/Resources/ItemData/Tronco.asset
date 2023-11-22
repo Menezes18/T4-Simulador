@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tronco
   m_EditorClassIdentifier: 
   ID: 6
-  DisplayName: Tronco
+  DisplayName: Machado
   Description: Machado.
   Icon: {fileID: 21300000, guid: f0e590c735115cc4b93dea29f128f561, type: 3}
   MaxStackSize: 4
