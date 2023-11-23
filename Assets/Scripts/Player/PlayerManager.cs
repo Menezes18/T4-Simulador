@@ -26,6 +26,7 @@ public class PlayerManager : MonoBehaviour
     public CraftArvore quebrarArvore;
     public int item;
     public PlantTrigger plantT;
+    public int ids;
 
     [SerializeField] private GameObject prefabCanvasInfo;
 
@@ -46,10 +47,6 @@ public class PlayerManager : MonoBehaviour
         if (energia > 10)
         {
             animator.SetTrigger("Bater");
-            if (id.Equals(15) && plantT != null)
-            {
-                // if(plantT.a)
-            }
             if (id.Equals(4) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(6)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
             if (id.Equals(6) && hitInfo.collider.gameObject.tag.Equals("ArvoreCraft")) 
@@ -135,6 +132,10 @@ public class PlayerManager : MonoBehaviour
             craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
             craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
             plantT = hitInfo.collider.gameObject.GetComponent<PlantTrigger>();
+            if (HotbarDisplay.Display.IsItemInHand(15) && plantT != null)
+            {
+                plantT.agua = true;
+            }
             if (hitInfo.collider.gameObject.tag.Equals("slot1"))
             {
                 item = HotbarDisplay.Display.GetCurrentItemId(itemInHandId);

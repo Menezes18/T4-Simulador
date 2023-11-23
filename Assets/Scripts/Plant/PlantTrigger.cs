@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.Debug;
 using Unity.VisualScripting;
+using UnityEngine.Serialization;
 
 public class PlantTrigger : MonoBehaviour, IObserverPlanta
 {
@@ -16,9 +17,9 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
    private float multiplacador;
    private float soma = 86400f;
 
-   public bool agua;
+   public bool agua = false;
    public int limitediasemagua = 3;
-   public int diascemAgua;
+   [FormerlySerializedAs("diascemAgua")] public int diascomAgua;
    [SerializeField] private int idadePlanta = 0;
 
    private int diaPlanta;
@@ -54,7 +55,11 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
    
    public void AdicionarAgua(int agua)
    {
-      diascemAgua += agua;
+      if (EstaEstacao)
+      {
+      diascomAgua += agua;
+         
+      }
    }
 
    private void FixedUpdate() {
@@ -64,17 +69,26 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
          plantaEstagio();
       }
    }
-
    public void ciclodiaPlant()
    {
-      
+      if (agua && EstaEstacao)
+      {
          segundos += Time.deltaTime * multiplacador;
-         
+
          if (segundos >= soma)
          {
             segundos = 0;
             idadePlanta++;
          }
+      }
+      else
+      {
+         if (diascomAgua >= 3)
+         {
+            agua = false;
+            diascomAgua = 0;
+         }
+      }
    }
 
 

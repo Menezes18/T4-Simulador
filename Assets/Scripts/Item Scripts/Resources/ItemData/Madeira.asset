@@ -15,10 +15,11 @@ MonoBehaviour:
   ID: 7
   DisplayName: Madeira
   Description: 
-  Icon: {fileID: 21300000, guid: dae318c894c6d634d81ab9af96ae5008, type: 3}
+  Icon: {fileID: 21300000, guid: 926e83d49e1b4dd4fbd4f6f5beabb19d, type: 3}
   MaxStackSize: 5
   GoldValue: 5
   ItemPrefab: {fileID: 156719443032939214, guid: 7f66f740072214843b042adda540ae4c, type: 3}
   ItemData: {fileID: 11400000, guid: 03e067dae4be4de429a640e5d935350d, type: 2}
-  _building: 0
-  durabilidade: 0
+  data: {fileID: 0}
+  _building: 1
+  semente: 1

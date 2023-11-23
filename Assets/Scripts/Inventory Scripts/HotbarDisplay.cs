@@ -332,9 +332,7 @@ public class HotbarDisplay : StaticInventoryDisplay
             }
         }
     }
-
-
-
+    
 
 
     // Verifica se um item específico existe na barra de atalho
@@ -527,9 +525,10 @@ public class HotbarDisplay : StaticInventoryDisplay
         InventoryItemData itemData = slots[_currentIndex].AssignedInventorySlot.ItemData;
         if (itemData != null && itemData.ID == itemId)
         {
+            Debug.Log("True");
             return true; // O item está na mão
         }
-
+        Debug.Log("ff");
         return false; 
     }
 

@@ -206,7 +206,7 @@ public class BuildTool : MonoBehaviour
         
         
     }
-
+    public bool pode = false;
     public void PositionBuildingPreview()
     {
         InventoryItemData Item = FindObjectOfType<InventoryItemData>();
@@ -226,8 +226,8 @@ public class BuildTool : MonoBehaviour
             _spawnedBuilding.transform.Rotate(0, _rotateSnapAngle * Time.deltaTime, 0);
             _lastRotation = _spawnedBuilding.transform.rotation;
         }
-
-        if (IsRayHittingSomething(_buildModeLayerMask, out RaycastHit hitInfo) && !hotbarDisplay.ItemSemente())
+        
+        if (IsRayHittingSomething(_buildModeLayerMask, out RaycastHit hitInfo) && !hotbarDisplay.ItemSemente() && pode)
         {
             var gridPosition = WorldGrid.GridPositionFromWorldPoint3D(hitInfo.point, 0.1f);
             // _spawnedBuilding.transform.position = gridPosition;
