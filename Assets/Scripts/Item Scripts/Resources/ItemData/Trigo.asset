@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
   m_Name: Trigo
   m_EditorClassIdentifier: 
-  ID: 23
+  ID: 15
   DisplayName: Trigo
   Description: Trigo
   Icon: {fileID: 0}

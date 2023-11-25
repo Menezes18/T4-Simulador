@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
   m_Name: SementeCenoura
   m_EditorClassIdentifier: 
-  ID: 16
+  ID: 22
   DisplayName: Semente de Cenoura
   Description: Semente de Cenoura.
   Icon: {fileID: 21300000, guid: 99852a93f37f2ff4c9a2dfeedcc82096, type: 3}
@@ -20,5 +20,6 @@ MonoBehaviour:
   GoldValue: 12
   ItemPrefab: {fileID: 2211517109068419072, guid: df525c814de7bf64ea8f4150ef1004ac, type: 3}
   ItemData: {fileID: 11400000, guid: e9688b596f6f3ea49bb209e272767940, type: 2}
+  data: {fileID: 0}
   _building: 1
-  durabilidade: 0
+  semente: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
   m_Name: SementeBatata
   m_EditorClassIdentifier: 
-  ID: 12
+  ID: 31
   DisplayName: Semente de Batata
   Description: Semente de Batata.
   Icon: {fileID: 21300000, guid: 0c8ef1a8432eb1d4280b1e79eaae9fa4, type: 3}
@@ -20,5 +20,6 @@ MonoBehaviour:
   GoldValue: 10
   ItemPrefab: {fileID: 2211517109068419072, guid: 71abbaece549f4046b27bef931d13865, type: 3}
   ItemData: {fileID: 11400000, guid: 994979de17d6c674dbffd2fd47a032a6, type: 2}
+  data: {fileID: 0}
   _building: 1
-  durabilidade: 0
+  semente: 1

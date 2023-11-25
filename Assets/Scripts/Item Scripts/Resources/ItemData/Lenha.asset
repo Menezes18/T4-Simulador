@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
   m_Name: Lenha
   m_EditorClassIdentifier: 
-  ID: 67
+  ID: 7
   DisplayName: Lenha
   Description: 
   Icon: {fileID: 21300000, guid: 5c5e99e6c58208044898d19f769ac888, type: 3}

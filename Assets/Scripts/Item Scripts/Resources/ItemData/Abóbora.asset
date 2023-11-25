@@ -16,7 +16,7 @@ MonoBehaviour:
   DisplayName: "Ab\xF3bora"
   Description: "Ab\xF3bora"
   Icon: {fileID: 21300000, guid: b77895f7d5acb4d448c78f6a32ed922a, type: 3}
-  MaxStackSize: 99
+  MaxStackSize: 16
   GoldValue: 190
   ItemPrefab: {fileID: 9174694344572902597, guid: cda4cff1604d2244c917da1997ff1c3c, type: 3}
   ItemData: {fileID: 0}

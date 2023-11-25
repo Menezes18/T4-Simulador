@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
   m_Name: SementeBeterraba
   m_EditorClassIdentifier: 
-  ID: 14
+  ID: 21
   DisplayName: Semente de Beterraba
   Description: Semente de Beterraba.
   Icon: {fileID: 21300000, guid: 343a5e2505d1f4f49b81a56d33f6422c, type: 3}
@@ -20,5 +20,6 @@ MonoBehaviour:
   GoldValue: 20
   ItemPrefab: {fileID: 2211517109068419072, guid: edd722ca41792594fb2573de814cd37e, type: 3}
   ItemData: {fileID: 11400000, guid: ce4f03151b999b14ea043d98847c5a1e, type: 2}
+  data: {fileID: 0}
   _building: 1
-  durabilidade: 0
+  semente: 1

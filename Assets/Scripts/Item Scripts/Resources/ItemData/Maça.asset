@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
   m_Name: "Ma\xE7a"
   m_EditorClassIdentifier: 
-  ID: 11
+  ID: 6
   DisplayName: "Ma\xE7a"
   Description: 
   Icon: {fileID: 21300000, guid: 34065b401b00a7746aab278fafad28b1, type: 3}
   MaxStackSize: 6
   GoldValue: 120
-  ItemPrefab: {fileID: 0}
+  ItemPrefab: {fileID: 8834361633212850794, guid: 98c0116a62a431147a2a72993a0685d1, type: 3}
   ItemData: {fileID: 0}
   data: {fileID: 0}
   _building: 0
