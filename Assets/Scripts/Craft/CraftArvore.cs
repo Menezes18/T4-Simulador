@@ -60,7 +60,7 @@ public class CraftArvore : MonoBehaviour
         // Verifica se o slot já está ocupado
         slotOcupado = slotsOcupados;
 
-        if (slots == 1 && id == 7 && trava == 1)
+        if (slots == 1 && id == 8 && trava == 1)
         {
             if (!slotOcupado)
             {
