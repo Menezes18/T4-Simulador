@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 557151862404643455}
   - component: {fileID: 1791610870299050184}
-  - component: {fileID: 5131283501291811123}
   - component: {fileID: 1178694560505361334}
   - component: {fileID: 6457917869240175551}
   - component: {fileID: 7251269169558943493}
@@ -64,28 +63,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &5131283501291811123
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3274437328844379829}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!135 &1178694560505361334
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -105,7 +82,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6457917869240175551
 MonoBehaviour:
@@ -136,7 +113,7 @@ MonoBehaviour:
   ItemData: {fileID: 11400000, guid: 5f8026011ca4641458e86205680103c5, type: 2}
   fisicaRigidbody: 0
   itemSaveData:
-    ItemData: {fileID: 0}
+    ItemData: {fileID: 11400000, guid: 5f8026011ca4641458e86205680103c5, type: 2}
     Position: {x: 0, y: 0, z: 0}
 --- !u!1 &3378380630357718424
 GameObject:
@@ -149,7 +126,7 @@ GameObject:
   - component: {fileID: 5023616276491655823}
   - component: {fileID: 2135354836188372785}
   - component: {fileID: 1072302284375639502}
-  - component: {fileID: 2291777140367065589}
+  - component: {fileID: 3260772069381237407}
   m_Layer: 0
   m_Name: IronBar(Clone)
   m_TagString: Untagged
@@ -166,8 +143,8 @@ Transform:
   m_GameObject: {fileID: 3378380630357718424}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: -0, y: 0, z: 2.654}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 557151862404643455}
@@ -222,8 +199,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2291777140367065589
-MeshCollider:
+--- !u!65 &3260772069381237407
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -240,7 +217,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3566958775468787758, guid: bbc0fe7412965cf4c9cd4df6003ab908, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.015170069, y: 0.00615347, z: 0.004335534}
+  m_Center: {x: -0.0003227484, y: 0.053458232, z: 0.0048078937}

@@ -17,8 +17,8 @@ public class CraftSystem : MonoBehaviour
     public GameObject FinalItem;
     [SerializeField] private Transform[] itemTransforms;
     public bool slotOcupado = false;
-    private bool itemFinalInstanciado = false;
-    private int currentReceitaId = -1;
+    public bool itemFinalInstanciado = false;
+    public int currentReceitaId = -1;
     
     void FixedUpdate()
     {
@@ -56,7 +56,7 @@ public class CraftSystem : MonoBehaviour
     {
         if(!slot1.Equals(0) || !slot2.Equals(0) || !slot3.Equals(0))
         {
-            receitas = int.Parse((slot1 != 0 ? slot1.ToString() : "") + (slot2 != 0 ? slot2.ToString() : "") + (slot3 != 0 ? slot3.ToString() : ""));
+            receitas = int.Parse((slot1 != 0 ? slot1.ToString() : "") + (slot2 != 0 ? slot2.ToString() : "") + (slot3 != 0 ? slot3.ToString() : "") + "0");
             Debug.Log("Receita: " + receitas);
             VerificarReceitaNoBancoDeDados(receitas);
             
@@ -116,7 +116,11 @@ public class CraftSystem : MonoBehaviour
         rb.isKinematic = true;
         }
         SphereCollider sphereCollider = novoItem.GetComponent<SphereCollider>();
+        if(sphereCollider != null)
+        {
         sphereCollider.enabled = false;
+
+        }
         novoItem.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
     }
     public bool VerificaItemFinal()
@@ -184,6 +188,7 @@ public class CraftSystem : MonoBehaviour
             slot1 = -1;
             slot1 = 0;
             slotsOcupado[0] = false; // Marca o slot como desocupado
+            itemFinalInstanciado = false;
             Destroy(prefabitem[slots - 1]);
         }
 
@@ -206,6 +211,7 @@ public class CraftSystem : MonoBehaviour
             slot2 = -1;
             slot2 = 0;
             slotsOcupado[1] = false; // Marca o slot como desocupado
+            itemFinalInstanciado = false;
             Destroy(prefabitem[slots - 1]);
         }
 
@@ -228,6 +234,7 @@ public class CraftSystem : MonoBehaviour
             slot3 = -1;
             slot3 = 0;
             slotsOcupado[2] = false; // Marca o slot como desocupado
+            itemFinalInstanciado = false;
             Destroy(prefabitem[slots - 1]);
         }
 

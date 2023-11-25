@@ -15,10 +15,10 @@ MonoBehaviour:
   ID: 27
   DisplayName: Ferro
   Description: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: f4684a1754d61aa41b3aea10931dd8c7, type: 3}
   MaxStackSize: 15
   GoldValue: 30
-  ItemPrefab: {fileID: 0}
+  ItemPrefab: {fileID: 4731978141492119926, guid: dba2ea4c741f81b468e22fc3a1496dcd, type: 3}
   ItemData: {fileID: 0}
   data: {fileID: 0}
   _building: 0

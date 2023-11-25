@@ -15,10 +15,10 @@ MonoBehaviour:
   ID: 29
   DisplayName: Graveto
   Description: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 6fdfa30de93d03247a80acc23a159255, type: 3}
   MaxStackSize: 20
   GoldValue: 5
-  ItemPrefab: {fileID: 0}
+  ItemPrefab: {fileID: 100000, guid: e6f4f133095b857408ab6e1ee62edb3c, type: 3}
   ItemData: {fileID: 0}
   data: {fileID: 0}
   _building: 0

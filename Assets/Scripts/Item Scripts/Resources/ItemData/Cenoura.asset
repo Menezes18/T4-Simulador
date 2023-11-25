@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 4
   DisplayName: Cenoura
   Description: 
-  Icon: {fileID: 21300000, guid: 35c5ec7c1bb57804da8fa905a3d81b25, type: 3}
+  Icon: {fileID: 21300000, guid: ae9f83f01a43510419cb69cca40fed78, type: 3}
   MaxStackSize: 16
   GoldValue: 18
   ItemPrefab: {fileID: 6924754152639487277, guid: 8d3c75adcdddf8f439158139afb2105a, type: 3}
