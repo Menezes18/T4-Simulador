@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.07, y: 0.07, z: 0.07}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.8465456, y: 1.2041768, z: 0.9335476}
+  m_Center: {x: 0.018380105, y: 0.5670883, z: -0.030498624}
 --- !u!114 &5130034538686964676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +71,7 @@ MonoBehaviour:
   estacaoPlanta: 0
   EstaEstacao: 0
   PrefabFinal: {fileID: 2079361290821738425, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+  cresceu: 0
   agua: 0
   limitediasemagua: 3
   diascomAgua: 0

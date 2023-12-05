@@ -131,10 +131,15 @@ public class PlayerManager : MonoBehaviour
         {
             craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
             craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
-            plantT = hitInfo.collider.gameObject.GetComponent<PlantTrigger>();
+            plantT = hitInfo.collider?.gameObject.GetComponent<PlantTrigger>();
             if (HotbarDisplay.Display.IsItemInHand(15) && plantT != null)
             {
                 plantT.agua = true;
+            }
+
+            if (plantT.cresceu)
+            {
+                plantT.ColherPlanta();
             }
             if (hitInfo.collider.gameObject.tag.Equals("slot1"))
             {
