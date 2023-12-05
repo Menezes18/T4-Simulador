@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fd0ee0fc5cc3574d91706f3380f2e78, type: 3}
-  m_Name: TrigoDatabuild
+  m_Name: CenouraDataBuild
   m_EditorClassIdentifier: 
-  DisplayName: SementeTrigo
-  Icon: {fileID: 21300000, guid: d1df42f9126ef574d98d5374c8323478, type: 3}
+  DisplayName: SementeCenoura
+  Icon: {fileID: 21300000, guid: 4191e6a7008c7ac49957f0bdbdb5cb50, type: 3}
   GridSnapSize: 1
-  Prefab: {fileID: 2211517109068419072, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
+  Prefab: {fileID: 2211517109068419072, guid: df525c814de7bf64ea8f4150ef1004ac, type: 3}
   BuildingSize: {x: 0, y: 0, z: 0}
   PartType: 2

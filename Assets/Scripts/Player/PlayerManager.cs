@@ -47,7 +47,7 @@ public class PlayerManager : MonoBehaviour
         if (energia > 10)
         {
             animator.SetTrigger("Bater");
-            if (id.Equals(4) && terraArada != null) terraArada.ArarTerra();
+            if (id.Equals(2927270) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(27290)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
             if (id.Equals(27290) && hitInfo.collider.gameObject.tag.Equals("ArvoreCraft")) 
             {
@@ -131,10 +131,15 @@ public class PlayerManager : MonoBehaviour
         {
             craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
             craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
-            plantT = hitInfo.collider.gameObject.GetComponent<PlantTrigger>();
+            plantT = hitInfo.collider?.gameObject.GetComponent<PlantTrigger>();
             if (HotbarDisplay.Display.IsItemInHand(15) && plantT != null)
             {
                 plantT.agua = true;
+            }
+
+            if (plantT.cresceu)
+            {
+                plantT.ColherPlanta();
             }
             if (hitInfo.collider.gameObject.tag.Equals("slot1"))
             {

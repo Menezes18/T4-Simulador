@@ -11,6 +11,10 @@ public class AudioControllerNpc : MonoBehaviour
     private bool isPlaying = false;
     private float originalVolume;
 
+    public Animator anim;
+
+    public float audio;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -28,15 +32,28 @@ public class AudioControllerNpc : MonoBehaviour
         }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Chamar"))
+        {
+            transform.LookAt(player.transform.position);
+        }
         if (distanceToPlayer < distanceThreshold)
         {
             if (!isPlaying)
             {
+                audioSource.time = audio;
                 audioSource.Play();
                 isPlaying = true;
+                anim.SetTrigger("Andar");
+                //audio = audioSource.clip.length;
             }
 
+            if(audio >= audioSource.clip.length)
+            {
+                audioSource.Stop();
+                return;
+            }
+
+                audio += Time.deltaTime;
             // Adjust volume based on distance
             float volume = 1f - (distanceToPlayer / distanceThreshold);
             audioSource.volume = Mathf.Clamp(volume, 0f, originalVolume);
@@ -45,7 +62,10 @@ public class AudioControllerNpc : MonoBehaviour
         {
             if (isPlaying)
             {
+                transform.LookAt(player.transform.position);
+                anim.SetTrigger("Chamar");
                 audioSource.UnPause();
+                
                 isPlaying = false;
             }
         }

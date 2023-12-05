@@ -16,6 +16,8 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
    private float segundos = 0;
    private float multiplacador;
    private float soma = 86400f;
+   public GameObject PrefabFinal;
+   public bool cresceu = false;
 
    public bool agua = false;
    public int limitediasemagua = 3;
@@ -61,7 +63,33 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
          
       }
    }
+   public void ColherPlanta()
+   {
+      if (cresceu = true)
+      {
+         if (idadePlanta >= diaPlanta)
+         {
+            
+            DroparPlanta();
 
+            
+            ExcluirPlanta();
+         }
+      }
+
+   }
+
+   private void DroparPlanta()
+   {
+      Vector3 finalPrefabPosition = new Vector3(t.position.x, t.position.y + 0.5f, t.position.z);
+      Instantiate(PrefabFinal, finalPrefabPosition, Quaternion.identity);
+   }
+
+   private void ExcluirPlanta()
+   {
+     
+      Destroy(gameObject);
+   }
    private void FixedUpdate() {
    
       if(EstaEstacao){
@@ -107,6 +135,7 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
          }else if(idadePlanta == diaPlanta) 
          {
             t.position = new Vector3(t.position.x, plant.transform, t.position.z);
+            cresceu = true;
             GetPrefab(3, t);
          }
    }
