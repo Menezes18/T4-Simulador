@@ -5873,6 +5873,7 @@ MonoBehaviour:
   plant: {fileID: 11400000, guid: 8387a7099ddc28348a66429735b565ef, type: 2}
   estacaoPlanta: 0
   EstaEstacao: 0
+  PrefabFinal: {fileID: 0}
   agua: 0
   limitediasemagua: 3
   diascomAgua: 0
@@ -9182,18 +9183,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SementeTrigo
       objectReference: {fileID: 0}
-    - target: {fileID: 5130034538686964676, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
-      propertyPath: agua
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5130034538686964676, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
-      propertyPath: plant
-      value: 
-      objectReference: {fileID: 11400000, guid: 8387a7099ddc28348a66429735b565ef, type: 2}
-    - target: {fileID: 5130034538686964676, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
-      propertyPath: cicloDiaNoite
-      value: 
-      objectReference: {fileID: 1103675051}
     - target: {fileID: 5354536691443586262, guid: 96b4fe9bdeff73745bfad20505836bf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.337
@@ -25499,6 +25488,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc26ab00608e0b4abb448fcb98010e2, type: 3}
+--- !u!1001 &1955989257
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2079361290821738425, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_Name
+      value: Trigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4788297
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.011853933
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5352329
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079361290821738426, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
 --- !u!1 &1960256673
 GameObject:
   m_ObjectHideFlags: 0
@@ -29121,6 +29167,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6580201691413213883, guid: e157af62db09a0247972dfc39f5c5519, type: 3}
     - target: {fileID: 2117699096, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: pode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117699096, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: plantio
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117699096, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: placedata
       value: 
       objectReference: {fileID: 11400000, guid: 9e529815695d5ec4ca07623e1e7a847b, type: 2}
@@ -29437,3 +29491,4 @@ SceneRoots:
   - {fileID: 186226834}
   - {fileID: 970091467}
   - {fileID: 2111733636}
+  - {fileID: 1955989257}

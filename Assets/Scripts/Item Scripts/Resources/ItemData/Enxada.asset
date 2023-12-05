@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
   m_Name: Enxada
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 2927270
   DisplayName: Enxada
   Description: 'Enxada.
 
@@ -23,5 +23,5 @@ MonoBehaviour:
   ItemPrefab: {fileID: 2079361290821738425, guid: a2555613bf652fe43bbb568fab5db0cb, type: 3}
   ItemData: {fileID: 0}
   data: {fileID: 0}
-  _building: 0
+  _building: 1
   semente: 1

@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2211517109068419072}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -67,10 +67,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea1b7760eda72842a99b32c8374405d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 11400000, guid: a4630a3de92e75d4e92e70b8fb8b4f2a, type: 2}
+  plant: {fileID: 11400000, guid: 8387a7099ddc28348a66429735b565ef, type: 2}
   estacaoPlanta: 0
   EstaEstacao: 0
-  aguas: 
+  PrefabFinal: {fileID: 2079361290821738425, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
+  agua: 0
+  limitediasemagua: 3
+  diascomAgua: 0
   idadePlanta: 0
   ciclodia: 0
   previousPrefab: {fileID: 0}
