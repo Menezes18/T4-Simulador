@@ -90,8 +90,9 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
      
       Destroy(gameObject);
    }
-   private void FixedUpdate() {
-   
+   private void FixedUpdate()
+   {
+      agua = true;
       if(EstaEstacao){
          ciclodiaPlant();
          plantaEstagio();

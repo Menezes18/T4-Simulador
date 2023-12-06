@@ -36,7 +36,7 @@ public class ChickenController : MonoBehaviour
         initialPosition = transform.position;
         currentState = ChickenState.Walking;
         isRunning = false;
-        InvokeRepeating("DropItem", 0f, 300f);
+        //InvokeRepeating("DropItem", 0f, 300f);
     }
     private void DropItem()
     {

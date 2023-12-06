@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Default Shop List
   m_EditorClassIdentifier: 
   _items:
-  - ItemData: {fileID: 11400000, guid: 90c88171c56093541a13ca1063266dc3, type: 2}
-    Amount: 99
-  - ItemData: {fileID: 11400000, guid: a71471f435f6d9542bc4e4414ed0cac5, type: 2}
-    Amount: 10
-  - ItemData: {fileID: 11400000, guid: 77736bd117e3575438f8e3fec235df90, type: 2}
-    Amount: 1
+  - ItemData: {fileID: 11400000, guid: 1203c7340be03c2469b793a28c324edb, type: 2}
+    Amount: 3
+  - ItemData: {fileID: 11400000, guid: 654cde1c6f7937840a3cfa43702c1872, type: 2}
+    Amount: 3
+  - ItemData: {fileID: 11400000, guid: 253ce1bc892ed6047ac95a3017589900, type: 2}
+    Amount: 3
+  - ItemData: {fileID: 11400000, guid: 57f6773c25aeb58438db1dc65667f46c, type: 2}
+    Amount: 3
+  - ItemData: {fileID: 11400000, guid: daabe82a37d21834e81ab4d309a2d98a, type: 2}
+    Amount: 3
   _maxAllowedGold: 1000
   _sellMarkUp: 0.25
   _buyMarkUp: 0.5
