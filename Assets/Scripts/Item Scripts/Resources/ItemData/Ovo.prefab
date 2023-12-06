@@ -138,10 +138,10 @@ GameObject:
   m_Component:
   - component: {fileID: 983995007262011113}
   - component: {fileID: 1643630509311595636}
-  - component: {fileID: 6540991720298431367}
   - component: {fileID: 3729684104859614550}
   - component: {fileID: 3033117800206571183}
   - component: {fileID: 1416155760823567430}
+  - component: {fileID: 2147186903099446397}
   m_Layer: 0
   m_Name: Ovo
   m_TagString: Untagged
@@ -192,28 +192,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6540991720298431367
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8876913781898218620}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!135 &3729684104859614550
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -266,3 +244,24 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 0}
     Position: {x: 0, y: 0, z: 0}
+--- !u!65 &2147186903099446397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8876913781898218620}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0004295304, y: 0.0004723614, z: 0.00057731045}
+  m_Center: {x: -1.018634e-10, y: -0.000000008520145, z: 0.00028734596}

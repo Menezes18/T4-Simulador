@@ -14,19 +14,21 @@ public class ChickenController : MonoBehaviour
     public float runDistance = 5.0f;
 
     public Animator animator;
-    private Transform player;
+    public Transform player;
+    
     private Vector3 initialPosition;
     private bool isRunning;
-    private bool isSpecialAnimationTriggered;
-    private enum ChickenState
+    public bool playerBool = false;
+    public GameObject itemPrefab;
+    public enum ChickenState
     {
         nenhum,
         Walking,
-        Running,
+        Player,
         SpecialAnimation
     }
-    [SerializeField]
-    private ChickenState currentState;
+    [NonSerialized]
+    public ChickenState currentState;
 
     private void Start()
     {
@@ -34,11 +36,28 @@ public class ChickenController : MonoBehaviour
         initialPosition = transform.position;
         currentState = ChickenState.Walking;
         isRunning = false;
-        isSpecialAnimationTriggered = false;
+        InvokeRepeating("DropItem", 0f, 300f);
     }
+    private void DropItem()
+    {
+        if (itemPrefab != null)
+        {
+            // Instantiate the itemPrefab at the chicken's position
+            GameObject droppedItem = Instantiate(itemPrefab, transform.position, Quaternion.identity);
 
+            // Optionally, you can add logic to modify the dropped item's properties or behavior here
+
+            Debug.Log("Item dropped!");
+        }
+        else
+        {
+            Debug.LogWarning("Item prefab not assigned to ChickenController!");
+        }
+    }
     private void FixedUpdate()
     {
+        GameObject playerObject = GameObject.FindWithTag("Player");
+        player = playerObject.transform;
         switch (currentState)
         {
             case ChickenState.nenhum:
@@ -47,7 +66,7 @@ public class ChickenController : MonoBehaviour
             case ChickenState.Walking:
                 HandleWalkingState();
                 break;
-            case ChickenState.Running:
+            case ChickenState.Player:
                 HandleRunningState();
                 break;
             case ChickenState.SpecialAnimation:
@@ -69,21 +88,21 @@ public class ChickenController : MonoBehaviour
     
         
     }
+    
     private void HandleWalkingState()
     {
         int randomvalue = Random.Range(0, 200);
         Debug.Log(randomvalue);
-        if (randomvalue < 2)
+        
+        
+        if (randomvalue < 2 && !playerBool)
         {
            
             currentState = ChickenState.nenhum;
         }
-
+    
         if (randomvalue < 1)
         {
-           
-            
-            
             transform.Rotate(0, Random.Range(90, 180), 0);
         }
         RaycastHit hit;
@@ -99,19 +118,6 @@ public class ChickenController : MonoBehaviour
             
         }
 
-        // Check for the player nearby
-        if (!isRunning && Physics.CheckSphere(transform.position, runDistance, playerLayer))
-        {
-            player = FindPlayer();
-            if (player != null)
-            {
-                
-                animator.SetBool("Walk", true);
-                //isRunning = true;
-                //currentState = ChickenState.Running;
-            }
-        }
-
         // Move the chicken forward
         animator.SetBool("Walk", true);
         Debug.Log("andei");
@@ -120,32 +126,40 @@ public class ChickenController : MonoBehaviour
 
     private void HandleRunningState()
     {
-        if (player != null)
+        
+        float stopDistance = 1f;
+        if (player != null && playerBool)
         {
-            // Run away from the player
-            Vector3 runDirection = transform.position - player.position;
-            runDirection.y = 0; // Ensure the chicken stays on the same level
-            runDirection.Normalize();
-            transform.position += runDirection * moveSpeed * Time.deltaTime;
-        }
+            // Direção para o jogador
+            Vector3 runDirection = (player.position - transform.position).normalized;
 
-        // Check if the chicken has escaped
-        if (Vector3.Distance(transform.position, initialPosition) >= runDistance)
+            // Verifica a distância para decidir se a galinha deve parar ou seguir
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+            if (distanceToPlayer <= stopDistance)
+            {
+                animator.SetBool("Walk", false);
+                // O jogador está muito próximo, pare de seguir
+                
+               // currentState = ChickenState.Walking;
+            }
+            else
+            {
+                animator.SetBool("Walk", true);
+                // Rotaciona a galinha para olhar na direção do jogador
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(runDirection), 5.0f * Time.deltaTime);
+
+                // Move a galinha na direção do jogador
+                transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            }
+            
+        }
+        if (!playerBool)
         {
-            isRunning = false;
             currentState = ChickenState.Walking;
         }
-    }
 
-    private Transform FindPlayer()
-    {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, runDistance, playerLayer);
-        if (colliders.Length > 0)
-        {
-            return colliders[0].transform;
-        }
-        return null;
     }
+    
 
     private void OnDrawGizmos()
     {

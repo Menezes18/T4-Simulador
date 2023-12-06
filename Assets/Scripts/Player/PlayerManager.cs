@@ -27,6 +27,7 @@ public class PlayerManager : MonoBehaviour
     public int item;
     public PlantTrigger plantT;
     public int ids;
+    public ChickenController galinha;
 
     [SerializeField] private GameObject prefabCanvasInfo;
 
@@ -129,6 +130,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (hitInfo.collider != null)
         {
+            galinha = hitInfo.collider.transform?.gameObject.GetComponent<ChickenController>();
             craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
             craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
             plantT = hitInfo.collider?.gameObject.GetComponent<PlantTrigger>();
@@ -137,9 +139,19 @@ public class PlayerManager : MonoBehaviour
                 plantT.agua = true;
             }
 
-            if (plantT.cresceu)
+            if (galinha != null)
             {
-                plantT.ColherPlanta();
+                galinha.playerBool = !galinha.playerBool;
+                Debug.Log(galinha.playerBool);
+                galinha.currentState = ChickenController.ChickenState.Player;
+            }
+            if (plantT != null)
+            {
+                if (plantT.cresceu)
+                {
+                plantT.ColherPlanta();  
+                    
+                }
             }
             if (hitInfo.collider.gameObject.tag.Equals("slot1"))
             {
