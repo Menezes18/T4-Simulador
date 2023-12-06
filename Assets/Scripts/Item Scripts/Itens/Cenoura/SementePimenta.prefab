@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5763390722257538172}
   - component: {fileID: 5130034538686964676}
   m_Layer: 0
-  m_Name: SementeBeterraba
+  m_Name: SementePimenta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3472003105926251686}
+  - {fileID: 2242306560720884076}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5763390722257538172
@@ -53,8 +53,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.42345476, y: 1.199061, z: 0.37116098}
-  m_Center: {x: 0.012367487, y: 0.56453043, z: 0.0008919239}
+  m_Size: {x: 0.37456197, y: 0.7081514, z: 0.39316702}
+  m_Center: {x: 0.019683689, y: 0.31907573, z: 0.003910832}
 --- !u!114 &5130034538686964676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,18 +67,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea1b7760eda72842a99b32c8374405d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plant: {fileID: 11400000, guid: f8ce8380db5164b448709d8429f5b280, type: 2}
+  plant: {fileID: 11400000, guid: c925ac2ab9f13ad4e9324eadf5074b79, type: 2}
   estacaoPlanta: 0
   EstaEstacao: 0
-  PrefabFinal: {fileID: 2079361290821738425, guid: 43aa367e835066f48b88c1cd4f543103, type: 3}
+  PrefabFinal: {fileID: 2079361290821738425, guid: 2d2e44bf9b53ff74191ac84ff651a09f, type: 3}
   cresceu: 0
-  agua: 1
+  agua: 0
   limitediasemagua: 3
   diascomAgua: 0
   idadePlanta: 0
   ciclodia: 0
   previousPrefab: {fileID: 0}
---- !u!1001 &1351527038153541093
+--- !u!1001 &4769155369416332093
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -86,51 +86,51 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5354536691443586262}
     m_Modifications:
-    - target: {fileID: 235505584161802672, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6375792394001240659, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_Name
-      value: SementeBeterraba
+      value: SementePimenta
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071067
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
+    - target: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -138,9 +138,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
---- !u!4 &3472003105926251686 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
+--- !u!4 &2242306560720884076 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2517123805838819651, guid: 62b7666b72ccd55459c88b5b0318babc, type: 3}
-  m_PrefabInstance: {fileID: 1351527038153541093}
+  m_CorrespondingSourceObject: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
+  m_PrefabInstance: {fileID: 4769155369416332093}
   m_PrefabAsset: {fileID: 0}

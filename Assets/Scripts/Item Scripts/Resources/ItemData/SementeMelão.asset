@@ -15,11 +15,11 @@ MonoBehaviour:
   ID: 23
   DisplayName: "Semente de Mel\xE3o"
   Description: "Semente de Mel\xE3o"
-  Icon: {fileID: 21300000, guid: 594d68d62c43f654d9d6d7a6d933f4b1, type: 3}
+  Icon: {fileID: 21300000, guid: ac5788ece64b158419c4f35226b435bc, type: 3}
   MaxStackSize: 8
   GoldValue: 70
   ItemPrefab: {fileID: 2211517109068419072, guid: 7ed58c3a065786a4d9b22d36ef3223dc, type: 3}
-  ItemData: {fileID: 11400000, guid: c38a2045960b45249aef39a19ccbec9e, type: 2}
+  ItemData: {fileID: 11400000, guid: 54df984debf4a8542b08d6a742929d90, type: 2}
   data: {fileID: 0}
   _building: 1
   semente: 1
