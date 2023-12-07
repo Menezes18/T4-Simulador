@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 23727812203580356}
   - component: {fileID: 742348779095870206}
   - component: {fileID: 4619089460111892481}
+  - component: {fileID: 8316319110457635657}
+  - component: {fileID: 8013330574929389789}
   m_Layer: 0
   m_Name: SM_Env_Tree_Peach_01
   m_TagString: Untagged
@@ -120,6 +122,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   opcoes: 1
+  vida: 3
+  item: {fileID: 156719443032939214, guid: 7f66f740072214843b042adda540ae4c, type: 3}
+  modelos: []
+--- !u!114 &8316319110457635657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279607818152092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f70d99452876e24bbac9e587ff6c8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opcoes: 1
   vida: 5
   item: {fileID: 156719443032939214, guid: 7f66f740072214843b042adda540ae4c, type: 3}
   modelos: []
+--- !u!64 &8013330574929389789
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279607818152092}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 4b770b47a02b2074f93e3b92bf2d535a, type: 3}
