@@ -28,11 +28,16 @@ public class PlayerManager : MonoBehaviour
     public PlantTrigger plantT;
     public int ids;
     public ChickenController galinha;
-
+    public CanvasInfo canvasinfo;
+    public CanvasInfo auxCanvas;
+    public bool isItemInHand = false;
+    public int itemInHandId;
     [SerializeField] private GameObject prefabCanvasInfo;
 
     private void Awake()
     {
+        
+
         if (playerManager != null && playerManager != this)
         {
             Destroy(gameObject);
@@ -107,33 +112,41 @@ public class PlayerManager : MonoBehaviour
     }
     private void Start()
     {
-    
         
-       // hotbarDisplay = FindObjectOfType<HotbarDisplay>();
-        InvokeRepeating("RegenerarEnergia", 5.0f, 5.0f);
+       // InvokeRepeating("RegenerarEnergia", 5.0f, 5.0f);
         
     }
 
     private void Update()
     {
+        canvasinfo = hitInfo.collider?.transform.gameObject?.GetComponent<CanvasInfo>();
         
-        DescerFome();
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             InteragirComObjeto();
         }
-        
+        if (canvasinfo != null)
+        {
+             //Debug.Log("A");
+            auxCanvas = canvasinfo;
+            auxCanvas.canvasAtivar();
+        }
+        else if (canvasinfo == null && auxCanvas != null)
+        {
+            auxCanvas.canvasDesativar();
+        }
     }
-    private bool isItemInHand = false;
-    private int itemInHandId;
     private void InteragirComObjeto()
     {
         if (hitInfo.collider != null)
         {
+            
+            
             galinha = hitInfo.collider.transform?.gameObject.GetComponent<ChickenController>();
             craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
             craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
             plantT = hitInfo.collider?.gameObject.GetComponent<PlantTrigger>();
+            
             if (HotbarDisplay.Display.IsItemInHand(15) && plantT != null)
             {
                 plantT.agua = true;
@@ -206,38 +219,7 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
-    public void DescerFome()
-    {
-        fome -= taxaDecaimentoFome * Time.deltaTime;
-        fome = Mathf.Clamp(fome, 0f, maxfome);
-        OnFomeChanged?.Invoke(fome); // Chama o evento quando a fome é alterada
-    }
-
-    private void RegenerarEnergia()
-    {
-        energia += 5f;
-
-        // Limite a energia ao valor máximo.
-        energia = Mathf.Clamp(energia, 0f, maxEnergia);
-
-        // Chame o evento de energia alterada.
-        OnEnergiaChanged?.Invoke(energia);
-    }
-
-    public void DescerEnergia(float perder)
-    {
-        if (energia - perder >= 0)
-        {
-            energia -= perder;
-            OnEnergiaChanged?.Invoke(energia); // Chama o evento quando a energia é alterada
-        }
-        else
-        {
-            energia = 0;
-            Debug.LogWarning("Energia não pode ser negativa.");
-        }
-    }
-
+    
     public void raycast(RaycastHit hitInforay)
     {
         hitInfo = hitInforay;

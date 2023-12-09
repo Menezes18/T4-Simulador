@@ -10,7 +10,7 @@ public class HotbarDisplay : StaticInventoryDisplay
     public Database database;
     private PlayerControls _playerControls;
     public Transform itemPrefab;
-    private GameObject spawnedObject;
+    //private GameObject _spawnedObject;
     public GameObject spawnObject2;
     public bool hasSpawned = true;
     private int itemId = -2;
@@ -352,14 +352,6 @@ public class HotbarDisplay : StaticInventoryDisplay
     private void Update()
     {
         ShowItemInHotbar();
-         if (Keyboard.current.fKey.wasPressedThisFrame)
-         {
-             GetItemInHand();
-         }
-        if (Keyboard.current.mKey.wasPressedThisFrame)
-         {
-              RemoveItem(0, 1);
-         }
         if (_playerControls.Player.MouseWheel.ReadValue<float>() > 0.1f)
         {
             ChangeIndex(1);
@@ -399,7 +391,7 @@ public class HotbarDisplay : StaticInventoryDisplay
         }
     }
     //
-    public void pegaritem()
+    private void pegaritem()
     {
         Destroy(spawnObject2);
         hasSpawned = true;
@@ -431,7 +423,7 @@ public class HotbarDisplay : StaticInventoryDisplay
         return false;
     }
 
-    // Instancia o item na mão com base em seu ID
+    
     public void InstantiateItemInHand(int itemId)
     {
         var db = Resources.Load<Database>("Database");
@@ -479,12 +471,9 @@ public class HotbarDisplay : StaticInventoryDisplay
     {
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {
-            int current = 0;
+           
             InventoryItemData item = slots[_currentIndex].AssignedInventorySlot.ItemData;
-             if (item._building = true)
-             {
-                 
-             }
+
             _playerManager.bater(itemId, item.ItemData, item.data);
             
         }
@@ -525,10 +514,10 @@ public class HotbarDisplay : StaticInventoryDisplay
         InventoryItemData itemData = slots[_currentIndex].AssignedInventorySlot.ItemData;
         if (itemData != null && itemData.ID == itemId)
         {
-            Debug.Log("True");
+          //  Debug.Log("True");
             return true; // O item está na mão
         }
-        Debug.Log("ff");
+//        Debug.Log("ff");
         return false; 
     }
 

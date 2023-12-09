@@ -65,8 +65,8 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
    }
    public void ColherPlanta()
    {
-      if (cresceu = true)
-      {
+      //if (cresceu = true)
+     // {
          if (idadePlanta >= diaPlanta)
          {
             
@@ -74,7 +74,7 @@ public class PlantTrigger : MonoBehaviour, IObserverPlanta
 
             
             ExcluirPlanta();
-         }
+         //}
       }
 
    }

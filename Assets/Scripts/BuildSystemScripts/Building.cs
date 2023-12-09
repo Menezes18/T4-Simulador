@@ -91,7 +91,7 @@ public class Building : MonoBehaviour
 
     private void OnDestroy()
     {
-        Debug.Log("Destroying object");
+        //Debug.Log("Destroying object");
         // if (SaveGameManager.Data.BuildingSaveData.Contains(SaveData))
         // {
         //     Debug.Log("Found data so removing it");

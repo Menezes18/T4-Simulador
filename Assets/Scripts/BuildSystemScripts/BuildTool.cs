@@ -81,7 +81,7 @@ public class BuildTool : MonoBehaviour
         placedata = data;
         _spawnedBuilding.Init(data);
         _spawnedBuilding.transform.rotation = _lastRotation;
-        Debug.Log("Selected part: " + data.name);
+//        Debug.Log("Selected part: " + data.name);
         if (data.name == "FloorSign")
         {
             

@@ -57,12 +57,10 @@
      <Compile Include="Assets\Scripts\UI Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\InventoryItemData.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\InventoryUIController.cs" />
-     <Compile Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Scripts\ReactiveRider.cs" />
-     <Compile Include="Assets\LPHorse_Version_2_9\Version_2_9\Saddle\Scripts\SaddleBind.cs" />
-     <Compile Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Scripts\OnAnimatorIKRelay.cs" />
      <Compile Include="Assets\Scripts\Movimentação\FirstPersonController\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\InventorySystem.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Scripts\Shop System\ShopSystem.cs" />
      <Compile Include="Assets\Scripts\Shop System\ShopKeeper.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\Database.cs" />
@@ -70,9 +68,7 @@
      <Compile Include="Assets\Scripts\BuildSystemScripts\ProceduralMesh.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\HotbarDisplay.cs" />
      <Compile Include="Assets\Scripts\SystemQuebrar\SystemQuebrar.cs" />
-     <Compile Include="Assets\Scripts\Craft\CraftingSystem.cs" />
      <Compile Include="Assets\Scripts\Craft\CraftSystem.cs" />
-     <Compile Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Scripts\RRSetIK.cs" />
      <Compile Include="Assets\MenuScript.cs" />
      <Compile Include="Assets\Pre-Fabs\Animal\Obstaculo.cs" />
      <Compile Include="Assets\Scripts\Movimentação\InputSystem\StarterAssetsInputs.cs" />
@@ -80,6 +76,7 @@
      <Compile Include="Assets\Scripts\UI Scripts\InventorySlot_UI.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\BuildingData.cs" />
      <Compile Include="Assets\Scripts\-MUDAR-SystemArruma\ConsertarTrigger.cs" />
+     <Compile Include="Assets\NPC\Scripts\WayPoint.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\InventoryHolder.cs" />
      <Compile Include="Assets\Scripts\Input\PlayerControls.cs" />
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
@@ -91,7 +88,6 @@
      <Compile Include="Assets\Scripts\Movimentação\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\UniqueID.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\HotbarSelector.cs" />
-     <Compile Include="Assets\Scripts\Craft\CraftSlot_UI.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\UI Scripts\BuildingPanelUI.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\BuildTool.cs" />
      <Compile Include="Assets\Scripts\IObeserver\IObserverPlanta.cs" />
@@ -106,6 +102,7 @@
      <Compile Include="Assets\Scripts\Item Scripts\ItemSlot.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\UI Scripts\BuildingPartUI.cs" />
      <Compile Include="Assets\Pre-Fabs\Animal\HorseController.cs" />
+     <Compile Include="Assets\NPC\Scripts\NPCMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
      <Compile Include="Assets\Scripts\BuildHouse\HouseData.cs" />
      <Compile Include="Assets\Scripts\Plant\Trigger.cs" />
@@ -115,6 +112,7 @@
      <Compile Include="Assets\Scripts\SaveLoad\SaveData.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\InventorySlot.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\ChestInventory.cs" />
+     <Compile Include="Assets\Scripts\Npc\NpcController.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\UI Scripts\BuildingSideUI.cs" />
      <Compile Include="Assets\Scripts\BuildHouse\VerificadorData.cs" />
      <Compile Include="Assets\Scripts\Interfaces\MenuPause.cs" />
@@ -126,7 +124,6 @@
      <Compile Include="Assets\Scripts\controllers\MenuController.cs" />
      <Compile Include="Assets\Scripts\Plant\Plant.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\InventoryDisplay.cs" />
-     <Compile Include="Assets\Scripts\Npc\AudioControllerNpc.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_6" />
      <Folder Include="Assets\StylizedWater2\_Demo" />
@@ -135,15 +132,16 @@
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\ReferenceUnlit.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Waveform.shader" />
      <None Include="Library\PackageCache\com.unity.settings-manager@2.0.1\package.json" />
-     <None Include="Assets\LPHorse_Version_2_9\Version_2_31\READ_ME.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_31\Horse3D\Textures" />
+     <Folder Include="Assets\QuickOutline\Resources" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LensDirt" />
      <Folder Include="Assets\Settings" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2" />
      <Folder Include="Assets\PolygonKnights\Models" />
+     <Folder Include="Assets\QuickOutline\Resources\Materials" />
+     <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\NormalPreview.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\Textures" />
@@ -185,7 +183,6 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools\ShapeTool\on" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Vectorscope.compute" />
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.7.0\Tests" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Prefabs" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Sampling.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_1" />
@@ -194,7 +191,6 @@
      <Folder Include="Assets\Materiais_E_Modelos\Texturas\Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_31\Saddle" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\Cubes" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\LineBillboard.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
@@ -204,36 +200,25 @@
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art\Materials" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Gizmos" />
      <Folder Include="Assets\PolygonKnights\Materials" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Override_Animations\Mouth" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Waveform.compute" />
      <Folder Include="Assets\ADG_Textures\ground_vol1\ground3" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
      <Folder Include="Assets\NPC\Texture" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\VertexPicker.shader" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Transitions" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Gizmos" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\ValidationConfig.json" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Saddle\Prefabs" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_31\Saddle\Materials" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\BuildingData" />
      <Folder Include="Assets\UI\Icons" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\BuildingPrefabs" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\package.json" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Override_Animations\Eyes" />
      <Folder Include="Assets\Render" />
      <Folder Include="Assets\StylizedWater2\Materials\Textures\Normals" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\PSSL.hlsl" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_31\Horse3D\Materials" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\DiffuseTextureBlend.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\LineBillboardMetal.shader" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9" />
      <Folder Include="Assets\Scripts\Item Scripts\Itens\Cenoura" />
-     <None Include="Assets\LPHorse_Version_2_9\Version_2_9\READ_ME.txt" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_31" />
      <Folder Include="Assets\UI\Icons\Sementes" />
-     <Folder Include="Assets\Scripts\Missao" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\ForwardPass.hlsl" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Baskets and Pails" />
@@ -241,6 +226,7 @@
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Common.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0" />
      <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\Gizmos" />
+     <Folder Include="Assets\QuickOutline\Samples" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_8" />
      <Folder Include="Assets\Scripts\InventoryItems" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationConfig.json" />
@@ -250,19 +236,16 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\READ ME" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Override_Animations" />
      <Folder Include="Assets\StylizedWater2\Materials\Textures\Foam" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Resources\Textures" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_31\Horse3D" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\ScrollHighlight.shader" />
      <Folder Include="Assets\ADG_Textures\ground_vol1\ground11" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\Scripts\Movimentação\FirstPersonController" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\UnlitSolidColor.shader" />
      <Folder Include="Assets\Animations" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\Head\Primary" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\AutoExposure.compute" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
@@ -270,6 +253,7 @@
      <Folder Include="Assets\Marketplace Cute Series\Materials" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
      <Folder Include="Assets\Scripts\Item Scripts" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasingBridge.hlsl" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Weapons" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\package.json" />
@@ -277,7 +261,6 @@
      <Folder Include="Assets\Pre-Fabs\arvore" />
      <Folder Include="Assets\Scripts\Plant\Tomate" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\ValidationExceptions.json" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Textures" />
      <Folder Include="Assets\Materiais_E_Modelos\Materials" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.1.0\package.json" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Tents" />
@@ -286,6 +269,7 @@
      <Folder Include="Library\PackageCache\com.unity.timeline@1.7.5" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
      <Folder Include="Assets\Marketplace Cute Series\Scenes" />
+     <Folder Include="Assets\UI\Icons\Button" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\BlueNoise256px" />
      <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\Tests" />
@@ -293,7 +277,6 @@
      <Folder Include="Assets\StylizedWater2" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\D3D11.hlsl" />
      <Folder Include="Assets\Marketplace Cute Series\Read Me" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Scenes" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
      <Folder Include="Assets\NPC" />
@@ -309,21 +292,19 @@
      <Folder Include="Assets\Materiais_E_Modelos\Imagens" />
      <Folder Include="Assets\Scripts\Plant\Melao" />
      <Folder Include="Assets\Materiais_E_Modelos\Texturas" />
-     <None Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Animation_Information.txt" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Tests" />
      <Folder Include="Assets\ADG_Textures\ground_vol1\ground1" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Flow" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project\Models" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Buildings\Snow" />
      <Folder Include="Assets\StylizedWater2\Shaders" />
      <Folder Include="Assets\PolygonFarm\Materials" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art\Skybox" />
      <Folder Include="Assets\Scripts\-MUDAR-SystemArruma" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Mecanim_Prototyper" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Masks" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_5" />
      <Folder Include="Assets\Marketplace Cute Series" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
@@ -333,15 +314,11 @@
      <Folder Include="Assets\StylizedWater2\Materials\Textures" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools\PolyShape" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\Head\Primary\Idle_Reference" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Plants" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\Textures" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Textures\Mouth" />
      <Folder Include="Assets\fonts\presets" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Saddle\Mesh" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_3" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_31\Saddle\Textures" />
      <Folder Include="Assets\Models" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Cursors" />
      <Folder Include="Assets\Marketplace Cute Series\FBX" />
@@ -349,7 +326,6 @@
      <Folder Include="Assets\ADG_Textures\ground_vol1\ground2" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.26\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\LeanAndCurve" />
      <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\EdgePicker.shader" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Resources\Materials" />
@@ -358,7 +334,6 @@
      <Folder Include="Assets\Scripts\Plant" />
      <Folder Include="Assets\ADG_Textures\ground_vol1\ground10" />
      <Folder Include="Assets\ColorSkies\Skies" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Override_Animations\Nostril" />
      <Folder Include="Assets\PolygonFarm\Models" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\VertexShader.shader" />
@@ -366,11 +341,9 @@
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Characters" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\FBX" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Primary_Cycles" />
      <Folder Include="Assets\ADG_Textures\ground_vol1\ground9" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project\Icons" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\package.json" />
-     <None Include="Assets\LPHorse_Version_2_9\Version_2_9\Prefabs\Saddled With ReactiveRider\ReactiveRider_Information.txt" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\UVEditor" />
      <Folder Include="Assets\Scripts\UI Scripts" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_7" />
@@ -402,11 +375,11 @@
      <Folder Include="Assets\Scripts\controllers" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Input.hlsl" />
      <Folder Include="Assets\StylizedWater2\Shaders\Libraries" />
+     <Folder Include="Assets\QuickOutline" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\ValidationExceptions.json" />
      <Folder Include="Assets\StylizedWater2\Materials" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\Metal.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Uber.shader" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\Tail" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Props" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\SMAA" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -414,8 +387,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Upgrade\AssetIdRemap-4_0_0.json" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1" />
-     <None Include="Assets\LPHorse_Version_2_9\Version_2_9\Materials\Material_Information.txt" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Animator" />
      <Folder Include="Assets\Models\textures" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Resources" />
@@ -424,7 +395,6 @@
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\Tests" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\UI Scripts" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Prefabs\Saddled" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\xRLib.hlsl" />
      <Folder Include="Assets\Pre-Fabs\Animal" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Prefabs" />
@@ -441,16 +411,16 @@
      <Folder Include="Assets\Scripts\Plant\Batata" />
      <Folder Include="Assets\ADG_Textures" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Generic" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\Head" />
      <Folder Include="Assets\NPC\Animação" />
      <Folder Include="Assets\Scripts\Shop System" />
+     <Folder Include="Assets\QuickOutline\Samples\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\license.txt" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LUTs" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Saddle\Scripts" />
+     <None Include="Assets\QuickOutline\Readme.txt" />
+     <Folder Include="Assets\Unity.VisualScripting.Generated" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\package.json" />
      <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\Head\Primary\Collected_Walk_Reference" />
      <Folder Include="Assets\Scripts\CicloDiaeNoite" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Overlays.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
@@ -473,6 +443,7 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Terrain" />
      <Folder Include="Assets\TutorialInfo\Scripts" />
+     <Folder Include="Assets\QuickOutline\Resources\Shaders" />
      <Folder Include="Assets\PolygonKnights\Textures" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\ProBuilderCG.cginc" />
@@ -481,14 +452,12 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\package.json" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project\Materials" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\Legs" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Environments" />
      <Folder Include="Assets\Scripts\Plant\Cenoura" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Models" />
      <Folder Include="Assets\TutorialInfo\Icons" />
      <Folder Include="Assets\ADG_Textures\ground_vol1\ground4" />
      <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\EditorResources\Overlay" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Prefabs\Not Saddled" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Wagons" />
      <Folder Include="Assets\TutorialInfo" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools\ShapeTool" />
@@ -497,14 +466,13 @@
      <Folder Include="Assets\Scripts\Plant\Beterraba" />
      <Folder Include="Assets\Pre-Fabs" />
      <Folder Include="Assets\Scripts\SaveLoad" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Masks" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.26" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures" />
      <Folder Include="Assets\PolygonFarm\Textures" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Food" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Textures\Eye" />
      <Folder Include="Assets\PolygonFarm\Models\Materials" />
+     <Folder Include="Assets\QuickOutline\Samples\Materials" />
      <Folder Include="Assets\Materiais_E_Modelos\Texturas\Bau_Argola_Fecho" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStd.shader" />
      <Folder Include="Assets\PolygonKnights\Models\Characters" />
@@ -523,9 +491,7 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Toolbar\Background" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Toolbar" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.1.0\ValidationConfig.json" />
-     <None Include="Assets\LPHorse_Version_2_9\Version_2_9\Saddle\Saddle_Information 1.txt" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Materials" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Prefabs\Saddled With ReactiveRider" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Characters\FixedScaleCharacters" />
      <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\package.json" />
      <Folder Include="Assets\NPC\Scripts" />
@@ -535,10 +501,8 @@
      <Folder Include="Assets\ColorSkies\Textures\Skybox_2" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\StandardVertexColor.shader" />
      <Folder Include="Assets\Scripts\Player" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Saddle\Materials" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Tests" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MotionBlur.shader" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Primary_Actions" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\SaveLoad" />
@@ -547,8 +511,6 @@
      <Folder Include="Assets\NPC\Animação\Gustar" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Fog.hlsl" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Environments\Snow" />
-     <None Include="Assets\LPHorse_Version_2_9\Version_2_31\Saddle\Saddle_Information.txt" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Prefabs" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\PointBillboard.shader" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Materials\Textures" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\Animations" />
@@ -573,8 +535,8 @@
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Characters" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Saddle" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Content" />
+     <Folder Include="Assets\QuickOutline\Scripts" />
      <Folder Include="Assets\Marketplace Cute Series\PPP" />
      <Folder Include="Assets\Scripts\Plant\ItemDataSemente" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader" />
@@ -602,17 +564,16 @@
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
      <Folder Include="Assets\PolygonKnights\Models\Characters\FixedScaleCharacters" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Waves.hlsl" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Materials\Mouth" />
      <Folder Include="Assets\fonts" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\IL3DN_Water.shader" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\External" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Hay" />
-     <Folder Include="Assets\LPHorse_Version_2_9\DemoAssets" />
      <Folder Include="Assets\StylizedWater2\Prefabs" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
      <Folder Include="Assets\PolygonKnights\Prefabs" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Upgrade" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
@@ -622,14 +583,9 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Buildings" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Material" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Materials" />
-     <Folder Include="Assets\LPHorse_Version_2_9" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\Head\Secondary" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaQuadrada" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Tables" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations\Full Body" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\BlueNoise64px" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Animations\Additive_Animations" />
      <Folder Include="Assets\ADG_Textures\ground_vol1" />
      <Folder Include="Assets\Scripts\Interfaces" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
@@ -637,12 +593,10 @@
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.Unsafe.xml" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\SelectionPicker.shader" />
      <Folder Include="Assets\Scripts\Craft" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Scripts" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\Vulkan.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Material\Textures" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\package.json" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\FaceHighlight.shader" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Materials\Eye" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\PPP" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Colors.hlsl" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs" />
@@ -650,8 +604,6 @@
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Presets\Noise" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Tests" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider\Animations" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\ReactiveRider" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\HideVertices.shader" />
      <Folder Include="Assets\UI" />
@@ -659,7 +611,6 @@
      <Folder Include="Assets\StylizedWater2\Prefabs\Effects" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Vehicles" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\URP.hlsl" />
-     <Folder Include="Assets\LPHorse_Version_2_9\Version_2_9\Mesh" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2" />
      <Folder Include="Assets\Scripts\Plant\Abobora" />
      <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\package.json" />
@@ -1411,21 +1362,21 @@
       <Project>{afde19a2-510f-813c-efc2-321e005cf1e9}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="sc.stylizedwater2.editor.csproj">
+      <Project>{103bbe8b-3851-36b9-acd1-803171dcbe3f}</Project>
+      <Name>sc.stylizedwater2.editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{b33949f9-d83d-62e7-ae6e-63d2d74c8e44}</Project>
       <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{a7e6287a-5dc5-fb94-e647-c09afd26cd2b}</Project>
-      <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
       <Project>{a21b8723-8c80-6816-2cac-d9db321b844c}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="sc.stylizedwater2.editor.csproj">
-      <Project>{103bbe8b-3851-36b9-acd1-803171dcbe3f}</Project>
-      <Name>sc.stylizedwater2.editor</Name>
+    <ProjectReference Include="Unity.InputSystem.csproj">
+      <Project>{a7e6287a-5dc5-fb94-e647-c09afd26cd2b}</Project>
+      <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
       <Project>{159a4e98-6722-931a-45cf-6cca2859018b}</Project>

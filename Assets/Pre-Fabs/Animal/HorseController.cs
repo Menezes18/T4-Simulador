@@ -17,7 +17,6 @@ public class HorseController : MonoBehaviour
     private Transform player;
     private Vector3 initialPosition;
     private bool isRunning;
-    private bool isSpecialAnimationTriggered;
     private enum HorseState
     {
         Walking,
@@ -33,7 +32,6 @@ public class HorseController : MonoBehaviour
         initialPosition = transform.position;
         currentState = HorseState.Walking;
         isRunning = false;
-        isSpecialAnimationTriggered = false;
     }
 
     private void FixedUpdate()

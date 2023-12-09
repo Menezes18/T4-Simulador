@@ -17,7 +17,6 @@ public class ChickenController : MonoBehaviour
     public Transform player;
     
     private Vector3 initialPosition;
-    private bool isRunning;
     public bool playerBool = false;
     public GameObject itemPrefab;
     public enum ChickenState
@@ -35,7 +34,6 @@ public class ChickenController : MonoBehaviour
         animator = GetComponent<Animator>();
         initialPosition = transform.position;
         currentState = ChickenState.Walking;
-        isRunning = false;
         //InvokeRepeating("DropItem", 0f, 300f);
     }
     private void DropItem()
@@ -82,7 +80,7 @@ public class ChickenController : MonoBehaviour
 
     public void EventAnimationEat()
     {
-        Debug.Log("TESTE");
+//        Debug.Log("TESTE");
         animator.SetBool("Eat", false);
         currentState = ChickenState.Walking;
     
@@ -92,7 +90,7 @@ public class ChickenController : MonoBehaviour
     private void HandleWalkingState()
     {
         int randomvalue = Random.Range(0, 200);
-        Debug.Log(randomvalue);
+       // Debug.Log(randomvalue);
         
         
         if (randomvalue < 2 && !playerBool)
@@ -120,7 +118,7 @@ public class ChickenController : MonoBehaviour
 
         // Move the chicken forward
         animator.SetBool("Walk", true);
-        Debug.Log("andei");
+//        Debug.Log("andei");
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
     }
 

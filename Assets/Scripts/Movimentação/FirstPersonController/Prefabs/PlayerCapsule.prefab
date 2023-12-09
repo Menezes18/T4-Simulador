@@ -186,7 +186,6 @@ GameObject:
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 2117699081}
   - component: {fileID: 2117699096}
-  - component: {fileID: 2117699097}
   - component: {fileID: 2117699109}
   - component: {fileID: 2117699101}
   m_Layer: 11
@@ -322,14 +321,19 @@ MonoBehaviour:
   GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 4673
   CinemachineCameraTarget: {fileID: 4135013735270702863}
   TopClamp: 89
   BottomClamp: -89
   targetSpeed: 0
   characterWithAnimator: {fileID: 0}
   passosAudioSource: {fileID: 0}
-  passosAudioClip: []
+  passosAudioClip:
+  - {fileID: 8300000, guid: 7131d701ae015a54aa3d856feccd513f, type: 3}
+  - {fileID: 8300000, guid: 942019cf9ecd5854ebeb343b12b7f779, type: 3}
+  - {fileID: 8300000, guid: 1a88f429c4a7b734f9c4254f0c654cea, type: 3}
+  - {fileID: 8300000, guid: 665f92bb69e46a94a8caf3717dbb0d5e, type: 3}
+  - {fileID: 8300000, guid: 8802544ed0324a14095edc70ab3bbab1, type: 3}
 --- !u!114 &8616685848737228376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,47 +464,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotateSnapAngle: 90
-  _rayDistance: 5
+  _rayDistance: 8
   _buildModeLayerMask:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 8769
   _deleteModeLayerMask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 8769
   FarmLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   _defaultLayerInt: 8
   _rayOrigin: {fileID: 0}
-  _buildingMatPositive: {fileID: -2474030419100534554, guid: 2a83f0dd7e81d924e997c0a4a8881021, type: 3}
-  _buildingMatNegative: {fileID: -2474030419100534554, guid: 2a83f0dd7e81d924e997c0a4a8881021, type: 3}
+  _buildingMatPositive: {fileID: 2100000, guid: b13cb86c4189a3c489865bf47f73b196, type: 2}
+  _buildingMatNegative: {fileID: 2100000, guid: 7ac839e7645a2584b9ee3af9ce1b13d4, type: 2}
   buildAtivar: 0
   _camera: {fileID: 0}
   terraArada:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8192
   data: {fileID: 0}
-  placedata: {fileID: 0}
+  placedata: {fileID: 11400000, guid: 9e529815695d5ec4ca07623e1e7a847b, type: 2}
   _spawnedBuilding: {fileID: 0}
-  materialTerraArada: {fileID: 0}
-  materialTerraNormal: {fileID: 0}
-  materialTerraPronta: {fileID: 0}
+  materialTerraArada: {fileID: 2100000, guid: 4193447f3d1b90d4d8784f255a257704, type: 2}
+  materialTerraNormal: {fileID: 2100000, guid: 6f02ed3167c849f46a9139081c2f3308, type: 2}
+  materialTerraPronta: {fileID: 2100000, guid: 4193447f3d1b90d4d8784f255a257704, type: 2}
   plantio: 0
---- !u!114 &2117699097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8616685848737228372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d656e7a9d29b18f4c9b51d1c09ccd9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tool: {fileID: 0}
-  build: {fileID: 0}
-  data: {fileID: 0}
+  pode: 1
 --- !u!114 &2117699109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,7 +512,18 @@ MonoBehaviour:
   terraArada: {fileID: 0}
   build: {fileID: 0}
   animator: {fileID: 0}
-  hotbarDisplay: {fileID: 0}
+  craft: {fileID: 0}
+  craftArvore: {fileID: 0}
+  quebrarArvore: {fileID: 0}
+  item: 0
+  plantT: {fileID: 0}
+  ids: 0
+  galinha: {fileID: 0}
+  canvasinfo: {fileID: 0}
+  auxCanvas: {fileID: 0}
+  prefabCanvasInfo: {fileID: 8773280026165873012, guid: e5f9bb18bd85257479fbbd45d8a00e34, type: 3}
+  isItemInHand: 0
+  itemInHandId: 0
 --- !u!114 &2117699101
 MonoBehaviour:
   m_ObjectHideFlags: 0

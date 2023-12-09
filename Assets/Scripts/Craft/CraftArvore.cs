@@ -5,7 +5,6 @@ using UnityEngine;
 public class CraftArvore : MonoBehaviour
 {
     public static CraftArvore arvoreC;
-    [SerializeField] private bool painelAtivo = false;
     public int slot = 0;
     public int receitas = 0;
     
@@ -17,6 +16,13 @@ public class CraftArvore : MonoBehaviour
 
     public Transform itemTransform;
     public GameObject[] itens;
+
+    public void Awake()
+    {
+
+        slotOcupado = false;
+    }
+
     public void Quebrar()
     {
         

@@ -958,21 +958,21 @@
       <Project>{afde19a2-510f-813c-efc2-321e005cf1e9}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="sc.stylizedwater2.editor.csproj">
+      <Project>{103bbe8b-3851-36b9-acd1-803171dcbe3f}</Project>
+      <Name>sc.stylizedwater2.editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{b33949f9-d83d-62e7-ae6e-63d2d74c8e44}</Project>
       <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.csproj">
-      <Project>{a7e6287a-5dc5-fb94-e647-c09afd26cd2b}</Project>
-      <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
       <Project>{a21b8723-8c80-6816-2cac-d9db321b844c}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="sc.stylizedwater2.editor.csproj">
-      <Project>{103bbe8b-3851-36b9-acd1-803171dcbe3f}</Project>
-      <Name>sc.stylizedwater2.editor</Name>
+    <ProjectReference Include="Unity.InputSystem.csproj">
+      <Project>{a7e6287a-5dc5-fb94-e647-c09afd26cd2b}</Project>
+      <Name>Unity.InputSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
       <Project>{159a4e98-6722-931a-45cf-6cca2859018b}</Project>
