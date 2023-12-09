@@ -72,7 +72,12 @@ public class ItemPickUp : MonoBehaviour
         }
     }
 
-
+    public void OnItemInventory()
+    {
+        var inventory = FindObjectOfType<PlayerInventoryHolder>(); //muito caro, mas n sei como fazer 
+        inventory.AddToInventory(ItemData, 1);
+        Destroy(this.gameObject);
+    }
 }
 
 [System.Serializable]

@@ -364,7 +364,7 @@ public class HotbarDisplay : StaticInventoryDisplay
         }
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {
-            Debug.Log("Item");
+            
             InventoryItemData item = slots[_currentIndex].AssignedInventorySlot.ItemData;
 
             if (item._building)
@@ -432,8 +432,8 @@ public class HotbarDisplay : StaticInventoryDisplay
 
         if (item != null)
         {
-            GameObject spawnedObject = Instantiate(item.ItemPrefab, itemPrefab.transform.position, Quaternion.identity);
 
+            GameObject spawnedObject = Instantiate(item.ItemPrefab, itemPrefab.transform.position, Quaternion.identity);
             // Obter a rotação da câmera principal
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
@@ -444,9 +444,9 @@ public class HotbarDisplay : StaticInventoryDisplay
             MeshCollider MeshcolliderItem = spawnedObject.GetComponentInChildren<MeshCollider>();
             Collider colliderDoItem = spawnedObject.GetComponent<Collider>();
             SphereCollider sphereCollider = spawnedObject.GetComponent<SphereCollider>();
-            
-            
-            Destroy(MeshcolliderItem);
+
+
+            if (MeshcolliderItem != null) MeshcolliderItem.enabled = false;
             if (sphereCollider != null) sphereCollider.enabled = false;
             if (colliderDoItem != null) colliderDoItem.enabled = false;
             

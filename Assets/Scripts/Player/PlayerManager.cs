@@ -8,14 +8,9 @@ using UnityEngine.InputSystem.Interactions;
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager playerManager;
-    public float fome = 100f;
-    public float maxfome = 100f;
-    private const float taxaDecaimentoFome = 0.16f;
-    public float energia = 100f;
-    public float maxEnergia = 100f;
     private RaycastHit hitInfo;
-    private event Action<float> OnFomeChanged;   // Evento para a fome
-    private event Action<float> OnEnergiaChanged; // Evento para a energia
+    public float playerReach = 3f;
+    private CanvasInfo currentCanvasInfo;
     [SerializeField] private GameObject objetoQuebravel;
     public SystemQuebrar systemQuebrarComponent;
     public TerraArada terraArada;
@@ -37,7 +32,6 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         
-
         if (playerManager != null && playerManager != this)
         {
             Destroy(gameObject);
@@ -50,9 +44,7 @@ public class PlayerManager : MonoBehaviour
     }
     public void bater(int id, BuildingData item, Building itemdata)
     {
-        if (energia > 10)
-        {
-            animator.SetTrigger("Bater");
+        animator.SetTrigger("Bater");
             if (id.Equals(2927270) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(27290)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
             if (id.Equals(27290) && hitInfo.collider.gameObject.tag.Equals("ArvoreCraft")) 
@@ -62,8 +54,6 @@ public class PlayerManager : MonoBehaviour
                 
                     quebrarArvore.Quebrar();
             }
-
-        }
     }
     void VerificarScriptNoAvoo(GameObject objeto, int id)
     {
@@ -110,43 +100,82 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("O script do pai NÃO foi encontrado.");
         }
     }
-    private void Start()
-    {
-        
-       // InvokeRepeating("RegenerarEnergia", 5.0f, 5.0f);
-        
-    }
-
     private void Update()
     {
+        CheckInteraction();
+        if (currentCanvasInfo != null)
+        {
+            currentCanvasInfo.Interact();
+        }
         canvasinfo = hitInfo.collider?.transform.gameObject?.GetComponent<CanvasInfo>();
         
         if (Keyboard.current.eKey.wasPressedThisFrame)
         {
             InteragirComObjeto();
         }
-        if (canvasinfo != null)
+        
+    }
+
+    #region Interaction
+    void CheckInteraction()
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        if (Physics.Raycast(ray, out hitInfo, playerReach))
         {
-             //Debug.Log("A");
-            auxCanvas = canvasinfo;
-            auxCanvas.canvasAtivar();
+            if (hitInfo.collider.gameObject.GetComponent<CanvasInfo>())
+            {
+                
+                CanvasInfo newcanvas = hitInfo.collider.GetComponent<CanvasInfo>();
+
+                if (currentCanvasInfo && newcanvas != currentCanvasInfo)
+                {
+                    currentCanvasInfo.DisableOutline();
+                }
+                
+                if (newcanvas.enabled)
+                {
+                    SetCurrentInteraction(newcanvas);
+                }
+            }
         }
-        else if (canvasinfo == null && auxCanvas != null)
+        else
         {
-            auxCanvas.canvasDesativar();
+            DisableCurrentInteractable();
         }
     }
+    void SetCurrentInteraction(CanvasInfo canvasInfo)
+    {
+
+        currentCanvasInfo = canvasInfo;
+        currentCanvasInfo.EnableOutline();
+        HUDController.instancia.EnableText(currentCanvasInfo.message, currentCanvasInfo.image);
+
+    }
+
+    private void DisableCurrentInteractable()
+    {
+        HUDController.instancia.DisableText();
+        if (currentCanvasInfo)
+        {
+            currentCanvasInfo.DisableOutline();
+            currentCanvasInfo = null;
+        }
+    }
+    #endregion
     private void InteragirComObjeto()
     {
         if (hitInfo.collider != null)
         {
-            
-            
+
+            var itemPick = hitInfo.collider.transform.gameObject.GetComponent<ItemPickUp>();
             galinha = hitInfo.collider.transform?.gameObject.GetComponent<ChickenController>();
             craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
             craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
             plantT = hitInfo.collider?.gameObject.GetComponent<PlantTrigger>();
-            
+            if (itemPick != null)
+            {
+                itemPick.OnItemInventory();
+            }
             if (HotbarDisplay.Display.IsItemInHand(15) && plantT != null)
             {
                 plantT.agua = true;
@@ -219,46 +248,31 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
-    
+
     public void raycast(RaycastHit hitInforay)
     {
         hitInfo = hitInforay;
-        string obj = hitInfo.collider.gameObject.name;
-        CanvasInfo(hitInfo);
-        
-        BuildHouse buildHouseComponent = hitInfo.collider.gameObject.GetComponentInChildren<BuildHouse>();
-        systemQuebrarComponent = hitInfo.collider.gameObject.GetComponent<SystemQuebrar>();
-        terraArada = hitInfo.collider.gameObject.GetComponent<TerraArada>();
-        craft = hitInfo.collider.gameObject.GetComponent<CraftSystem>();
-        if (buildHouseComponent != null)
-        {
-            buildHouseComponent.hud();
-        }
-         
-    }
+        float distanceToHit = hitInfo.distance;
 
-    private GameObject prefab;
-    public void CanvasInfo(RaycastHit hitInforay)
-    {
-        if(hitInforay.collider.gameObject.tag.Equals("CanvasInfo"))
+        // Adicionando verificação de distância aqui
+        if (distanceToHit <= playerReach)
         {
-            
-            Canvas canvas = hitInforay.collider.gameObject.GetComponentInChildren<Canvas>();
-            if (canvas == null)
+            string obj = hitInfo.collider.gameObject.name;
+
+            BuildHouse buildHouseComponent = hitInfo.collider.gameObject.GetComponentInChildren<BuildHouse>();
+            systemQuebrarComponent = hitInfo.collider.gameObject.GetComponent<SystemQuebrar>();
+            terraArada = hitInfo.collider.gameObject.GetComponent<TerraArada>();
+            craft = hitInfo.collider.gameObject.GetComponent<CraftSystem>();
+        
+            if (buildHouseComponent != null)
             {
-                Debug.Log("Canvas"); 
-            prefab = Instantiate(prefabCanvasInfo, hitInforay.collider.gameObject.transform.position, Quaternion.identity);
-            prefab.transform.parent = hitInforay.collider.gameObject.transform;
+                buildHouseComponent.hud();
             }
         }
-        else if (prefab != null)
-        {
-            Destroy(prefab);
-        }
-        
-        
-
     }
+
+
+    private GameObject prefab;
     public InventoryItemData GetItemData()
     {
         if (HotbarDisplay.Display != null)

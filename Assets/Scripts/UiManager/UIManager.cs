@@ -37,29 +37,19 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if(PlayerManager.playerManager != null) UpdateUI();
-        if (Keyboard.current.tabKey.wasPressedThisFrame)
-        {
-            menu.SetActive(!menu.activeSelf);
-            SetMouseCursorState(menu.activeSelf);
-            
-
-            // Ativa ou desativa o CinemachineBrain quando pressionar Tab
-            if (cinemachineBrain != null)
-            {
-                cinemachineBrain.enabled = !menu.gameObject.activeInHierarchy;
-            }
-        }
-    }
-    
-    private void UpdateUI()
-    {
-        FomeSlider.value = PlayerManager.playerManager.fome / PlayerManager.playerManager.maxfome;
-        EnergiaSlider.value = PlayerManager.playerManager.energia / 100f; // Supondo que a energia máxima é 100.
-
-        // Atualiza os TextMeshPro de Porcentagem.
-        FomeTextMeshPro.text = Mathf.RoundToInt(PlayerManager.playerManager.fome) + "%";
-        EnergiaTextMeshPro.text = Mathf.RoundToInt(PlayerManager.playerManager.energia) + "%";
+        
+        // if (Keyboard.current.tabKey.wasPressedThisFrame)
+        // {
+        //     menu.SetActive(!menu.activeSelf);
+        //     SetMouseCursorState(menu.activeSelf);
+        //     
+        //
+        //     // Ativa ou desativa o CinemachineBrain quando pressionar Tab
+        //     if (cinemachineBrain != null)
+        //     {
+        //         cinemachineBrain.enabled = !menu.gameObject.activeInHierarchy;
+        //     }
+        // }
     }
 
     private void SetMouseCursorState(bool newState)

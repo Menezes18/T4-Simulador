@@ -132,19 +132,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023276319236942}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 7523594159936911416}
-  player: {fileID: 7523594159936911416}
-  alvo: {fileID: 0}
-  textCanvas: {fileID: 4114291186909133537}
-  image: {fileID: 7330117056340254505}
-  text: Aperte para quebrar a arvore
-  painel: 0
-  novaSprite: {fileID: 0}
+  _outline: {fileID: 0}
+  message: 
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3406818231007774298
 GameObject:
   m_ObjectHideFlags: 0

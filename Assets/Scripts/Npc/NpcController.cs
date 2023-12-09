@@ -11,7 +11,7 @@ public class NpcController : MonoBehaviour
 
     public Animator anim;
 
-    public float audio;
+    public float audio = 0f;
 
     private float waypointTimer = 5f; // 60 seconds for 1 minute
     private float waypointCooldown = 0f;

@@ -13,6 +13,8 @@ public class PlayerInventoryHolder : InventoryHolder
     
     public static UnityAction<InventorySystem, int> OnPlayerInventoryDisplayRequested;
 
+
+
     private void Start()
     {
         

@@ -137,7 +137,7 @@ public class BuildTool : MonoBehaviour
             PlayerManager playerStatus = FindObjectOfType<PlayerManager>();
             if (playerStatus != null)
             {
-                //print("raycast");
+                
                 playerStatus.raycast(hitInfo);
             }
             return true;

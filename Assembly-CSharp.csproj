@@ -86,6 +86,7 @@
      <Compile Include="Assets\Scripts\UiManager\UIManager.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\WorldGrid.cs" />
      <Compile Include="Assets\Scripts\Movimentação\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
+     <Compile Include="Assets\Scripts\Canvas\HUDController.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\UniqueID.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\HotbarSelector.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\UI Scripts\BuildingPanelUI.cs" />
@@ -179,14 +180,14 @@
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
      <Folder Include="Assets\Marketplace Cute Series\Textures" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground5" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground5" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools\ShapeTool\on" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Vectorscope.compute" />
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.7.0\Tests" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Sampling.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_1" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground14" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground14" />
      <Folder Include="Assets\Models\pl\Prefab\Prefab" />
      <Folder Include="Assets\Materiais_E_Modelos\Texturas\Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -201,7 +202,7 @@
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Gizmos" />
      <Folder Include="Assets\PolygonKnights\Materials" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Waveform.compute" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground3" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground3" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
      <Folder Include="Assets\NPC\Texture" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\VertexPicker.shader" />
@@ -241,7 +242,7 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Resources\Textures" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\ScrollHighlight.shader" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground11" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground11" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\Scripts\Movimentação\FirstPersonController" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\UnlitSolidColor.shader" />
@@ -285,7 +286,7 @@
      <Folder Include="Assets\PolygonFarm\Materials\Alts" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\TransparentOverlay.shader" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground8" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground8" />
      <Folder Include="Assets\PolygonFarm\Materials\Misc" />
      <Folder Include="Assets\Scripts\Movimentação\FirstPersonController\Prefabs" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\UnlitVertexColor.shader" />
@@ -295,7 +296,7 @@
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Tests" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground1" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground1" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Flow" />
@@ -323,7 +324,7 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Cursors" />
      <Folder Include="Assets\Marketplace Cute Series\FBX" />
      <None Include="Assets\PolygonKnights\Scenes\README.txt" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground2" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground2" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.26\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders" />
      <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
@@ -332,7 +333,7 @@
      <Folder Include="Assets\Scenes\Game" />
      <Folder Include="Assets\ColorSkies\Textures" />
      <Folder Include="Assets\Scripts\Plant" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground10" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground10" />
      <Folder Include="Assets\ColorSkies\Skies" />
      <Folder Include="Assets\PolygonFarm\Models" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
@@ -341,7 +342,7 @@
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Characters" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\FBX" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground9" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground9" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project\Icons" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\package.json" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\UVEditor" />
@@ -409,7 +410,7 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Textures" />
      <Folder Include="Assets\Scripts\Plant\Batata" />
-     <Folder Include="Assets\ADG_Textures" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Generic" />
      <Folder Include="Assets\NPC\Animação" />
      <Folder Include="Assets\Scripts\Shop System" />
@@ -436,7 +437,7 @@
      <Folder Include="Assets\Scripts\Item Scripts\Itens" />
      <Folder Include="Assets\Materiais_E_Modelos" />
      <Folder Include="Assets\Scripts\Movimentação" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground6" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground6" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
      <Folder Include="Assets\Scripts\Input" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
@@ -456,7 +457,7 @@
      <Folder Include="Assets\Scripts\Plant\Cenoura" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Models" />
      <Folder Include="Assets\TutorialInfo\Icons" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground4" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground4" />
      <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.4\EditorResources\Overlay" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Wagons" />
      <Folder Include="Assets\TutorialInfo" />
@@ -507,7 +508,7 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\SaveLoad" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Props" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground7" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground7" />
      <Folder Include="Assets\NPC\Animação\Gustar" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Fog.hlsl" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Environments\Snow" />
@@ -530,7 +531,7 @@
      <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\ValidationConfig.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing" />
      <Folder Include="Assets\StylizedWater2\Models" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground13" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground13" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
@@ -547,7 +548,7 @@
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Scene" />
      <Folder Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1\ground12" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground12" />
      <Folder Include="Assets\Scripts\Plant\Pimenta" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
      <Folder Include="Assets\Scenes" />
@@ -586,7 +587,7 @@
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaQuadrada" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Tables" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\BlueNoise64px" />
-     <Folder Include="Assets\ADG_Textures\ground_vol1" />
+     <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1" />
      <Folder Include="Assets\Scripts\Interfaces" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\PolygonFarm\Prefabs" />
