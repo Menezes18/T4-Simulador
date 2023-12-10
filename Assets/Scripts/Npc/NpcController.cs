@@ -1,122 +1,75 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NpcController : MonoBehaviour
 {
-    public string playerTag = "Player";
-    public float distanceThreshold = 5f;
-    private AudioSource audioSource;
-    private bool isPlaying = false;
-    private float originalVolume;
+    public NavMeshAgent agent;
+    public float wanderRadius = 5f;
+    public float wanderTimer = 5f;
+    public Animator anim; // Adiciona uma referência ao componente Animator
+    private bool andarAtivo = false;
 
-    public Animator anim;
-
-    public float audio = 0f;
-
-    private float waypointTimer = 5f; // 60 seconds for 1 minute
-    private float waypointCooldown = 0f;
-    private float chanceToCallWaypoint = 0.2f;
-    public WayPoint pontoInicial;
-    void Start()
+    private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        originalVolume = audioSource.volume;
+        agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>(); // Obtém o componente Animator
+
+        StartCoroutine(Wander());
     }
 
-    void Update()
+    private IEnumerator Wander()
     {
-        // Check waypoint timer
-        waypointCooldown -= Time.deltaTime;
-        if (waypointCooldown <= 0f)
+        while (true)
         {
-            // Reset the timer
-            waypointCooldown = waypointTimer;
+            // Espera por um tempo aleatório
+            yield return new WaitForSeconds(Random.Range(1f, 5f));
 
-            // Check the chance to call waypoint
-            //if (Random.Range(0f, 1f) <= chanceToCallWaypoint)
-            //{
-                CallWaypoint();
-           // }
-        }
+            // Define um destino aleatório dentro do raio especificado
+            Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
+            agent.SetDestination(newPos);
 
-        GameObject player = GameObject.FindGameObjectWithTag(playerTag);
-
-        if (player == null)
-        {
-            Debug.LogWarning("Player not found. Make sure the player has the correct tag.");
-            return;
-        }
-
-        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-
-        if (distanceToPlayer < distanceThreshold)
-        {
-            if (!isPlaying)
+            // Ativa a animação de "Andar" apenas se não estiver ativa
+            if (!andarAtivo)
             {
-                anim.SetTrigger("tchau");
-                transform.LookAt(player.transform.position);
-                audioSource.Play();
-                isPlaying = true;
+                Debug.Log("TTgit");
+                anim.SetBool("Andar", true);
+                andarAtivo = true;
             }
 
-            if (audio >= audioSource.clip.length)
-            {
-                audioSource.Stop();
-                return;
-            }
+            // Espera até que o NPC alcance o destino
+            yield return new WaitUntil(() => agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending);
 
-            audio += Time.deltaTime;
+            // Agora, esperamos até que o NPC esteja completamente parado
+            yield return new WaitUntil(() => agent.velocity.magnitude == 0);
+            
+            
 
-            float volume = 1f - (distanceToPlayer / distanceThreshold);
-            audioSource.volume = Mathf.Clamp(volume, 0f, originalVolume);
-        }
-        else
-        {
-            if (isPlaying)
-            {
-                // transform.LookAt(player.transform.position);
-                audioSource.Stop();
-
-                isPlaying = false;
-            }
+            // Chama o método quando o NPC atinge o destino
+            ChegueiNoDestino();
+            
+            // Espera por um tempo aleatório antes de escolher um novo destino
+            yield return new WaitForSeconds(wanderTimer);
         }
     }
 
-    void CallWaypoint()
+    private void ChegueiNoDestino()
     {
-        WayPoint waypointDoInimigo = GetComponent<WayPoint>();
-
-        // Iniciar movimentação para o próximo waypoint
-        StartCoroutine(MoverParaProximoWaypoint( waypointDoInimigo != null ? waypointDoInimigo : pontoInicial));
+        anim.SetBool("Andar", false);
+        Debug.Log("Cheguei no destino!");
+        andarAtivo = false;
     }
-    
-    
-    IEnumerator MoverParaProximoWaypoint(WayPoint pontoInicial)
+
+    private Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
     {
-        var velocidade = 2;
-        WayPoint currentWaypoint = pontoInicial;
+        // Gera um ponto aleatório dentro de uma esfera
+        Vector3 randomDirection = Random.insideUnitSphere * dist;
 
-        // while (currentWaypoint != null)
-        // {
-            transform.LookAt(currentWaypoint.transform.position);
-            transform.Translate(Vector3.forward * velocidade * Time.deltaTime);
+        randomDirection += origin;
 
-            // Verificar se o inimigo chegou ao waypoint
-            float distancia = Vector3.Distance(transform.position, currentWaypoint.transform.position);
-            if (distancia < 0.1f)
-            {
-                // Atualizar o próximo waypoint
-                currentWaypoint = currentWaypoint.next;
+        NavMeshHit navHit;
+        NavMesh.SamplePosition(randomDirection, out navHit, dist, layermask);
 
-                // Se houver próximo waypoint, continuar movendo
-                if (currentWaypoint == null)
-                {
-                   // break; // Saia do loop se não houver mais waypoints
-                }
-            }
-
-            // Aguardar um frame antes de verificar novamente
-            yield return null;
-       // }
+        return navHit.position;
     }
 }

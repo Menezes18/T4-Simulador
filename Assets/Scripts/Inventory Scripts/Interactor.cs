@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ public class Interactor : MonoBehaviour
     public float InteractionPointRadius = 1f;
     public bool IsInteracting { get; private set; }
 
+
+    public MenuScript menuScript;
+
     private void Update()
     {
         var colliders = Physics.OverlapSphere(InteractionPoint.position, InteractionPointRadius, InteractionLayer);
@@ -20,7 +24,11 @@ public class Interactor : MonoBehaviour
             {
                 var interactable = colliders[i].GetComponent<IInteractable>();
 
-                if (interactable != null) StartInteraction(interactable);
+                if (interactable != null)
+                {
+                    StartInteraction(interactable);
+                    return;
+                }
             }
         }
     }
@@ -29,10 +37,17 @@ public class Interactor : MonoBehaviour
     {
         interactable.Interact(this, out bool interactSuccessful);
         IsInteracting = true;
+
+        // Se houver uma interação, feche o menu se estiver aberto
+        if (menuScript != null && menuScript.IsMenuActive())
+        {
+            menuScript.CloseMenu();
+        }
     }
 
     void EndInteraction()
     {
+        Debug.Log("Fechar ");
         IsInteracting = false;
     }
 }

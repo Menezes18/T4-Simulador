@@ -1989,7 +1989,6 @@ GameObject:
   - component: {fileID: 7624841692440891401}
   - component: {fileID: 2559230246901868482}
   - component: {fileID: 5418870921120113747}
-  - component: {fileID: 8302987165488340999}
   m_Layer: 5
   m_Name: Backmenu
   m_TagString: Untagged
@@ -2099,7 +2098,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8302987165488340999}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: BackMenu
         m_Mode: 1
@@ -2111,20 +2110,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8302987165488340999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900404351514419436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f5281ef232303943be64a83314e708e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelPause: {fileID: 0}
-  panelTutorial: {fileID: 0}
 --- !u!1 &952675291481692801
 GameObject:
   m_ObjectHideFlags: 0
@@ -7295,7 +7280,6 @@ GameObject:
   - component: {fileID: 8580044281561441755}
   - component: {fileID: 4581028870803126536}
   - component: {fileID: 8284107532676502992}
-  - component: {fileID: 5318123973981977243}
   m_Layer: 5
   m_Name: resume
   m_TagString: Untagged
@@ -7405,7 +7389,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5318123973981977243}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -7417,20 +7401,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5318123973981977243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4438193874466530871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f5281ef232303943be64a83314e708e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelPause: {fileID: 6966271839644563113}
-  panelTutorial: {fileID: 0}
 --- !u!1 &4484406778246028753
 GameObject:
   m_ObjectHideFlags: 0
@@ -12712,7 +12682,6 @@ GameObject:
   - component: {fileID: 7644751039818892773}
   - component: {fileID: 5223336748648780816}
   - component: {fileID: 7156700549742993305}
-  - component: {fileID: 5707057597714039687}
   m_Layer: 5
   m_Name: back
   m_TagString: Untagged
@@ -12822,7 +12791,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5707057597714039687}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: FecharTutorial
         m_Mode: 1
@@ -12834,20 +12803,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5707057597714039687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7565639030984886599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f5281ef232303943be64a83314e708e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelPause: {fileID: 6966271839644563113}
-  panelTutorial: {fileID: 55140289576742805}
 --- !u!1 &7579084491382289765
 GameObject:
   m_ObjectHideFlags: 0
@@ -14142,7 +14097,6 @@ GameObject:
   - component: {fileID: 7591957194290994435}
   - component: {fileID: 7467622387743350229}
   - component: {fileID: 1369561060748126305}
-  - component: {fileID: 4132614197992083644}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -14252,7 +14206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4132614197992083644}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: TutorialButton
         m_Mode: 1
@@ -14264,20 +14218,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4132614197992083644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556890957622254917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f5281ef232303943be64a83314e708e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelPause: {fileID: 6966271839644563113}
-  panelTutorial: {fileID: 55140289576742805}
 --- !u!1 &8723011201606536462
 GameObject:
   m_ObjectHideFlags: 0

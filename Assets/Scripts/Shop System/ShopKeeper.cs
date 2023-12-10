@@ -62,6 +62,7 @@ public class ShopKeeper : MonoBehaviour, IInteractable
         if (playerInv != null)
         {
             OnShopWindowRequested?.Invoke(_shopSystem, playerInv);
+            Debug.Log("Abriu");
             interactSuccessful = true;
         }
         else
@@ -73,6 +74,7 @@ public class ShopKeeper : MonoBehaviour, IInteractable
 
     public void EndInteraction()
     {
+            Debug.Log("fechou");
         
     }
 }

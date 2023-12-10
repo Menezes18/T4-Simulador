@@ -21,7 +21,7 @@ public class HUDController : MonoBehaviour
     public void EnableText(string text, Sprite image)
     {
         imageGameobject.gameObject.SetActive(true);
-        interactionText.text = " " + text;
+        interactionText.text = text;
         imageGameobject.sprite = image;
         interactionText.gameObject.SetActive(true);
         

@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MenuScript : MonoBehaviour
 {
+    public static MenuScript inst;
     public GameObject menuObject;
     private bool isMenuActive = false;
 
@@ -10,11 +12,17 @@ public class MenuScript : MonoBehaviour
     public GameObject ajudaPanel;
     
 
-    // Update is called once per frame
+    public Interactor interactor;
+
+    public void Awake()
+    {
+        inst = this;
+    }
+    
     void Update()
     {
         // Verifica se a tecla Tab foi pressionada para ativar/desativar o menu
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             menusair();
         }
@@ -26,7 +34,37 @@ public class MenuScript : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
+    // Método para abrir o menu
+    public void OpenMenu()
+    {
+        isMenuActive = true;
 
+        // Ativa o GameObject do menu
+        menuObject.SetActive(true);
+
+        // Ativa o cursor
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    // Método para fechar o menu
+    public void CloseMenu()
+    {
+        isMenuActive = false;
+
+        // Desativa o GameObject do menu
+        menuObject.SetActive(false);
+
+        // Desativa o cursor
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    // Método para verificar se o menu está ativo
+    public bool IsMenuActive()
+    {
+        return isMenuActive;
+    }
     public void menusair()
     {
         isMenuActive = !isMenuActive;
