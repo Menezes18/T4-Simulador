@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 7586597475921468012}
   - component: {fileID: 1926139695218243279}
   - component: {fileID: 2838509971283081162}
-  - component: {fileID: 3865671169263723807}
-  - component: {fileID: 6494700993221985262}
+  - component: {fileID: 6619516830114832860}
   m_Layer: 0
   m_Name: Abobora
   m_TagString: Untagged
@@ -86,8 +85,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3865671169263723807
-MeshCollider:
+--- !u!65 &6619516830114832860
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -104,29 +103,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7474138871709678809, guid: 4dedf4de5cf7bfd4b839273d2108f73c, type: 3}
---- !u!64 &6494700993221985262
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9174694344572902597}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7474138871709678809, guid: 4dedf4de5cf7bfd4b839273d2108f73c, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.002511208, y: 0.0025112084, z: 0.0018579394}
+  m_Center: {x: 0.000004110916, y: 0.00073484355, z: 0.0007915809}

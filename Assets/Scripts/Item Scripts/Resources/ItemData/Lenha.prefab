@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 344856953777639969}
   - component: {fileID: 486638962762225974}
   - component: {fileID: 2316711339380469455}
+  - component: {fileID: -1089830866115886721}
   m_Layer: 0
   m_Name: Lenha
   m_TagString: Untagged
@@ -138,6 +139,24 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 11400000, guid: 9d12ac0b9700cd14cb4de0ae06924b08, type: 2}
     Position: {x: 0, y: 0, z: 0}
+--- !u!114 &-1089830866115886721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2520074377297110086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 563622940161338560}
+  message: Pegar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5744666841736257510
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +169,7 @@ GameObject:
   - component: {fileID: 2985995053538906313}
   - component: {fileID: 262904800076113782}
   - component: {fileID: 8684992333698324866}
+  - component: {fileID: 563622940161338560}
   m_Layer: 0
   m_Name: Lenha(Clone)
   m_TagString: Untagged
@@ -244,3 +264,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ab6dfcbc913b1d54f9dcced09c2a76eb, type: 3}
+--- !u!114 &563622940161338560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5744666841736257510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

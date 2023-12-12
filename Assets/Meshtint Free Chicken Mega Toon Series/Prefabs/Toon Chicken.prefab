@@ -307,7 +307,6 @@ GameObject:
   - component: {fileID: 7752395619453865392}
   - component: {fileID: 8470343318213010704}
   - component: {fileID: 8217178679885719500}
-  - component: {fileID: 1347978440856267897}
   m_Layer: 0
   m_Name: Toon Chicken
   m_TagString: Untagged
@@ -409,27 +408,6 @@ MonoBehaviour:
   playerBool: 0
   itemPrefab: {fileID: 8876913781898218620, guid: a0f5f5610101c6a4487d0d90f95ca668, type: 3}
 --- !u!65 &8217178679885719500
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1311290861401530}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.29032135, y: 0.45958143, z: 0.43251324}
-  m_Center: {x: 0, y: 0.23265073, z: 0.0029616356}
---- !u!65 &1347978440856267897
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

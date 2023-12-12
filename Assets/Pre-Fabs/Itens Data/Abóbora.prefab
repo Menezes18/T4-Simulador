@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 140296032821196698}
   - component: {fileID: 5622765806056768284}
   - component: {fileID: 3398251044837255626}
+  - component: {fileID: 4596851358007060821}
   m_Layer: 0
   m_Name: "Ab\xF3bora"
   m_TagString: Untagged
@@ -27,6 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079361290821738425}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.108, y: 0, z: 1.9309998}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,7 +36,6 @@ Transform:
   m_Children:
   - {fileID: 4998865910890536694}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1282688707
 Rigidbody:
@@ -43,10 +44,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079361290821738425}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -60,9 +72,17 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079361290821738425}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Radius: 0.74191815
   m_Center: {x: 0, y: 0.38253325, z: -0.35071084}
 --- !u!114 &5622765806056768284
@@ -77,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082e99dbb9d8e9949ab4393da640fdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: 36192e82-318a-45d1-b985-e0c545a6e0ad
+  _id: 971c3c6f-c8d4-4b99-a520-22908bf1cd60
 --- !u!114 &3398251044837255626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,11 +116,30 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 0}
     Position: {x: 0, y: 0, z: 0}
+--- !u!114 &4596851358007060821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079361290821738425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 4085066208288168933}
+  message: Pegar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &3176876373677180058
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2079361290821738426}
     m_Modifications:
     - target: {fileID: 7586597475921468012, guid: cda4cff1604d2244c917da1997ff1c3c, type: 3}
@@ -151,7 +190,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Abobora
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6494700993221985262, guid: cda4cff1604d2244c917da1997ff1c3c, type: 3}
+    - {fileID: 3865671169263723807, guid: cda4cff1604d2244c917da1997ff1c3c, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9174694344572902597, guid: cda4cff1604d2244c917da1997ff1c3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4085066208288168933}
+    - targetCorrespondingSourceObject: {fileID: 9174694344572902597, guid: cda4cff1604d2244c917da1997ff1c3c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571743236628503524}
   m_SourcePrefab: {fileID: 100100000, guid: cda4cff1604d2244c917da1997ff1c3c, type: 3}
 --- !u!4 &4998865910890536694 stripped
 Transform:
@@ -163,31 +213,42 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9174694344572902597, guid: cda4cff1604d2244c917da1997ff1c3c, type: 3}
   m_PrefabInstance: {fileID: 3176876373677180058}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &8100523615460154614
-MeshCollider:
+--- !u!114 &4085066208288168933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6000351472390346847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!65 &571743236628503524
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6000351472390346847}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7474138871709678809, guid: 4dedf4de5cf7bfd4b839273d2108f73c, type: 3}
---- !u!64 &1387895690
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6000351472390346847}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7474138871709678809, guid: 4dedf4de5cf7bfd4b839273d2108f73c, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.002511208, y: 0.0025112084, z: 0.0018579394}
+  m_Center: {x: 0.000004110916, y: 0.00073484355, z: 0.0007915809}

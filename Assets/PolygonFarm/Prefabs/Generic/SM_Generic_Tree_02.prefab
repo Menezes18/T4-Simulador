@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 23123426773069496}
   - component: {fileID: 2133563177795260730}
   - component: {fileID: 6759203226492829626}
+  - component: {fileID: 2496337797605492813}
+  - component: {fileID: 1938088411591731226}
   m_Layer: 0
   m_Name: SM_Generic_Tree_02
   m_TagString: Untagged
@@ -123,3 +125,39 @@ MonoBehaviour:
   vida: 3
   item: {fileID: 156719443032939214, guid: 7f66f740072214843b042adda540ae4c, type: 3}
   modelos: []
+--- !u!114 &2496337797605492813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401117786091214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 1938088411591731226}
+  message: Quebrar
+  image: {fileID: 21300000, guid: 367581d1722a0264ab69d952d17ae4d5, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1938088411591731226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401117786091214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

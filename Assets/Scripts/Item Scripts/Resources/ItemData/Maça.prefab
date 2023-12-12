@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2829915748310777747}
   - component: {fileID: 5948429102480185574}
   - component: {fileID: 2318204216300154242}
+  - component: {fileID: -7372595619681876018}
   m_Layer: 0
   m_Name: "Ma\xE7a"
   m_TagString: Untagged
@@ -138,6 +139,24 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 0}
     Position: {x: 0, y: 0, z: 0}
+--- !u!114 &-7372595619681876018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4829876809576807779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 5727773107451378695}
+  message: Pegar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8634297681608139658
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +170,7 @@ GameObject:
   - component: {fileID: 4542416149604550059}
   - component: {fileID: 4772047053396060494}
   - component: {fileID: 7703575734712886353}
+  - component: {fileID: 5727773107451378695}
   m_Layer: 0
   m_Name: Apple(Clone)
   m_TagString: Untagged
@@ -266,3 +286,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.00053974614, y: 0.0006847381, z: 0.00058357295}
   m_Center: {x: -0.00000004917092, y: -0.0000027697238, z: 0.00029278224}
+--- !u!114 &5727773107451378695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634297681608139658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6230889869451308100}
   - component: {fileID: 3480072313964798879}
   - component: {fileID: 4678055415134164296}
+  - component: {fileID: 7921756335984598107}
   m_Layer: 0
   m_Name: SM_Prop_Tool_Bucket_01(Clone)
   m_TagString: Untagged
@@ -106,6 +107,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 6a0462221a6bfb44c87b72c0cf8afcb6, type: 3}
+--- !u!114 &7921756335984598107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6145483957136361262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6757956318599291550
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +139,7 @@ GameObject:
   - component: {fileID: 769968792587984833}
   - component: {fileID: 6247659447522226334}
   - component: {fileID: 1055732101135194370}
+  - component: {fileID: 7091603821175090409}
   m_Layer: 0
   m_Name: Balde
   m_TagString: Untagged
@@ -244,3 +264,21 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 0}
     Position: {x: 0, y: 0, z: 0}
+--- !u!114 &7091603821175090409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757956318599291550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 7921756335984598107}
+  message: Pegar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []

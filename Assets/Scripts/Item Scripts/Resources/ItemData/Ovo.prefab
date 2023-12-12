@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4516565486193850698}
   - component: {fileID: 8512229041543772066}
   - component: {fileID: 1113794033019322750}
+  - component: {fileID: 7474466979817941941}
   m_Layer: 0
   m_Name: Egg(Clone)
   m_TagString: Untagged
@@ -105,6 +106,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0004295304, y: 0.0004723614, z: 0.00057731045}
   m_Center: {x: -1.018634e-10, y: -0.000000008520145, z: 0.00028734596}
+--- !u!114 &7474466979817941941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6549423818497642718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &8876913781898218620
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +138,7 @@ GameObject:
   - component: {fileID: 3033117800206571183}
   - component: {fileID: 1416155760823567430}
   - component: {fileID: 2147186903099446397}
+  - component: {fileID: 3557397437320379230}
   m_Layer: 0
   m_Name: Ovo
   m_TagString: Untagged
@@ -242,3 +262,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0004295304, y: 0.0004723614, z: 0.00057731045}
   m_Center: {x: -1.018634e-10, y: -0.000000008520145, z: 0.00028734596}
+--- !u!114 &3557397437320379230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8876913781898218620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 7474466979817941941}
+  message: Pegar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []

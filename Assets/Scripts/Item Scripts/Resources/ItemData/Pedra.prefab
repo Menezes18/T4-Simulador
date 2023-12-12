@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4280080796152996192}
   - component: {fileID: 6071603322349433132}
   - component: {fileID: 1873468597513942845}
+  - component: {fileID: 6947617665624021654}
   m_Layer: 0
   m_Name: SM_Generic_Small_Rocks_05(Clone)
   m_TagString: Untagged
@@ -106,6 +107,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 6ed551e890e2cd04a9b79d864c5320c7, type: 3}
+--- !u!114 &6947617665624021654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409989801585927647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1431062295840860638
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +139,7 @@ GameObject:
   - component: {fileID: 1525648518060476831}
   - component: {fileID: 5758035986218528956}
   - component: {fileID: 3326417452816592679}
+  - component: {fileID: 5306986868525034915}
   m_Layer: 0
   m_Name: Pedra
   m_TagString: Untagged
@@ -225,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082e99dbb9d8e9949ab4393da640fdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: 
+  _id: 7c5c8619-81cb-448c-a50a-6e0e20351fb1
 --- !u!114 &3326417452816592679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,3 +264,21 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 0}
     Position: {x: 0, y: 0, z: 0}
+--- !u!114 &5306986868525034915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431062295840860638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 6947617665624021654}
+  message: Pegar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []

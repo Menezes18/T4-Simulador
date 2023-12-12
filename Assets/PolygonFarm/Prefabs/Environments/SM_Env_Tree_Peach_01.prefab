@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 4619089460111892481}
   - component: {fileID: 8316319110457635657}
   - component: {fileID: 8013330574929389789}
+  - component: {fileID: 1673293594492309222}
+  - component: {fileID: 5872603801374170671}
   m_Layer: 0
   m_Name: SM_Env_Tree_Peach_01
   m_TagString: Untagged
@@ -163,3 +165,39 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 4b770b47a02b2074f93e3b92bf2d535a, type: 3}
+--- !u!114 &1673293594492309222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279607818152092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &5872603801374170671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279607818152092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 1673293594492309222}
+  message: Quebrar
+  image: {fileID: 21300000, guid: 367581d1722a0264ab69d952d17ae4d5, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7498778367577738335}
   - component: {fileID: 8332505545285356998}
   - component: {fileID: 4277369657993911818}
+  - component: {fileID: 4559272335742696200}
   m_Layer: 0
   m_Name: CenouraVerde(Clone)
   m_TagString: Untagged
@@ -107,6 +108,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7801560750257797716, guid: 0da1d46fb44ff074d975d634d9b3dfd2, type: 3}
+--- !u!114 &4559272335742696200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4034749514670438909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &7102682962706584482
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,6 +140,7 @@ GameObject:
   - component: {fileID: 6699046688011200027}
   - component: {fileID: 216842585088233042}
   - component: {fileID: 5373423459301147037}
+  - component: {fileID: 3353988470567562830}
   m_Layer: 0
   m_Name: Cenoura
   m_TagString: Untagged
@@ -245,3 +265,21 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 0}
     Position: {x: 0, y: 0, z: 0}
+--- !u!114 &3353988470567562830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7102682962706584482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 4559272335742696200}
+  message: Pegar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []

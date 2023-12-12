@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3301562}
   - component: {fileID: 2347296}
   - component: {fileID: 64947974986038540}
-  - component: {fileID: 64196464233314280}
-  - component: {fileID: 64716861004618932}
-  - component: {fileID: 64390138086328940}
   - component: {fileID: 7520478355088955676}
+  - component: {fileID: 1043377506433893643}
+  - component: {fileID: 6706402190369386158}
+  - component: {fileID: 5579614793272330988}
   m_Layer: 0
   m_Name: SM_Env_Tree_Twisted_01
   m_TagString: Untagged
@@ -110,72 +110,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43083919373551270, guid: e1d6113e337caff4ab3fba65d8ac04b4, type: 2}
---- !u!64 &64196464233314280
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136664}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43157400440361382, guid: e1d6113e337caff4ab3fba65d8ac04b4, type: 2}
---- !u!64 &64716861004618932
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136664}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43141634336193230, guid: e1d6113e337caff4ab3fba65d8ac04b4, type: 2}
---- !u!64 &64390138086328940
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136664}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43499651681743564, guid: e1d6113e337caff4ab3fba65d8ac04b4, type: 2}
 --- !u!114 &7520478355088955676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,3 +126,55 @@ MonoBehaviour:
   vida: 3
   item: {fileID: 156719443032939214, guid: 7f66f740072214843b042adda540ae4c, type: 3}
   modelos: []
+--- !u!114 &1043377506433893643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 6706402190369386158}
+  message: Quebrar
+  image: {fileID: 21300000, guid: 367581d1722a0264ab69d952d17ae4d5, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6706402190369386158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!208 &5579614793272330988
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136664}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.59, y: 2.535, z: 2.575}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.282, y: 2.5080001, z: 0.022000002}
+  m_TimeToStationary: 0.5

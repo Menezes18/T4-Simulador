@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2661674080372773744}
   - component: {fileID: 2934851272721708033}
   - component: {fileID: 9126666688320946697}
+  - component: {fileID: 7092867589557704353}
   m_Layer: 0
   m_Name: SacoSementeBeterraba
   m_TagString: Untagged
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082e99dbb9d8e9949ab4393da640fdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: 55ee643d-7c2e-4bb2-b2e8-90f547de5445
+  _id: 64b202b1-ccc4-45d0-a46a-55a5a3200edf
 --- !u!114 &9126666688320946697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +116,24 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 0}
     Position: {x: 0, y: 0, z: 0}
+--- !u!114 &7092867589557704353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5622254340948506711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 8174484577289080934}
+  message: Pegar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1041311355458890612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,6 +213,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bd305c0ec3bc4e46b8db4d264ecc54c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6035300836083229154}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bd305c0ec3bc4e46b8db4d264ecc54c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8174484577289080934}
   m_SourcePrefab: {fileID: 100100000, guid: 3bd305c0ec3bc4e46b8db4d264ecc54c, type: 3}
 --- !u!1 &194238593625495077 stripped
 GameObject:
@@ -222,6 +244,24 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5452737255211304369, guid: 3bd305c0ec3bc4e46b8db4d264ecc54c, type: 3}
+--- !u!114 &8174484577289080934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194238593625495077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &718819283119393951 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3bd305c0ec3bc4e46b8db4d264ecc54c, type: 3}

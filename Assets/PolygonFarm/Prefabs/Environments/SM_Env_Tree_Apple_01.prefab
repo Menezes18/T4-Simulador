@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8977778970834161179}
   - component: {fileID: 4773378221059735164}
   - component: {fileID: 4092977094950653584}
+  - component: {fileID: 3430303865212338171}
   m_Layer: 0
   m_Name: SM_Env_Tree_Apple_01
   m_TagString: Untagged
@@ -132,16 +133,35 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638305729631902}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _outline: {fileID: 0}
-  message: 
+  _outline: {fileID: 3430303865212338171}
+  message: Quebrar
+  image: {fileID: 21300000, guid: 367581d1722a0264ab69d952d17ae4d5, type: 3}
   onInteraction:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3430303865212338171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638305729631902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &850726938403166430
 GameObject:
   m_ObjectHideFlags: 0

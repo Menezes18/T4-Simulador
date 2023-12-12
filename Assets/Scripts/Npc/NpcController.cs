@@ -32,7 +32,7 @@ public class NpcController : MonoBehaviour
             // Ativa a animação de "Andar" apenas se não estiver ativa
             if (!andarAtivo)
             {
-                Debug.Log("TTgit");
+                Debug.Log("TT");
                 anim.SetBool("Andar", true);
                 andarAtivo = true;
             }

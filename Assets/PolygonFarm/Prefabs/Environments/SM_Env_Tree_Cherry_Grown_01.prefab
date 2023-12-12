@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 23726574535564460}
   - component: {fileID: 8011063025693054110}
   - component: {fileID: 3972361451832974988}
+  - component: {fileID: 4300817934386306931}
+  - component: {fileID: 9122698914544897866}
   m_Layer: 0
   m_Name: SM_Env_Tree_Cherry_Grown_01
   m_TagString: Untagged
@@ -123,3 +125,39 @@ MonoBehaviour:
   vida: 3
   item: {fileID: 156719443032939214, guid: 7f66f740072214843b042adda540ae4c, type: 3}
   modelos: []
+--- !u!114 &4300817934386306931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315716995744334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &9122698914544897866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315716995744334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 4300817934386306931}
+  message: Quebrar
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
