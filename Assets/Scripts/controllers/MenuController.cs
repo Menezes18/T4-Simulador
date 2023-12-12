@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +12,17 @@ public class MenuController : MonoBehaviour
      public GameObject panelTutorial;
      public GameObject panelCredits;
 
+     public void Start()
+     {
+         Cursor.lockState = CursorLockMode.None;
+         Cursor.visible = true;
+     }
 
-    public void NewGame()
+     public void NewGame()
     {
         SceneManager.LoadScene("Game");
-        // SceneManager.LoadScene("Game");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void OpenOptions()
@@ -34,7 +41,7 @@ public class MenuController : MonoBehaviour
     {
         panelOptions.SetActive(false);
         panelMenuInicial.SetActive(true);
-        //
+        
 
     }
 

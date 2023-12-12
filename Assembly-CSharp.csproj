@@ -93,6 +93,7 @@
      <Compile Include="Assets\Scripts\BuildSystemScripts\BuildTool.cs" />
      <Compile Include="Assets\Scripts\IObeserver\IObserverPlanta.cs" />
      <Compile Include="Assets\Scripts\BuildHouse\BuildHouse.cs" />
+     <Compile Include="Assets\Scripts\MostrarFPS.cs" />
      <Compile Include="Assets\Scripts\controllers\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\-MUDAR-SystemArruma\ConsertarData.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\BaseManager.cs" />
@@ -579,6 +580,7 @@
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
+     <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\AssetIdRemapUtility" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Buildings" />
