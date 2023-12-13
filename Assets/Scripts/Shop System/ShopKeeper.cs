@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -63,10 +64,12 @@ public class ShopKeeper : MonoBehaviour, IInteractable
         {
             OnShopWindowRequested?.Invoke(_shopSystem, playerInv);
             Debug.Log("Abriu");
+            UnlockCursor();
             interactSuccessful = true;
         }
         else
         {
+            EndInteraction();
             interactSuccessful = false;
             Debug.LogError("Player inventory not found");
         }
@@ -74,11 +77,24 @@ public class ShopKeeper : MonoBehaviour, IInteractable
 
     public void EndInteraction()
     {
+        LockCursor();
             Debug.Log("fechou");
         
     }
-}
+    private void UnlockCursor()
+    {
+        FirstPersonController.instancia.cameraMovementEnabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
+    private void LockCursor()
+    {
+        FirstPersonController.instancia.cameraMovementEnabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+}
 [System.Serializable]
 public class ShopSaveData
 {

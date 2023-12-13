@@ -11,7 +11,7 @@ namespace StarterAssets
 #endif
     public class FirstPersonController : MonoBehaviour
     {
-        
+        public static FirstPersonController instancia;
         [Header("Jogador")]
         [Tooltip("Velocidade de movimento do personagem em m/s")]
         public float MoveSpeed = 4.0f;
@@ -21,7 +21,8 @@ namespace StarterAssets
         public float RotationSpeed = 1.0f;
         [Tooltip("Aceleração e desaceleração")]
         public float SpeedChangeRate = 10.0f;
-
+        
+        public bool cameraMovementEnabled = true; //tirar o movimento da camera
         [Space(10)]
         [Tooltip("A altura que o jogador pode pular")]
         public float JumpHeight = 1.2f;
@@ -95,7 +96,14 @@ namespace StarterAssets
 
         private void Awake()
         {
-            // obtenha uma referência para a nossa câmera principal
+            if (instancia != null)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                instancia = this;
+            }
             if (_mainCamera == null)
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -130,9 +138,15 @@ namespace StarterAssets
 
         private void LateUpdate()
         {
-            CameraRotation();
+            if (cameraMovementEnabled)
+            {
+                CameraRotation();
+            }
         }
-
+        public void ToggleCameraMovement(bool enable)
+        {
+            cameraMovementEnabled = enable;
+        }
         private void GroundedCheck()
         {
             // defina a posição da esfera, com compensação

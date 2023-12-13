@@ -150,7 +150,30 @@ public class HotbarDisplay : StaticInventoryDisplay
     }
 
     #endregion
-    
+    public bool IsHotbarFull()
+    {
+        int emptySlots = CountEmptySlots();
+        Debug.Log("Número de slots vazios: " + emptySlots);
+        return (emptySlots == 0);
+    }
+    public int CountEmptySlots()
+    {
+        int emptySlotCount = 0;
+
+        foreach (InventorySlot_UI slotUI in slots)
+        {
+            InventorySlot slot = slotUI.AssignedInventorySlot;
+
+            if (slot.ItemData == null)
+            {
+                // Encontrou um slot vazio
+                emptySlotCount++;
+            }
+        }
+
+        return emptySlotCount;
+    }
+
     // Limpa o item selecionado do slot atual
     public void ClearSelectedItem()
     {

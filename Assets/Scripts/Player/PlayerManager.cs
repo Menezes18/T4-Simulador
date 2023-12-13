@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
@@ -28,6 +29,7 @@ public class PlayerManager : MonoBehaviour
     public bool isItemInHand = false;
     public int itemInHandId;
     [SerializeField] private GameObject prefabCanvasInfo;
+    private bool cursorActive = false;
 
     private void Awake()
     {
@@ -42,6 +44,9 @@ public class PlayerManager : MonoBehaviour
         }
         
     }
+
+
+
     public void bater(int id, BuildingData item, Building itemdata)
     {
         animator.SetTrigger("Bater");
@@ -113,7 +118,28 @@ public class PlayerManager : MonoBehaviour
         {
             InteragirComObjeto();
         }
-        
+        if (Keyboard.current.jKey.wasPressedThisFrame)
+        {
+            // Inverte o estado do cursor
+            cursorActive = !cursorActive;
+
+            
+            if (cursorActive)
+            {
+                Debug.Log("Ativar");
+                FirstPersonController.instancia.cameraMovementEnabled = false;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                Debug.Log("Desativar");
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                FirstPersonController.instancia.cameraMovementEnabled = true;
+            }
+        }
+
     }
 
     #region Interaction
@@ -174,7 +200,11 @@ public class PlayerManager : MonoBehaviour
             plantT = hitInfo.collider?.gameObject.GetComponent<PlantTrigger>();
             if (itemPick != null)
             {
-                itemPick.OnItemInventory();
+                Debug.Log(HotbarDisplay.Display.IsHotbarFull());
+                if (!HotbarDisplay.Display.IsHotbarFull())
+                {
+                    itemPick.OnItemInventory();
+                }
             }
             if (HotbarDisplay.Display.IsItemInHand(15) && plantT != null)
             {

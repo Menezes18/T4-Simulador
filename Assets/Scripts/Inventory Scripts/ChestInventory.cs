@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(UniqueID))]
 public class ChestInventory : InventoryHolder, IInteractable
@@ -27,15 +29,38 @@ public class ChestInventory : InventoryHolder, IInteractable
         // }
     }
 
+    private void FixedUpdate()
+    {
+        if (Keyboard.current.escapeKey.isPressed)
+        {
+            EndInteraction();
+        }
+    }
+
     public void Interact(Interactor interactor, out bool interactSuccessful)
     {
         OnDynamicInventoryDisplayRequested?.Invoke(primaryInventorySystem, 0);
         
+        UnlockCursor();
+
         interactSuccessful = true;
     }
 
+    private void UnlockCursor()
+    {
+        FirstPersonController.instancia.cameraMovementEnabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    private void LockCursor()
+    {
+        FirstPersonController.instancia.cameraMovementEnabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
     public void EndInteraction()
     {
-        
+        LockCursor();
     }
 }
