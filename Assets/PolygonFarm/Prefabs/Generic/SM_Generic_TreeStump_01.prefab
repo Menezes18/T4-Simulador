@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4334860644434506}
   - component: {fileID: 33116738121784112}
   - component: {fileID: 23126829735531926}
-  - component: {fileID: 6315426671736223118}
-  - component: {fileID: 8899167330584539498}
+  - component: {fileID: 640251049668743517}
   m_Layer: 0
   m_Name: SM_Generic_TreeStump_01
   m_TagString: CraftArvore
@@ -87,29 +86,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6315426671736223118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481219685281736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e4bfc839684d7c49b1b61ffce612d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slot: 0
-  receitas: 0
-  painel: {fileID: 2066336288422961398}
-  arvore: {fileID: 6217163252507120596}
-  madeira: 0
-  itemTransform: {fileID: 4334860644434506}
-  itens:
-  - {fileID: 3583373101958574997, guid: a5beaa030b9ae364e8851d094ca59a4f, type: 3}
-  - {fileID: 2520074377297110086, guid: f5b5b3119bdce354ab8d098cd63fc2e2, type: 3}
---- !u!64 &8899167330584539498
-MeshCollider:
+--- !u!65 &640251049668743517
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -126,10 +104,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: c931f4d55b024d246a704deff299abbc, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.77756166, y: 0.497575, z: 0.82104033}
+  m_Center: {x: -0.0000026524065, y: 0.2487875, z: -0.00000016391276}
 --- !u!1 &1872612983171671636
 GameObject:
   m_ObjectHideFlags: 0
