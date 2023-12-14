@@ -23,3 +23,6 @@ MonoBehaviour:
   data: {fileID: 0}
   _building: 0
   semente: 0
+  isBucket: 0
+  maxWater: 100
+  currentWater: 0

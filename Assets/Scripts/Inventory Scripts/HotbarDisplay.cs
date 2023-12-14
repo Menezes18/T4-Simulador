@@ -1,6 +1,7 @@
 using UnityEngine.InputSystem;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
 
 public class HotbarDisplay : StaticInventoryDisplay
 {
@@ -455,8 +456,8 @@ public class HotbarDisplay : StaticInventoryDisplay
 
         if (item != null)
         {
-
             GameObject spawnedObject = Instantiate(item.ItemPrefab, itemPrefab.transform.position, Quaternion.identity);
+            
             // Obter a rotação da câmera principal
             Quaternion cameraRotation = Camera.main.transform.rotation;
 
@@ -496,14 +497,14 @@ public class HotbarDisplay : StaticInventoryDisplay
         {
            
             InventoryItemData item = slots[_currentIndex].AssignedInventorySlot.ItemData;
-
-            _playerManager.bater(itemId, item.ItemData, item.data);
             
+            _playerManager.bater(itemId, item);
+
         }
         else
         {
             itemId = -1;
-            _playerManager.bater(itemId,null, null);
+            _playerManager.bater(itemId, null);
         }
     }
     
@@ -529,7 +530,6 @@ public class HotbarDisplay : StaticInventoryDisplay
     }
 
     /// Verifica se o item com o ID fornecido está na mão.
-    /// 
     /// "itemId" O ID do item a ser verificado.
     /// >True se o item estiver na mão, False caso contrário.
     public bool IsItemInHand(int itemId)

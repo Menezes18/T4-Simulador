@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Inventory Scripts\MouseItemData.cs" />
      <Compile Include="Assets\Pre-Fabs\Animal\ChickenController.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\UIController.cs" />
+     <Compile Include="Assets\Scripts\Balde\BucketController.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\InventoryItemData.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\InventoryUIController.cs" />
      <Compile Include="Assets\Scripts\Movimentação\FirstPersonController\Scripts\FirstPersonController.cs" />
@@ -557,6 +558,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\unity3d.txt" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\D3D12.hlsl" />
+     <Folder Include="Assets\Scripts\Balde" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art\Textures" />
      <Folder Include="Assets\Marketplace Cute Series\Cute series demo assets" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaGrande" />

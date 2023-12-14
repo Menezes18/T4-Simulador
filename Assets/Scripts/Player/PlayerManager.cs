@@ -30,7 +30,9 @@ public class PlayerManager : MonoBehaviour
     public int itemInHandId;
     [SerializeField] private GameObject prefabCanvasInfo;
     private bool cursorActive = false;
-
+    public BucketController _Bucket;
+    public Database database;
+    
     private void Awake()
     {
         
@@ -42,23 +44,58 @@ public class PlayerManager : MonoBehaviour
         {
             playerManager = this;
         }
+
         
     }
 
+    public void Start()
+    {
+        database._itemDatabase[270].currentWater = 0;
+        if (database != null)
+        {
+            InventoryItemData itemWithID270 = database.GetItem(270);
+
+            if (itemWithID270 != null)
+            {
+                itemWithID270.currentWater = 0;
+            }
+            else
+            {
+                Debug.LogError("Item with ID 270 not found in the database.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Database not found.");
+        }
+    }
 
 
-    public void bater(int id, BuildingData item, Building itemdata)
+    public void bater(int id, InventoryItemData item)
     {
         animator.SetTrigger("Bater");
+        if (id == 270 && hitInfo.collider.gameObject.tag.Equals("Agua"))
+        {
+            Debug.Log("AA");
+            if (item.currentWater < 100)
+            {
+                item.currentWater = Mathf.Min(item.currentWater + 10, 100);
+            }
+            else
+            {
+                Debug.Log("Bucket is already full!");
+            }
+        }
             if (id.Equals(2927270) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(27290)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
-            if (id.Equals(27290) && hitInfo.collider.gameObject.tag.Equals("ArvoreCraft")) 
+            if (id.Equals(27290) && hitInfo.collider != null && hitInfo.collider.gameObject.CompareTag("ArvoreCraft")) 
             {
 
               quebrarArvore = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftArvore>();
                 
                     quebrarArvore.Quebrar();
             }
+
     }
     void VerificarScriptNoAvoo(GameObject objeto, int id)
     {
@@ -276,6 +313,7 @@ public class PlayerManager : MonoBehaviour
             {
                     VerificarScriptNoAvoo(hitInfo.collider.gameObject, 2);
             }
+            
         }
     }
 

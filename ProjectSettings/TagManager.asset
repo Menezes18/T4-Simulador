@@ -23,6 +23,7 @@ TagManager:
   - receita1
   - ArvoreCraft
   - SlotLenha
+  - Agua
   layers:
   - Default
   - TransparentFX

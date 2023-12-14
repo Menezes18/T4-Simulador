@@ -24,6 +24,13 @@ public class InventoryItemData : ScriptableObject
    
     public bool _building = false;
     public bool semente = true;
+    
+    //Variavel balde
+    public bool isBucket = false;
+    public int maxWater = 100;
+    public int currentWater = 0; // Quantidade atual de água no balde
+    
+
 }
 
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 270
   DisplayName: Balde
-  Description: 
+  Description: a
   Icon: {fileID: 21300000, guid: a988339394a12614ba947e50533bd088, type: 3}
   MaxStackSize: 1
   GoldValue: 100
@@ -23,3 +23,6 @@ MonoBehaviour:
   data: {fileID: 0}
   _building: 1
   semente: 0
+  isBucket: 1
+  maxWater: 0
+  currentWater: 111
