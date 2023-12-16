@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Balde\BucketController.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\InventoryItemData.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\InventoryUIController.cs" />
+     <Compile Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\AbstractTargetFollower.cs" />
      <Compile Include="Assets\Scripts\Movimentação\FirstPersonController\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\InventorySystem.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\ShoppingCartItemUI.cs" />
      <Compile Include="Assets\Scripts\Canvas\CanvasInfo.cs" />
+     <Compile Include="Assets\MenuAtive.cs" />
      <Compile Include="Assets\Scripts\CicloDiaeNoite\CicloDiaNoite.cs" />
      <Compile Include="Assets\Scripts\UiManager\UIManager.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\WorldGrid.cs" />
@@ -97,6 +99,7 @@
      <Compile Include="Assets\Scripts\MostrarFPS.cs" />
      <Compile Include="Assets\Scripts\controllers\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\-MUDAR-SystemArruma\ConsertarData.cs" />
+     <Compile Include="Assets\SimpleToon\Scripts\SelfRotation.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\BaseManager.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\ShopSlotUI.cs" />
      <Compile Include="Assets\Scripts\IObeserver\SubjectPlant.cs" />
@@ -125,19 +128,25 @@
      <Compile Include="Assets\Scripts\Inventory Scripts\Interactor.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\SaveGameManager.cs" />
      <Compile Include="Assets\Scripts\controllers\MenuController.cs" />
+     <Compile Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\FreeLookCam.cs" />
      <Compile Include="Assets\Scripts\Plant\Plant.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\InventoryDisplay.cs" />
+     <Compile Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\PivotBasedCameraRig.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_6" />
+     <Folder Include="Assets\Kamgam\SettingsGenerator\Libs\UGUIComponentsForSettings" />
      <Folder Include="Assets\StylizedWater2\_Demo" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\StdLib.hlsl" />
      <Folder Include="Assets\Materiais_E_Modelos\Abobora Versçoes" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\ReferenceUnlit.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Waveform.shader" />
      <None Include="Library\PackageCache\com.unity.settings-manager@2.0.1\package.json" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Strata\Ridge.hlsl" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <Folder Include="Assets\SimpleToon\Model\Monkey" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Strata\Voronoi.hlsl" />
      <Folder Include="Assets\QuickOutline\Resources" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LensDirt" />
      <Folder Include="Assets\Settings" />
@@ -148,11 +157,13 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\Textures" />
      <Folder Include="Assets\StylizedWater2\Materials\Effects\Textures" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseFillFbm.shader" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Lighting.hlsl" />
      <Folder Include="Assets\Scripts\BuildSystemScripts" />
      <Folder Include="Assets\Scripts\Inventory Scripts" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Distortion.hlsl" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Prefabs" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Features.hlsl" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series" />
@@ -161,8 +172,10 @@
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Stalls" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.7.0\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
+     <None Include="Assets\SimpleToon\Shader\ToonLightBase.shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Materials\Face" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\ValidationExceptions.json" />
      <Folder Include="Assets\Scripts\UiManager" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
@@ -173,10 +186,14 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\FastApproximateAntialiasing.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\DiffuseVertexColor.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Implementation\RidgeImpl.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.26\Rider" />
      <Folder Include="Assets\Scripts\Plant\Trigo" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Implementation\BillowImpl.hlsl" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None\Voronoi.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Bloom.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\TwistHeight.shader" />
      <Folder Include="Assets\Pre-Fabs\New Folder" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
@@ -187,7 +204,9 @@
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.7.0\Tests" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Sampling.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
+     <Folder Include="Assets\SimpleToon\Demo\Scene" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_1" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Materials" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground14" />
      <Folder Include="Assets\Models\pl\Prefab\Prefab" />
      <Folder Include="Assets\Materiais_E_Modelos\Texturas\Materials" />
@@ -196,17 +215,21 @@
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\Cubes" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\LineBillboard.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Materials\Slime 2" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Crates" />
      <Folder Include="Assets\PolygonFarm\Demo" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Graphics" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art\Materials" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Gizmos" />
      <Folder Include="Assets\PolygonKnights\Materials" />
+     <Folder Include="Assets\Kamgam\SettingsGenerator\Libs" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Waveform.compute" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground3" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
      <Folder Include="Assets\NPC\Texture" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\VertexPicker.shader" />
+     <Folder Include="Assets\SimpleToon\Scripts" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Gizmos" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\ValidationConfig.json" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\BuildingData" />
@@ -216,9 +239,12 @@
      <Folder Include="Assets\Render" />
      <Folder Include="Assets\StylizedWater2\Materials\Textures\Normals" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\TexelValidity.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Strata\Perlin.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\PSSL.hlsl" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\DiffuseTextureBlend.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\LineBillboardMetal.shader" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts" />
      <Folder Include="Assets\Scripts\Item Scripts\Itens\Cenoura" />
      <Folder Include="Assets\UI\Icons\Sementes" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\ForwardPass.hlsl" />
@@ -226,8 +252,10 @@
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Baskets and Pails" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Tesselation.hlsl" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Common.hlsl" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm\Value.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0" />
      <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Gizmos" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib" />
      <Folder Include="Assets\QuickOutline\Samples" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_8" />
      <Folder Include="Assets\Scripts\InventoryItems" />
@@ -240,9 +268,14 @@
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
      <Folder Include="Assets\StylizedWater2\Materials\Textures\Foam" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None" />
+     <Folder Include="Assets\SimpleToon" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Resources\Textures" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Strata" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm\Voronoi.hlsl" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\ScrollHighlight.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseFill.shader" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground11" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\Scripts\Movimentação\FirstPersonController" />
@@ -279,12 +312,15 @@
      <Folder Include="Assets\StylizedWater2" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\D3D11.hlsl" />
      <Folder Include="Assets\Marketplace Cute Series\Read Me" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\HDRP" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Implementation\PerlinImpl.hlsl" />
      <Folder Include="Assets\NPC" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData.json" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\PolygonFarm\Materials\Alts" />
+     <Folder Include="Assets\Kamgam\SettingsGenerator\Resources" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\TransparentOverlay.shader" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground8" />
@@ -299,7 +335,10 @@
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Tests" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground1" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SedimentSplat.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm\Perlin.hlsl" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Noise.hlsl" />
      <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Flow" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project\Models" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Buildings\Snow" />
@@ -307,6 +346,8 @@
      <Folder Include="Assets\PolygonFarm\Materials" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art\Skybox" />
      <Folder Include="Assets\Scripts\-MUDAR-SystemArruma" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\URP\URP_TerrainVisualizationLitPass.hlsl" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_5" />
      <Folder Include="Assets\Marketplace Cute Series" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
@@ -314,6 +355,7 @@
      <Folder Include="Assets\Scripts\Npc" />
      <None Include="Assets\StylizedWater2\package.json" />
      <Folder Include="Assets\StylizedWater2\Materials\Textures" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\package.json" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools\PolyShape" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Plants" />
@@ -323,36 +365,48 @@
      <Folder Include="Assets\ColorSkies\Textures\Skybox_3" />
      <Folder Include="Assets\Models" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Cursors" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Tests" />
      <Folder Include="Assets\Marketplace Cute Series\FBX" />
      <None Include="Assets\PolygonKnights\Scenes\README.txt" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground2" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PinchHeight.shader" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.26\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseFillNone.shader" />
      <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\EdgePicker.shader" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Resources\Materials" />
      <Folder Include="Assets\Scenes\Game" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Templates" />
      <Folder Include="Assets\ColorSkies\Textures" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SmoothHeight.shader" />
      <Folder Include="Assets\Scripts\Plant" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground10" />
      <Folder Include="Assets\ColorSkies\Skies" />
      <Folder Include="Assets\PolygonFarm\Models" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SharpenPeaks.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\VertexShader.shader" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\NoiseCommon.hlsl" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Characters" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\FBX" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground9" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project\Icons" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\package.json" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\URP\URP_TerrainVisualizationInput.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\UVEditor" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None\Billow.hlsl" />
      <Folder Include="Assets\Scripts\UI Scripts" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_7" />
      <Folder Include="Assets\PolygonKnights\Models\ConvexCollisions" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\SpectralLUTs" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
      <Folder Include="Assets\Scripts\IObeserver" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintAspect.shader" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Models" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\Scenes" />
      <Folder Include="Library\PackageCache\com.unity.inputsystem@1.7.0" />
      <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.5" />
@@ -361,15 +415,19 @@
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art\Models" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\Materials" />
      <Folder Include="Assets\NPC\Animação\Estevar" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Models\Top" />
      <Folder Include="Assets\Models\pl" />
      <Folder Include="Assets\Render\Waterfall" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScalableAO.shader" />
+     <Folder Include="Assets\Shader\Shaders" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\ACES.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\FinalPass.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Histogram.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Caustics.hlsl" />
      <Folder Include="Assets\Scripts\Item Scripts\Resources\ItemData" />
+     <Folder Include="Assets\SimpleToon\Demo" />
      <Folder Include="Assets\Pre-Fabs\Itens Data" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Histogram.compute" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\Switch.hlsl" />
@@ -385,50 +443,66 @@
      <Folder Include="Assets\PolygonFarm\Prefabs\Props" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\SMAA" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\TerrainToolHeightBlit.shader" />
      <Folder Include="Assets\Scripts\Movimentação\InputSystem" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Upgrade\AssetIdRemap-4_0_0.json" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes" />
      <Folder Include="Assets\Models\textures" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Resources" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Buildings" />
      <Folder Include="Assets\Models\source" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationExceptions.json" />
+     <Folder Include="Assets\Shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\Tests" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\UI Scripts" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\xRLib.hlsl" />
      <Folder Include="Assets\Pre-Fabs\Animal" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Prefabs" />
+     <Folder Include="Assets\Kamgam\SettingsGenerator\Libs\LocalizationsForSettings" />
      <Folder Include="Assets\Materiais_E_Modelos\Decals" />
      <None Include="Assets\Scripts\Movimentação\license.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SimpleHeightBlend.shader" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\ExampleAssets\NoiseSettings" />
      <Folder Include="Assets\StylizedWater2\Materials\Effects" />
      <Folder Include="Assets\Models\Materials" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SmudgeHeight.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\FacePicker.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\ContrastHeight.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\SmoothingPreview.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Textures" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SetExactHeight.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\DetailScatter.shader" />
      <Folder Include="Assets\Scripts\Plant\Batata" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Generic" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintMaterialBrushPreview.shader" />
      <Folder Include="Assets\NPC\Animação" />
      <Folder Include="Assets\Scripts\Shop System" />
      <Folder Include="Assets\QuickOutline\Samples\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\license.txt" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LUTs" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\MeshUtility.shader" />
      <None Include="Assets\QuickOutline\Readme.txt" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Implementation" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\ExampleAssets" />
      <Folder Include="Assets\Unity.VisualScripting.Generated" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\package.json" />
      <Folder Include="Library\PackageCache\com.unity.mathematics@1.2.6" />
      <Folder Include="Assets\Scripts\CicloDiaeNoite" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Materials\Slime 3" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Overlays.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Vertex.hlsl" />
      <Folder Include="Assets\Scripts\Movimentação\FirstPersonController\Scripts" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\PSP2.hlsl" />
+     <Folder Include="Assets\Kamgam" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.7.0\ValidationExceptions.json" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos" />
      <Folder Include="Assets\TextMesh Pro\Shaders" />
@@ -451,6 +525,7 @@
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\ProBuilderCG.cginc" />
      <Folder Include="Assets\Scripts\BuildHouse" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\OpenGL.hlsl" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\package.json" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project\Materials" />
@@ -460,16 +535,21 @@
      <Folder Include="Assets\TutorialInfo\Icons" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground4" />
      <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\EditorResources\Overlay" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\TerraceErosion.shader" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Wagons" />
      <Folder Include="Assets\TutorialInfo" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools\ShapeTool" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Weapons" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6" />
      <Folder Include="Assets\Scripts\Plant\Beterraba" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\TerrainTools.hlsl" />
      <Folder Include="Assets\Pre-Fabs" />
      <Folder Include="Assets\Scripts\SaveLoad" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\BrushPreview.shader" />
+     <Folder Include="Assets\SimpleToon\Model" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.26" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\NoisePreview.shader" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures" />
      <Folder Include="Assets\PolygonFarm\Textures" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Food" />
@@ -481,13 +561,16 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Modes" />
      <Folder Include="Library\PackageCache\com.unity.searcher@4.9.2\Tests" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Tools" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseFillStrata.shader" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\PolygonFarm" />
      <Folder Include="Assets\PolygonKnights\Scenes" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_4" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\HDRP\HDRP_TerrainVisualizationTemplate.hlsl" />
      <Folder Include="Assets\Pre-Fabs\Testes" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Terrain\Layers" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None\Value.hlsl" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Environments" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaCruzada" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Toolbar\Background" />
@@ -497,27 +580,38 @@
      <Folder Include="Assets\PolygonKnights\Prefabs\Characters\FixedScaleCharacters" />
      <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\package.json" />
      <Folder Include="Assets\NPC\Scripts" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintConcavity.shader" />
      <Folder Include="Library\PackageCache\com.unity.ide.vscode@1.2.5" />
      <Folder Include="Assets\Sounds" />
      <Folder Include="Assets\Animations\Machadoo" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_2" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\StandardVertexColor.shader" />
      <Folder Include="Assets\Scripts\Player" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Materials\Slime 1" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Tests" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MotionBlur.shader" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\Builtin" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\CloneBrush.shader" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Models\Slimes" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\SaveLoad" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Props" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground7" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\URP" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm\Billow.hlsl" />
      <Folder Include="Assets\NPC\Animação\Gustar" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Fog.hlsl" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseBlitNone.shader" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Textures\Face" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Environments\Snow" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\PointBillboard.shader" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Materials\Textures" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\NoiseImpl.hlsl" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\Animations" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Strata\Billow.hlsl" />
      <Folder Include="Assets\PolygonKnights" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Presets" />
      <Folder Include="Assets\Models\pl\Materials" />
@@ -526,7 +620,9 @@
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets\PolygonFarm\Prefabs\FX" />
+     <Folder Include="Assets\SimpleToon\Skybox" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.1.0\Lib" />
+     <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Textures" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API" />
      <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.9.0\ValidationConfig.json" />
@@ -534,13 +630,17 @@
      <Folder Include="Assets\StylizedWater2\Models" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground13" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseBlitStrata.shader" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
+     <Folder Include="Assets\Kamgam\SettingsGenerator\Resources\Connections" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Characters" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Content" />
      <Folder Include="Assets\QuickOutline\Scripts" />
      <Folder Include="Assets\Marketplace Cute Series\PPP" />
      <Folder Include="Assets\Scripts\Plant\ItemDataSemente" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintHeight.shader" />
+     <Folder Include="Assets\SimpleToon\Material" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Scripts" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
@@ -555,11 +655,15 @@
      <Folder Include="Assets\Scenes" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\XboxOne.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Copy.shader" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\unity3d.txt" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\D3D12.hlsl" />
      <Folder Include="Assets\Scripts\Balde" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art\Textures" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Preview.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Strata\Value.hlsl" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None\Ridge.hlsl" />
      <Folder Include="Assets\Marketplace Cute Series\Cute series demo assets" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaGrande" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Props\Snow" />
@@ -574,13 +678,17 @@
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Hay" />
      <Folder Include="Assets\StylizedWater2\Prefabs" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None\Perlin.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
      <Folder Include="Assets\PolygonKnights\Prefabs" />
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Upgrade" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\Builtin\BLT_TerrainVisualizationCommon.cginc" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseBlitFbm.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm\Ridge.hlsl" />
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\AssetIdRemapUtility" />
@@ -589,14 +697,20 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Material" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaQuadrada" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Tables" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintTexture.shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\BlueNoise64px" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseHeightTool.shader" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Implementation\ValueImpl.hlsl" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1" />
      <Folder Include="Assets\Scripts\Interfaces" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <Folder Include="Assets\PolygonFarm\Prefabs" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\HDRP\HDRP_TerrainVisualizationData.hlsl" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.Unsafe.xml" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\SelectionPicker.shader" />
+     <Folder Include="Assets\SimpleToon\Shader" />
      <Folder Include="Assets\Scripts\Craft" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Implementation\VoronoiImpl.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\Vulkan.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Material\Textures" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\package.json" />
@@ -608,6 +722,8 @@
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Presets\Noise" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Tests" />
+     <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Templates" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SlopeFlatten.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\HideVertices.shader" />
      <Folder Include="Assets\UI" />
@@ -615,8 +731,11 @@
      <Folder Include="Assets\StylizedWater2\Prefabs\Effects" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Vehicles" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\URP.hlsl" />
+     <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\Builtin\BLT_TerrainVisualization.shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2" />
      <Folder Include="Assets\Scripts\Plant\Abobora" />
+     <Folder Include="Assets\Kamgam\SettingsGenerator" />
+     <Folder Include="Assets\Kamgam\SettingsGenerator\Packages" />
      <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\package.json" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\Prefabs" />
      <Reference Include="UnityEngine">
@@ -1278,6 +1397,14 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Kamgam.UGUIComponentsForSettings.csproj">
+      <Project>{b3b53609-cd06-da9e-8e2b-63868d2050d2}</Project>
+      <Name>Kamgam.UGUIComponentsForSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="Kamgam.SettingsGenerator.csproj">
+      <Project>{545014ee-d8ec-063a-fc5c-137089ac7e6f}</Project>
+      <Name>Kamgam.SettingsGenerator</Name>
+    </ProjectReference>
     <ProjectReference Include="com.unity.cinemachine.editor.csproj">
       <Project>{42fea13b-2e7e-2c16-83a2-8003fbbc35b0}</Project>
       <Name>com.unity.cinemachine.editor</Name>
@@ -1293,6 +1420,10 @@
     <ProjectReference Include="Unity.AI.Navigation.csproj">
       <Project>{7da308b1-46ed-53f4-713f-aa4750d00eb4}</Project>
       <Name>Unity.AI.Navigation</Name>
+    </ProjectReference>
+    <ProjectReference Include="LocalizationsForSettings.csproj">
+      <Project>{b732fbf2-1a8d-5856-c3ad-69991650c9cc}</Project>
+      <Name>LocalizationsForSettings</Name>
     </ProjectReference>
     <ProjectReference Include="sc.stylizedwater2.runtime.csproj">
       <Project>{c23c63a1-dda0-ce0f-f99d-ffa31fbb8ee2}</Project>
@@ -1330,6 +1461,14 @@
       <Project>{1204d40e-664f-3eb5-088e-2b2c7adca6d7}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Kamgam.SettingsGeneratorExamples.csproj">
+      <Project>{a6b90a46-3543-6b04-55f6-9c6b21b73c44}</Project>
+      <Name>Kamgam.SettingsGeneratorExamples</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.Editor.csproj">
+      <Project>{ae2f41d5-99f6-22bb-42f7-43d85c5d7f00}</Project>
+      <Name>Unity.TerrainTools.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
       <Project>{8781c819-f2b1-f9fb-b3e6-65b0366c2506}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
@@ -1349,6 +1488,10 @@
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{8a334bee-3b91-1ebf-6b2d-b77b03273443}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TerrainTools.csproj">
+      <Project>{a354f65b-3953-c0fe-bfbc-1c017c42fcf9}</Project>
+      <Name>Unity.TerrainTools</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{b7f02cb7-7cb1-0dc5-9456-e3760d6dbc57}</Project>
@@ -1390,6 +1533,14 @@
       <Project>{0444b45b-7332-f416-e36b-ec601e58b355}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Kamgam.SettingsGeneratorEditor.csproj">
+      <Project>{1e845ea4-e40a-69d4-aa8d-d889eb2e84ea}</Project>
+      <Name>Kamgam.SettingsGeneratorEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Kamgam.UGUIComponentsForSettingsEditor.csproj">
+      <Project>{950516fa-dc83-345a-5e0b-b15fff4cc539}</Project>
+      <Name>Kamgam.UGUIComponentsForSettingsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
       <Project>{94b4b745-bad2-6adc-da29-4fa88dda2775}</Project>
       <Name>Unity.AI.Navigation.Updater</Name>
@@ -1405,6 +1556,10 @@
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{d03fba28-cf17-b5b9-beb1-bc31280259cc}</Project>
       <Name>Unity.Mathematics</Name>
+    </ProjectReference>
+    <ProjectReference Include="LocalizationsForSettingsEditor.csproj">
+      <Project>{8b086628-95ec-b460-1e58-7f272862d366}</Project>
+      <Name>LocalizationsForSettingsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{e3693849-4e2f-63d7-d5f8-af4a9ef64d73}</Project>

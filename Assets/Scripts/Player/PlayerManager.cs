@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Start()
     {
-        database._itemDatabase[270].currentWater = 0;
+       // database._itemDatabase[270].currentWater = 0; mudar para o item 
         if (database != null)
         {
             InventoryItemData itemWithID270 = database.GetItem(270);

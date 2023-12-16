@@ -1,0 +1,22 @@
+{
+    "name": "Kamgam.SettingsGeneratorEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8fbafa9b5c2c6d948869fc39f97c5901",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:f05bbbc1eb014f546bba3fc8846da227",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
