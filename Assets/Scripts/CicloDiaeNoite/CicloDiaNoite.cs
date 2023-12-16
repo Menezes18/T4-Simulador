@@ -6,16 +6,17 @@ using System;
 
 public enum Estacao
 {
-    Primavera,
-    Verao,
+    
     Outono,
-    Inverno
+    Inverno,
+    Primavera,
+    Verao
 }
 public class CicloDiaNoite : MonoBehaviour
 {
     public static CicloDiaNoite ciclo;
     [SerializeField] private Transform luzDirecional;
-    [SerializeField] [Tooltip("Duração do dia em segundos")] public int duracaoDoDia;
+    [SerializeField] [Tooltip("Duração do dia em segundos")] public int duracaoDoDia = 200;
     [SerializeField] private TextMeshProUGUI horarioText;
     [SerializeField] private TextMeshProUGUI estadoText;
     [SerializeField] private TextMeshProUGUI anoText;
@@ -55,7 +56,16 @@ public class CicloDiaNoite : MonoBehaviour
 
     void Update()
     {
-        
+        if (estacaoAtual == Estacao.Inverno && diaAtual == 2)
+        {
+            SnowManager.instancia.isSnowActive = true;
+        }
+        else if (estacaoAtual == Estacao.Inverno && diaAtual == 13)
+        {
+            SnowManager.instancia.isSnowActive = false;
+            SnowManager.instancia.shouldRevertSnow = true;
+        }
+
         segundos += Time.deltaTime * multiplacador;
        
         if (segundos >= soma)
@@ -63,7 +73,7 @@ public class CicloDiaNoite : MonoBehaviour
             segundos = 0;
             SubjectPlant.inst.NotifyPlantaAguaAll(1);
             diaAtual++;        
-            if (diaAtual == 10)
+            if (diaAtual == 15)
             {
                 
                 diaAtual = 1;

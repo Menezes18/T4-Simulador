@@ -870,14 +870,6 @@
       <Project>{fe3927c8-ace2-78a6-d976-1dc491c52375}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
-    <ProjectReference Include="Kamgam.UGUIComponentsForSettings.csproj">
-      <Project>{b3b53609-cd06-da9e-8e2b-63868d2050d2}</Project>
-      <Name>Kamgam.UGUIComponentsForSettings</Name>
-    </ProjectReference>
-    <ProjectReference Include="Kamgam.SettingsGenerator.csproj">
-      <Project>{545014ee-d8ec-063a-fc5c-137089ac7e6f}</Project>
-      <Name>Kamgam.SettingsGenerator</Name>
-    </ProjectReference>
     <ProjectReference Include="com.unity.cinemachine.editor.csproj">
       <Project>{42fea13b-2e7e-2c16-83a2-8003fbbc35b0}</Project>
       <Name>com.unity.cinemachine.editor</Name>
@@ -894,13 +886,21 @@
       <Project>{7da308b1-46ed-53f4-713f-aa4750d00eb4}</Project>
       <Name>Unity.AI.Navigation</Name>
     </ProjectReference>
-    <ProjectReference Include="LocalizationsForSettings.csproj">
-      <Project>{b732fbf2-1a8d-5856-c3ad-69991650c9cc}</Project>
-      <Name>LocalizationsForSettings</Name>
+    <ProjectReference Include="Kamgam.SettingsGenerator.csproj">
+      <Project>{545014ee-d8ec-063a-fc5c-137089ac7e6f}</Project>
+      <Name>Kamgam.SettingsGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="Kamgam.UGUIComponentsForSettings.csproj">
+      <Project>{b3b53609-cd06-da9e-8e2b-63868d2050d2}</Project>
+      <Name>Kamgam.UGUIComponentsForSettings</Name>
     </ProjectReference>
     <ProjectReference Include="sc.stylizedwater2.runtime.csproj">
       <Project>{c23c63a1-dda0-ce0f-f99d-ffa31fbb8ee2}</Project>
       <Name>sc.stylizedwater2.runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Kamgam.SettingsGeneratorExamples.csproj">
+      <Project>{a6b90a46-3543-6b04-55f6-9c6b21b73c44}</Project>
+      <Name>Kamgam.SettingsGeneratorExamples</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
       <Project>{781f0a7b-8545-1159-2524-fff9f39b51f5}</Project>
@@ -934,10 +934,6 @@
       <Project>{1204d40e-664f-3eb5-088e-2b2c7adca6d7}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Kamgam.SettingsGeneratorExamples.csproj">
-      <Project>{a6b90a46-3543-6b04-55f6-9c6b21b73c44}</Project>
-      <Name>Kamgam.SettingsGeneratorExamples</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TerrainTools.Editor.csproj">
       <Project>{ae2f41d5-99f6-22bb-42f7-43d85c5d7f00}</Project>
       <Name>Unity.TerrainTools.Editor</Name>
@@ -950,9 +946,17 @@
       <Project>{046a845a-135f-0743-1087-4c6606458087}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
+    <ProjectReference Include="Kamgam.UGUIComponentsForSettingsEditor.csproj">
+      <Project>{950516fa-dc83-345a-5e0b-b15fff4cc539}</Project>
+      <Name>Kamgam.UGUIComponentsForSettingsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ProBuilder.csproj">
       <Project>{0398e6ef-8170-083e-1ac4-e372e5f18fc1}</Project>
       <Name>Unity.ProBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Kamgam.SettingsGeneratorEditor.csproj">
+      <Project>{1e845ea4-e40a-69d4-aa8d-d889eb2e84ea}</Project>
+      <Name>Kamgam.SettingsGeneratorEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
       <Project>{ea38d570-1438-9148-b66b-cff840f71698}</Project>
@@ -994,25 +998,25 @@
       <Project>{a21b8723-8c80-6816-2cac-d9db321b844c}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="LocalizationsForSettingsEditor.csproj">
+      <Project>{8b086628-95ec-b460-1e58-7f272862d366}</Project>
+      <Name>LocalizationsForSettingsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
       <Project>{a7e6287a-5dc5-fb94-e647-c09afd26cd2b}</Project>
       <Name>Unity.InputSystem</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
-      <Project>{159a4e98-6722-931a-45cf-6cca2859018b}</Project>
-      <Name>Unity.InputSystem.ForUI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
       <Project>{0444b45b-7332-f416-e36b-ec601e58b355}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Kamgam.SettingsGeneratorEditor.csproj">
-      <Project>{1e845ea4-e40a-69d4-aa8d-d889eb2e84ea}</Project>
-      <Name>Kamgam.SettingsGeneratorEditor</Name>
+    <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
+      <Project>{159a4e98-6722-931a-45cf-6cca2859018b}</Project>
+      <Name>Unity.InputSystem.ForUI</Name>
     </ProjectReference>
-    <ProjectReference Include="Kamgam.UGUIComponentsForSettingsEditor.csproj">
-      <Project>{950516fa-dc83-345a-5e0b-b15fff4cc539}</Project>
-      <Name>Kamgam.UGUIComponentsForSettingsEditor</Name>
+    <ProjectReference Include="LocalizationsForSettings.csproj">
+      <Project>{b732fbf2-1a8d-5856-c3ad-69991650c9cc}</Project>
+      <Name>LocalizationsForSettings</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
       <Project>{94b4b745-bad2-6adc-da29-4fa88dda2775}</Project>
@@ -1029,10 +1033,6 @@
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{d03fba28-cf17-b5b9-beb1-bc31280259cc}</Project>
       <Name>Unity.Mathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="LocalizationsForSettingsEditor.csproj">
-      <Project>{8b086628-95ec-b460-1e58-7f272862d366}</Project>
-      <Name>LocalizationsForSettingsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{e3693849-4e2f-63d7-d5f8-af4a9ef64d73}</Project>

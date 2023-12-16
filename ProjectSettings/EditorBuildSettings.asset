@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: c651de03a73dfb6429e436b3f6aa4ef6
   - enabled: 1
-    path: Assets/Kamgam/SettingsGenerator/Examples/FromAsset/SettingsFromAssetDemo
-      UI (loaded additive).unity
+    path: Assets/MenezesMenu/SettingsGenerator/Examples/FromAsset/SettingsFromAsset
+      (loaded additive).unity
     guid: 032051237de8c824eb4985d20cb5f346
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: caf7586823927ce46bb92c3e069ac07b, type: 2}

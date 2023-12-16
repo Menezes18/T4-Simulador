@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,11 +31,13 @@ public class MenuAtive : MonoBehaviour
         // Ativa ou desativa o cursor com base no estado do menu
         if (menu.activeSelf)
         {
+            FirstPersonController.instancia.cameraMovementEnabled = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
         else
         {
+            FirstPersonController.instancia.cameraMovementEnabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
