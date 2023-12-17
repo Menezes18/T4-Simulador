@@ -81,7 +81,7 @@ public class MenuScript : MonoBehaviour
         // Ativa o painel de tutorial
         tutorialPanel.SetActive(true);
     }
-
+    
     public void DesativarTutorial()
     {
         // Desativa o painel de tutorial

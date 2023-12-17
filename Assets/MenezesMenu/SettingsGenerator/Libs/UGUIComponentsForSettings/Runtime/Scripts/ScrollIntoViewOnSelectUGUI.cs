@@ -1,3 +1,7 @@
+//using StarterAssets;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -112,5 +116,6 @@ namespace Kamgam.UGUIComponentsForSettings
 
             return default(Rect);
         }
+        
     }
 }

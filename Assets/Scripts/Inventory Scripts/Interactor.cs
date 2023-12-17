@@ -37,7 +37,7 @@ public class Interactor : MonoBehaviour
     {
         interactable.Interact(this, out bool interactSuccessful);
         IsInteracting = true;
-
+        Time.timeScale = 0;
         // Se houver uma interação, feche o menu se estiver aberto
         if (menuScript != null && menuScript.IsMenuActive())
         {
@@ -47,6 +47,7 @@ public class Interactor : MonoBehaviour
 
     void EndInteraction()
     {
+        Time.timeScale = 1;
         Debug.Log("Fechar ");
         IsInteracting = false;
     }

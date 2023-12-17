@@ -62,4 +62,13 @@ public class MenuAtive : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+    public void END()
+    {
+        FirstPersonController.instancia.cameraMovementEnabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0;
+
+        
+    }
 }

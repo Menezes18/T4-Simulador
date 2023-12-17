@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
+using StarterAssets;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -43,21 +43,28 @@ public class UIController : MonoBehaviour
     private void OnEnable()
     {
         ShopKeeper.OnShopWindowRequested += DisplayShopWindow;
+        
     }
 
     private void OnDisable()
     {
         ShopKeeper.OnShopWindowRequested -= DisplayShopWindow;
+        
     }
 
     private void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame) _shopKeeperDisplay.gameObject.SetActive(false);
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            _shopKeeperDisplay.gameObject.SetActive(false);
+            Time.timeScale = 1;
+        }
         
     }
 
     private void DisplayShopWindow(ShopSystem shopSystem, PlayerInventoryHolder playerInventory)
     {
+        
         _shopKeeperDisplay.gameObject.SetActive(true);
         _shopKeeperDisplay.DisplayShopWindow(shopSystem, playerInventory);
     }

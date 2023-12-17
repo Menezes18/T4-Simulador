@@ -42,16 +42,18 @@ public class ChestInventory : InventoryHolder, IInteractable
         OnDynamicInventoryDisplayRequested?.Invoke(primaryInventorySystem, 0);
         
         UnlockCursor();
-
+        
         interactSuccessful = true;
     }
 
     private void UnlockCursor()
     {
+        Time.timeScale = 0;
         FirstPersonController.instancia.cameraMovementEnabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
 
     private void LockCursor()
     {
@@ -61,6 +63,7 @@ public class ChestInventory : InventoryHolder, IInteractable
     }
     public void EndInteraction()
     {
+        Time.timeScale = 1;
         LockCursor();
     }
 }
