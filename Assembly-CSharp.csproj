@@ -194,6 +194,7 @@
      <Folder Include="Assets\ColorSkies" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Stalls" />
      <None Include="Library\PackageCache\com.unity.inputsystem@1.7.0\ValidationConfig.json" />
+     <Folder Include="Assets\Models\_ Robson exportando coisas\Fogueira e tocha" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
      <None Include="Assets\SimpleToon\Shader\ToonLightBase.shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug" />
@@ -203,6 +204,7 @@
      <Folder Include="Assets\Scripts\UiManager" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
+     <Folder Include="Assets\EldamarStudio\100+ Cinematic Post Processing Profiles\LUTs" />
      <Folder Include="Assets\Materiais_E_Modelos\Texturas\Bau_Argola_Fecho\Materials" />
      <Folder Include="Assets\Models\pl\Prefab" />
      <None Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\package.json" />
@@ -250,10 +252,12 @@
      <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\EmptySky.shader" />
      <Folder Include="Assets\MenezesMenu\SettingsGenerator\Libs" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Waveform.compute" />
+     <Folder Include="Assets\EldamarStudio\100+ Cinematic Post Processing Profiles\Post Processing Profiles" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground3" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
      <Folder Include="Assets\NPC\Texture" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\VertexPicker.shader" />
+     <Folder Include="Assets\Models\_ Robson exportando coisas" />
      <Folder Include="Assets\SimpleToon\Scripts" />
      <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4" />
      <Folder Include="Library\PackageCache\com.unity.cinemachine@2.9.5\Gizmos" />
@@ -268,8 +272,10 @@
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\TexelValidity.shader" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Strata\Perlin.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\PSSL.hlsl" />
+     <Folder Include="Assets\Models\_ Robson exportando coisas\Fogueira e tocha\Texture" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\DiffuseTextureBlend.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\LineBillboardMetal.shader" />
+     <Folder Include="Assets\Models\_ Robson exportando coisas\Fogueira e tocha\Materiais" />
      <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts" />
      <Folder Include="Assets\Scripts\Item Scripts\Itens\Cenoura" />
      <Folder Include="Assets\UI\Icons\Sementes" />
@@ -279,6 +285,7 @@
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Baskets and Pails" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Tesselation.hlsl" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Common.hlsl" />
+     <Folder Include="Assets\EldamarStudio\100+ Cinematic Post Processing Profiles\test" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm\Value.hlsl" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0" />
      <Folder Include="Library\PackageCache\com.unity.ai.navigation@1.1.5\Gizmos" />
@@ -367,6 +374,7 @@
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\package.json" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SedimentSplat.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <Folder Include="Assets\Scenes\Game_Profiles" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm\Perlin.hlsl" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Noise.hlsl" />
      <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Flow" />
@@ -495,6 +503,7 @@
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22\ValidationExceptions.json" />
      <Folder Include="Assets\Shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\Tests" />
+     <Folder Include="Assets\Models\_ Robson exportando coisas\Fogueira e tocha\VFX" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\UI Scripts" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\xRLib.hlsl" />
      <Folder Include="Assets\Pre-Fabs\Animal" />
@@ -519,6 +528,7 @@
      <Folder Include="Assets\Scripts\Plant\Batata" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures" />
      <Folder Include="Assets\Shader\Shaders\Snow\Textures\Ground037_1K-PNG" />
+     <Folder Include="Assets\EldamarStudio" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Generic" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintMaterialBrushPreview.shader" />
      <Folder Include="Assets\NPC\Animação" />
@@ -558,6 +568,7 @@
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground6" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
      <Folder Include="Assets\Scripts\Input" />
+     <Folder Include="Assets\EldamarStudio\100+ Cinematic Post Processing Profiles\test\Example Scene\images" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
      <Folder Include="Assets\StylizedWater2\_Demo\DemoAssets\Terrain" />
@@ -679,6 +690,7 @@
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground13" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseBlitStrata.shader" />
+     <Folder Include="Assets\Models\_ Robson exportando coisas\Fogueira e tocha\Prefabs" />
      <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Default" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
@@ -722,6 +734,7 @@
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaGrande" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Props\Snow" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
+     <Folder Include="Assets\EldamarStudio\100+ Cinematic Post Processing Profiles\test\Example Scene" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData_Assets.json" />
      <Folder Include="Assets\PolygonKnights\Models\Characters\FixedScaleCharacters" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Waves.hlsl" />
@@ -746,6 +759,7 @@
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\AssetIdRemapUtility" />
+     <Folder Include="Assets\EldamarStudio\100+ Cinematic Post Processing Profiles" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Tools" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Buildings" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Material" />
