@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5838528699667815203}
   - component: {fileID: 7965850836884818515}
   - component: {fileID: 9174023990619432060}
+  - component: {fileID: 124932937048859177}
   m_Layer: 0
   m_Name: SementeTrigoItem
   m_TagString: Untagged
@@ -115,6 +116,24 @@ MonoBehaviour:
   itemSaveData:
     ItemData: {fileID: 0}
     Position: {x: 0, y: 0, z: 0}
+--- !u!114 &124932937048859177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079361290821738425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 5568253198204362042}
+  message: 
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4922004640558741983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,10 +193,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7844409468666355946, guid: a6e3ed0d4515b1147be43f40507b7176, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5568253198204362042}
   m_SourcePrefab: {fileID: 100100000, guid: a6e3ed0d4515b1147be43f40507b7176, type: 3}
 --- !u!4 &46117673211450612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4966818254291021099, guid: a6e3ed0d4515b1147be43f40507b7176, type: 3}
   m_PrefabInstance: {fileID: 4922004640558741983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2923550828570761525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7844409468666355946, guid: a6e3ed0d4515b1147be43f40507b7176, type: 3}
+  m_PrefabInstance: {fileID: 4922004640558741983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5568253198204362042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2923550828570761525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

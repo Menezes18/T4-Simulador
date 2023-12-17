@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
   m_Name: Ferro
   m_EditorClassIdentifier: 
-  ID: 27
+  ID: 7777777
   DisplayName: Pedra
   Description: 
   Icon: {fileID: 21300000, guid: f4684a1754d61aa41b3aea10931dd8c7, type: 3}

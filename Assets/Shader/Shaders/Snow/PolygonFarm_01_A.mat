@@ -139,7 +139,7 @@ Material:
     - _ShadowStepSmooth: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
-    - _SnowAmount: 0.28224987
+    - _SnowAmount: 0
     - _SnowBlend: 0.05
     - _SnowColorNoiseSize: 250
     - _SnowColorNoiseStrength: 0.5

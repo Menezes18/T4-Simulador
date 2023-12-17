@@ -22,7 +22,6 @@ public class PlayerManager : MonoBehaviour
     public CraftArvore quebrarArvore;
     public int item;
     public PlantTrigger plantT;
-    public int ids;
     public ChickenController galinha;
     public CanvasInfo canvasinfo;
     public CanvasInfo auxCanvas;
@@ -30,12 +29,11 @@ public class PlayerManager : MonoBehaviour
     public int itemInHandId;
     [SerializeField] private GameObject prefabCanvasInfo;
     private bool cursorActive = false;
-    public BucketController _Bucket;
     public Database database;
-    
+    public InventoryItemData Balde;
     private void Awake()
     {
-        
+        Balde = database.GetItem(270);
         if (playerManager != null && playerManager != this)
         {
             Destroy(gameObject);
@@ -48,9 +46,11 @@ public class PlayerManager : MonoBehaviour
         
     }
 
+
+
     public void Start()
     {
-       // database._itemDatabase[270].currentWater = 0; mudar para o item 
+        database.GetItem(270).currentWater = 0;
         if (database != null)
         {
             InventoryItemData itemWithID270 = database.GetItem(270);
@@ -74,20 +74,10 @@ public class PlayerManager : MonoBehaviour
     public void bater(int id, InventoryItemData item)
     {
         animator.SetTrigger("Bater");
-        if (id == 270 && hitInfo.collider.gameObject.tag.Equals("Agua"))
-        {
-            Debug.Log("AA");
-            if (item.currentWater < 100)
-            {
-                item.currentWater = Mathf.Min(item.currentWater + 10, 100);
-            }
-            else
-            {
-                Debug.Log("Bucket is already full!");
-            }
-        }
+        Debug.Log(id);
             if (id.Equals(2927270) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(27290)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
+            if (id.Equals(2729290)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.rock, hitInfo);
             if (id.Equals(27290) && hitInfo.collider != null && hitInfo.collider.gameObject.CompareTag("ArvoreCraft")) 
             {
 
@@ -227,14 +217,36 @@ public class PlayerManager : MonoBehaviour
     #endregion
     private void InteragirComObjeto()
     {
-        if (hitInfo.collider != null)
-        {
-
             var itemPick = hitInfo.collider.transform.gameObject.GetComponent<ItemPickUp>();
             galinha = hitInfo.collider.transform?.gameObject.GetComponent<ChickenController>();
             craft = hitInfo.collider.transform.parent?.gameObject.GetComponent<CraftSystem>();
             craftArvore = hitInfo.collider.gameObject.GetComponent<CraftArvore>();
             plantT = hitInfo.collider?.gameObject.GetComponent<PlantTrigger>();
+            
+            if (hitInfo.collider != null)
+            {
+                if (plantT)
+                {
+                    if (plantT.aguadaplanta < 100 && Balde.currentWater > 0) 
+                    {
+                        Balde.currentWater -= 25;
+                        Debug.Log("total " + Balde.currentWater);
+                        plantT.AdicionarAgua();
+                        
+                    }
+                }
+                if (HotbarDisplay.Display != null && hitInfo.collider != null && HotbarDisplay.Display.IsCurrentItem(270) && hitInfo.collider.CompareTag("Agua"))
+                {
+                    
+                    InventoryItemData Balde = database.GetItem(270);
+                    UIController.instancia.ShowNotification("Pegou água com o [Balde " + Balde.currentWater + "%]");
+                    //database.GetItem(270).currentWater = 10;
+                    if (Balde != null)
+                    {
+                        Balde.currentWater = Mathf.Min(Balde.currentWater + 10, 100);
+                        Debug.Log("Coloquei " + Balde.currentWater);
+                    }
+                }
             if (itemPick != null)
             {
                 Debug.Log(HotbarDisplay.Display.IsHotbarFull());
@@ -245,7 +257,7 @@ public class PlayerManager : MonoBehaviour
             }
             if (HotbarDisplay.Display.IsItemInHand(15) && plantT != null)
             {
-                plantT.agua = true;
+               // plantT.agua = true;
             }
 
             if (galinha != null)

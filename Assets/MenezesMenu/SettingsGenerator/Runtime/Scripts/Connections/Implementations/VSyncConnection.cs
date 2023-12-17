@@ -17,7 +17,7 @@ namespace Kamgam.SettingsGenerator
 #if UNITY_EDITOR
             if (SettingsGeneratorSettings.GetOrCreateSettings().ShowEditorInfoLogs)
             {
-                Logger.LogMessage("Setting V-Sync has no effect in the Editor. Please try in a build. - " + SettingsGeneratorSettings._showEditorInfoLogsHint);
+               // Logger.LogMessage("Setting V-Sync has no effect in the Editor. Please try in a build. - " + SettingsGeneratorSettings._showEditorInfoLogsHint);
             }
 #endif
         }

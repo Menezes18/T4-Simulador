@@ -72,7 +72,8 @@ public class CicloDiaNoite : MonoBehaviour
         {
             segundos = 0;
             SubjectPlant.inst.NotifyPlantaAguaAll(1);
-            diaAtual++;        
+            diaAtual++;   
+            SubjectPlant.inst.NotifyPlantaAll(estacaoAtual);
             if (diaAtual == 15)
             {
                 

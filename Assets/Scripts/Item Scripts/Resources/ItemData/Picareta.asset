@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0c4e3f5e196ad84cbef2ad2ebe7c428, type: 3}
-  m_Name: Pedra
+  m_Name: Picareta
   m_EditorClassIdentifier: 
-  ID: 27
-  DisplayName: Pedra
+  ID: 2729290
+  DisplayName: Picareta
   Description: 
-  Icon: {fileID: 21300000, guid: b5569c714442cdb40a51ba5a494c6a0a, type: 3}
-  MaxStackSize: 20
-  GoldValue: 10
-  ItemPrefab: {fileID: 1431062295840860638, guid: d93b91db3a36292478a8cb59b8893981, type: 3}
+  Icon: {fileID: 21300000, guid: 0709536de8417ac4fae0b1ea2c05f572, type: 3}
+  MaxStackSize: 1
+  GoldValue: 70
+  ItemPrefab: {fileID: 9003158863006073538, guid: cf18e7c83198e1140a611dcc8cb15344, type: 3}
   ItemData: {fileID: 0}
   data: {fileID: 0}
   _building: 0

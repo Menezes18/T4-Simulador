@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5354536691443586262}
   - component: {fileID: 5763390722257538172}
   - component: {fileID: 5130034538686964676}
+  - component: {fileID: 368769177417228857}
   m_Layer: 0
   m_Name: SementeTrigo
   m_TagString: Untagged
@@ -72,12 +73,29 @@ MonoBehaviour:
   EstaEstacao: 0
   PrefabFinal: {fileID: 2079361290821738425, guid: 8c4e8107b5296f24e938c11ce4ea29f2, type: 3}
   cresceu: 0
-  agua: 0
-  limitediasemagua: 3
-  diascomAgua: 0
+  aguadaplanta: 0
   idadePlanta: 0
+  CanvasInfoObj: {fileID: 368769177417228857}
   ciclodia: 0
   previousPrefab: {fileID: 0}
+--- !u!114 &368769177417228857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211517109068419072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 7832824092396709190}
+  message: 
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &437100810767294654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,10 +104,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5354536691443586262}
     m_Modifications:
-    - target: {fileID: 4966818254291021099, guid: a6e3ed0d4515b1147be43f40507b7176, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4966818254291021099, guid: a6e3ed0d4515b1147be43f40507b7176, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -144,3 +158,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4966818254291021099, guid: a6e3ed0d4515b1147be43f40507b7176, type: 3}
   m_PrefabInstance: {fileID: 437100810767294654}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7832824092396709190 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7684034712959747576, guid: a6e3ed0d4515b1147be43f40507b7176, type: 3}
+  m_PrefabInstance: {fileID: 437100810767294654}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

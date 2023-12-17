@@ -305,7 +305,12 @@ public class HotbarDisplay : StaticInventoryDisplay
 
          return (itemData != null) ? itemData.ID : -1;
     }
-    
+    //Verifica se o item da mao é do item pelo id
+    public bool IsCurrentItem(int itemId)
+    {
+        InventoryItemData itemData = slots[_currentIndex].AssignedInventorySlot.ItemData;
+        return (itemData != null && itemData.ID == itemId);
+    }
     // Remove um item específico da barra de atalho por ID e quantidade
     public void RemoveItem(int itemId, int quantity)
     {
@@ -468,8 +473,15 @@ public class HotbarDisplay : StaticInventoryDisplay
             MeshCollider MeshcolliderItem = spawnedObject.GetComponentInChildren<MeshCollider>();
             Collider colliderDoItem = spawnedObject.GetComponent<Collider>();
             SphereCollider sphereCollider = spawnedObject.GetComponent<SphereCollider>();
+            MeshCollider filhodomesh = FindMeshColliderInChildren(spawnedObject.transform);
+            BoxCollider filhodobox = FindBoxColliderInChildren(spawnedObject.transform);
 
-
+            //MeshCollider itemfilho = item.GetComponentInChildren<MeshCollider>();
+            
+            
+           // if(itemfilho != null) itemfilho.enabled = false;
+           if (filhodobox != null) filhodobox.enabled = false; 
+            if (filhodomesh != null) filhodomesh.enabled = false;
             if (MeshcolliderItem != null) MeshcolliderItem.enabled = false;
             if (sphereCollider != null) sphereCollider.enabled = false;
             if (colliderDoItem != null) colliderDoItem.enabled = false;
@@ -488,7 +500,70 @@ public class HotbarDisplay : StaticInventoryDisplay
             Debug.LogWarning("Item não encontrado no banco de dados. ID do item: " + itemPrefab);
         }
     }
+    BoxCollider FindBoxColliderInChildren(Transform parent)
+    {
+        BoxCollider meshCollider = null;
 
+        // Percorre todos os filhos do objeto pai
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            // Obtém o transform do filho atual
+            Transform child = parent.GetChild(i);
+
+            // Tenta obter o MeshCollider do filho atual
+            meshCollider = child?.GetComponent<BoxCollider>();
+
+            // Se encontrado, retorna imediatamente
+            if (meshCollider != null)
+            {
+                return meshCollider;
+            }
+
+            // Se não encontrado no filho atual, chama recursivamente para os filhos desse filho
+            meshCollider = FindBoxColliderInChildren(child);
+
+            // Se encontrado em algum filho recursivo, retorna imediatamente
+            if (meshCollider != null)
+            {
+                return meshCollider;
+            }
+        }
+
+        // Se não encontrado em nenhum filho, retorna null
+        return null;
+    }
+    MeshCollider FindMeshColliderInChildren(Transform parent)
+    {
+        MeshCollider meshCollider = null;
+
+        // Percorre todos os filhos do objeto pai
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            // Obtém o transform do filho atual
+            Transform child = parent.GetChild(i);
+
+            // Tenta obter o MeshCollider do filho atual
+            meshCollider = child.GetComponent<MeshCollider>();
+
+            // Se encontrado, retorna imediatamente
+            if (meshCollider != null)
+            {
+                return meshCollider;
+            }
+
+            // Se não encontrado no filho atual, chama recursivamente para os filhos desse filho
+            meshCollider = FindMeshColliderInChildren(child);
+
+            // Se encontrado em algum filho recursivo, retorna imediatamente
+            if (meshCollider != null)
+            {
+                return meshCollider;
+            }
+        }
+
+        // Se não encontrado em nenhum filho, retorna null
+        return null;
+    }
 
 // Método para lidar com o uso de um item da barra de atalho
     public void UseItem(InputAction.CallbackContext obj)

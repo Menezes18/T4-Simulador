@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5354536691443586262}
   - component: {fileID: 5763390722257538172}
   - component: {fileID: 5130034538686964676}
+  - component: {fileID: 4350334202987884394}
   m_Layer: 0
   m_Name: SementeBatata
   m_TagString: Untagged
@@ -72,12 +73,29 @@ MonoBehaviour:
   EstaEstacao: 0
   PrefabFinal: {fileID: 0}
   cresceu: 0
-  agua: 0
-  limitediasemagua: 3
-  diascomAgua: 0
+  aguadaplanta: 0
   idadePlanta: 0
+  CanvasInfoObj: {fileID: 0}
   ciclodia: 0
   previousPrefab: {fileID: 0}
+--- !u!114 &4350334202987884394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211517109068419072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 6389381238402615784}
+  message: 
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6564947518112512877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,8 +155,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3605464655911030478, guid: a6c1f82196832224ab67c4b9dd517c26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6389381238402615784}
   m_SourcePrefab: {fileID: 100100000, guid: a6c1f82196832224ab67c4b9dd517c26, type: 3}
+--- !u!1 &7571201870331393443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3605464655911030478, guid: a6c1f82196832224ab67c4b9dd517c26, type: 3}
+  m_PrefabInstance: {fileID: 6564947518112512877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6389381238402615784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7571201870331393443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &8359539255012627977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3393581433008926052, guid: a6c1f82196832224ab67c4b9dd517c26, type: 3}

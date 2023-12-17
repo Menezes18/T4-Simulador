@@ -22,7 +22,7 @@ MonoBehaviour:
   ItemData: {fileID: 0}
   data: {fileID: 0}
   _building: 1
-  semente: 0
+  semente: 1
   isBucket: 1
   maxWater: 0
-  currentWater: 111
+  currentWater: 0

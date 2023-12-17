@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5354536691443586262}
   - component: {fileID: 5763390722257538172}
   - component: {fileID: 5130034538686964676}
+  - component: {fileID: 6135331002507201984}
   m_Layer: 0
   m_Name: SementePimenta
   m_TagString: Untagged
@@ -72,12 +73,29 @@ MonoBehaviour:
   EstaEstacao: 0
   PrefabFinal: {fileID: 2079361290821738425, guid: 2d2e44bf9b53ff74191ac84ff651a09f, type: 3}
   cresceu: 0
-  agua: 0
-  limitediasemagua: 3
-  diascomAgua: 0
+  aguadaplanta: 0
   idadePlanta: 0
+  CanvasInfoObj: {fileID: 6135331002507201984}
   ciclodia: 0
   previousPrefab: {fileID: 0}
+--- !u!114 &6135331002507201984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211517109068419072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeda4475f5cfaa4c8056e7daad9d623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _outline: {fileID: 7337649763669528394}
+  message: 
+  image: {fileID: 21300000, guid: 75b6651b5a60b9f459f81fb52b525c47, type: 3}
+  onInteraction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4769155369416332093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,8 +155,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6375792394001240659, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7337649763669528394}
   m_SourcePrefab: {fileID: 100100000, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
+--- !u!1 &1897190738351997294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6375792394001240659, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}
+  m_PrefabInstance: {fileID: 4769155369416332093}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7337649763669528394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897190738351997294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &2242306560720884076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6715206130298962513, guid: c371b1ccfc098ba42bd227fa1c12c9e9, type: 3}

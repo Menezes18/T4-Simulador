@@ -41,6 +41,7 @@ public class BuildTool : MonoBehaviour
     public bool plantio;
     private void Start()
     {
+        ConfigurarCamadas();
         _cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
         _camera = Camera.main;
         ChoosePart(placedata);
@@ -100,7 +101,13 @@ public class BuildTool : MonoBehaviour
         }
         if (buildAtivar)
         {
+            ConfigurarCamadasBuild();
+            
             ChoosePart(data);
+            
+        }else if (buildAtivar == false)
+        {
+            ConfigurarCamadas();
         }
         if (_spawnedBuilding && Keyboard.current.escapeKey.wasPressedThisFrame) DeleteObjectPreview();
         if (Keyboard.current.pKey.wasPressedThisFrame) _deleteModeEnabled = !_deleteModeEnabled;
@@ -148,6 +155,7 @@ public class BuildTool : MonoBehaviour
     {
         if (_spawnedBuilding != null)
         {
+            buildAtivar = false;
             Destroy(_spawnedBuilding.gameObject);
             _spawnedBuilding = null;
         }
@@ -207,8 +215,35 @@ public class BuildTool : MonoBehaviour
         
     }
     public bool pode = false;
+    private LayerMask groundLayer;
+    private LayerMask farmingLayer;
+    private LayerMask terraAradaLayer;
+    private LayerMask layerD;
+    // ... Outros membros da classe ...
+
+    public void ConfigurarCamadasBuild()
+    {
+        // Defina suas camadas individuais conforme necessário
+        groundLayer = LayerMask.GetMask("Ground");
+        farmingLayer = LayerMask.GetMask("Farming");
+        terraAradaLayer = LayerMask.GetMask("terraArada");
+
+        // Combine as camadas usando o operador |
+        _buildModeLayerMask = groundLayer | farmingLayer | terraAradaLayer;
+    }
+    public void ConfigurarCamadas()
+    {
+        layerD = LayerMask.GetMask("Default");
+        groundLayer = LayerMask.GetMask("Ground");
+        farmingLayer = LayerMask.GetMask("Farming");
+        terraAradaLayer = LayerMask.GetMask("terraArada");
+
+        // Combine as camadas usando o operador |
+        _buildModeLayerMask = groundLayer | farmingLayer | terraAradaLayer | layerD;
+    }
     public void PositionBuildingPreview()
     {
+        buildAtivar = true;
         InventoryItemData Item = FindObjectOfType<InventoryItemData>();
         HotbarDisplay hotbarDisplay = FindObjectOfType<HotbarDisplay>();
 
@@ -226,9 +261,11 @@ public class BuildTool : MonoBehaviour
             _spawnedBuilding.transform.Rotate(0, _rotateSnapAngle * Time.deltaTime, 0);
             _lastRotation = _spawnedBuilding.transform.rotation;
         }
-        
+
+        ConfigurarCamadasBuild();
         if (IsRayHittingSomething(_buildModeLayerMask, out RaycastHit hitInfo) && !hotbarDisplay.ItemSemente() && pode)
         {
+            
             var gridPosition = WorldGrid.GridPositionFromWorldPoint3D(hitInfo.point, 0.1f);
             // _spawnedBuilding.transform.position = gridPosition;
             _spawnedBuilding.transform.position = hitInfo.point;
