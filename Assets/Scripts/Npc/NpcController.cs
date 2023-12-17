@@ -56,7 +56,7 @@ public class NpcController : MonoBehaviour
     private void ChegueiNoDestino()
     {
         anim.SetBool("Andar", false);
-        Debug.Log("Cheguei no destino!");
+       // Debug.Log("Cheguei no destino!");
         andarAtivo = false;
     }
 

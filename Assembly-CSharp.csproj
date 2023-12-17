@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
-    <DefineConstants>UNITY_2022_3_10;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2022_3_10;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2;DISTANT_LANDS;COZY_WEATHER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -49,18 +49,23 @@
      <Compile Include="Assets\Scripts\UI Scripts\StaticInventoryDisplay.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\ShopKeeperDisplay.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\DynamicInventoryDisplay.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureSkyRenderController.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\PlayerInventoryHolder.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\SaveLoad.cs" />
      <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\MouseItemData.cs" />
      <Compile Include="Assets\DropdownController.cs" />
      <Compile Include="Assets\Pre-Fabs\Animal\ChickenController.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureUtilities.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\Balde\BucketController.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\InventoryItemData.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\InventoryUIController.cs" />
      <Compile Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\AbstractTargetFollower.cs" />
      <Compile Include="Assets\Scripts\Movimentação\FirstPersonController\Scripts\FirstPersonController.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureWeatherZone.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureTimeController.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\_Utilities\AzureFlyCamera.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\InventorySystem.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
@@ -69,6 +74,7 @@
      <Compile Include="Assets\Scripts\Item Scripts\Database.cs" />
      <Compile Include="Assets\Scripts\Shop System\ShopItemList.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\ProceduralMesh.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureShaderUniforms.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\HotbarDisplay.cs" />
      <Compile Include="Assets\Scripts\SystemQuebrar\SystemQuebrar.cs" />
      <Compile Include="Assets\Scripts\Craft\CraftSystem.cs" />
@@ -93,25 +99,32 @@
      <Compile Include="Assets\Scripts\Canvas\HUDController.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\UniqueID.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\HotbarSelector.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureWeatherProfile.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\UI Scripts\BuildingPanelUI.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\BuildTool.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureEnvironmentController.cs" />
      <Compile Include="Assets\Scripts\IObeserver\IObserverPlanta.cs" />
      <Compile Include="Assets\Scripts\BuildHouse\BuildHouse.cs" />
      <Compile Include="Assets\Shader\Shaders\Snow\SnowManager.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureFogScattering.cs" />
      <Compile Include="Assets\Scripts\MostrarFPS.cs" />
      <Compile Include="Assets\Scripts\controllers\PauseMenu.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureWeatherController.cs" />
      <Compile Include="Assets\Scripts\-MUDAR-SystemArruma\ConsertarData.cs" />
      <Compile Include="Assets\SimpleToon\Scripts\SelfRotation.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\BaseManager.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\_Utilities\AzureCameraOrbit.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\ShopSlotUI.cs" />
      <Compile Include="Assets\Scripts\IObeserver\SubjectPlant.cs" />
      <Compile Include="Assets\Scripts\Shop System\ShopSlot.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\SerializableDictionary.cs" />
      <Compile Include="Assets\Scripts\Item Scripts\ItemSlot.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureOverrideObject.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\UI Scripts\BuildingPartUI.cs" />
      <Compile Include="Assets\Pre-Fabs\Animal\HorseController.cs" />
      <Compile Include="Assets\NPC\Scripts\NPCMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureFogScatteringFeature.cs" />
      <Compile Include="Assets\Scripts\BuildHouse\HouseData.cs" />
      <Compile Include="Assets\Scripts\Plant\Trigger.cs" />
      <Compile Include="Assets\Scripts\BuildSystemScripts\TerraArada.cs" />
@@ -129,14 +142,20 @@
      <Compile Include="Assets\Scripts\BuildSystemScripts\Building.cs" />
      <Compile Include="Assets\Scripts\Inventory Scripts\Interactor.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\SaveGameManager.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\_Utilities\AzureSliderToTime.cs" />
      <Compile Include="Assets\Scripts\controllers\MenuController.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureOverridePropertiesManually.cs" />
      <Compile Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\FreeLookCam.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureEffectsController.cs" />
      <Compile Include="Assets\Scripts\Plant\Plant.cs" />
+     <Compile Include="Assets\Azure[Sky] Dynamic Skybox\Scripts\AzureThunderEffect.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\InventoryDisplay.cs" />
      <Compile Include="Assets\SimpleToon\Model\Kawaii Slimes\Cameras\Scripts\PivotBasedCameraRig.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_6" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Shaders" />
      <Folder Include="Assets\MenezesMenu\SettingsGenerator\Libs\UGUIComponentsForSettings" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\_Beta" />
      <Folder Include="Assets\StylizedWater2\_Demo" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\StdLib.hlsl" />
      <Folder Include="Assets\Materiais_E_Modelos\Abobora Versçoes" />
@@ -159,6 +178,7 @@
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\NormalPreview.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\Textures" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\GI" />
      <Folder Include="Assets\StylizedWater2\Materials\Effects\Textures" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseFillFbm.shader" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Lighting.hlsl" />
@@ -214,8 +234,10 @@
      <Folder Include="Assets\Models\pl\Prefab\Prefab" />
      <Folder Include="Assets\Materiais_E_Modelos\Texturas\Materials" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Weather Zones" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\Cubes" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\FogScattering.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\LineBillboard.shader" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
      <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Materials\Slime 2" />
@@ -225,6 +247,7 @@
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment\Art\Materials" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Gizmos" />
      <Folder Include="Assets\PolygonKnights\Materials" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\EmptySky.shader" />
      <Folder Include="Assets\MenezesMenu\SettingsGenerator\Libs" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Waveform.compute" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground3" />
@@ -251,6 +274,7 @@
      <Folder Include="Assets\Scripts\Item Scripts\Itens\Cenoura" />
      <Folder Include="Assets\UI\Icons\Sementes" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\ForwardPass.hlsl" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Materials" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Baskets and Pails" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Tesselation.hlsl" />
@@ -269,6 +293,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\READ ME" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\package.json" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\_Beta\Read-Me.txt" />
      <Folder Include="Assets\StylizedWater2\Materials\Textures\Foam" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons" />
      <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None" />
@@ -289,6 +314,7 @@
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
      <Folder Include="Assets\Scripts\SystemQuebrar" />
      <Folder Include="Assets\Marketplace Cute Series\Materials" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\Transparent" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
      <Folder Include="Assets\Scripts\Item Scripts" />
      <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
@@ -314,6 +340,7 @@
      <Folder Include="Assets\NPC\Animação\Ferreiro" />
      <Folder Include="Assets\StylizedWater2" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\D3D11.hlsl" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Documentation" />
      <Folder Include="Assets\Marketplace Cute Series\Read Me" />
      <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\HDRP" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
@@ -375,6 +402,7 @@
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PinchHeight.shader" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.26\package.json" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\Transparent\ParticleMultiply.shader" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseFillNone.shader" />
      <None Include="Library\PackageCache\com.unity.searcher@4.9.2\package.json" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\EdgePicker.shader" />
@@ -386,12 +414,15 @@
      <Folder Include="Assets\Scripts\Plant" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground10" />
      <Folder Include="Assets\ColorSkies\Skies" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\WeatherParticles.shader" />
      <Folder Include="Assets\PolygonFarm\Models" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SharpenPeaks.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\VertexShader.shader" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts" />
      <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Fbm" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Prefabs\Thunders" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\StaticClouds.shader" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\NoiseCommon.hlsl" />
      <Folder Include="Assets\PolygonFarm\Prefabs\Characters" />
@@ -400,6 +431,7 @@
      <Folder Include="Assets\Scripts\BuildSystemScripts\Project\Icons" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\package.json" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Visualization\URP\URP_TerrainVisualizationInput.hlsl" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Override Properties By Scripting" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\UVEditor" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None\Billow.hlsl" />
      <Folder Include="Assets\Scripts\UI Scripts" />
@@ -420,12 +452,14 @@
      <Folder Include="Assets\NPC\Animação\Estevar" />
      <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes\Models\Top" />
      <Folder Include="Assets\Models\pl" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\_Replacements" />
      <Folder Include="Assets\Render\Waterfall" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScalableAO.shader" />
      <Folder Include="Assets\Shader\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\ACES.hlsl" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\FinalPass.shader" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\SoundFx" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Debug\Histogram.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\StylizedWater2\Shaders\Libraries\Caustics.hlsl" />
@@ -450,6 +484,7 @@
      <Folder Include="Assets\Scripts\Movimentação\InputSystem" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Upgrade\AssetIdRemap-4_0_0.json" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1" />
      <Folder Include="Assets\SimpleToon\Model\Kawaii Slimes" />
      <Folder Include="Assets\Models\textures" />
@@ -491,6 +526,8 @@
      <Folder Include="Assets\QuickOutline\Samples\Scenes" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.cinemachine@2.9.5\license.txt" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\DynamicClouds.shader" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Textures\StaticClouds" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\LUTs" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\MeshUtility.shader" />
      <None Include="Assets\QuickOutline\Readme.txt" />
@@ -513,6 +550,7 @@
      <Folder Include="Assets\TextMesh Pro\Shaders" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Gizmos" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\Transparent\UnlitAlpha.shader" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.1.0" />
      <Folder Include="Assets\Scripts\Item Scripts\Itens" />
      <Folder Include="Assets\Materiais_E_Modelos" />
@@ -552,6 +590,7 @@
      <Folder Include="Assets\Scripts\SaveLoad" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\BrushPreview.shader" />
      <Folder Include="Assets\SimpleToon\Model" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\Transparent\ParticleAlphaBlend.shader" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.26" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\NoisePreview.shader" />
@@ -579,6 +618,7 @@
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\None\Value.hlsl" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Environments" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaCruzada" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Profiles" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Toolbar\Background" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Toolbar" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.1.0\ValidationConfig.json" />
@@ -589,6 +629,7 @@
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintConcavity.shader" />
      <Folder Include="Library\PackageCache\com.unity.ide.vscode@1.2.5" />
      <Folder Include="Assets\Sounds" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Prefabs" />
      <Folder Include="Assets\Animations\Machadoo" />
      <Folder Include="Assets\ColorSkies\Textures\Skybox_2" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\StandardVertexColor.shader" />
@@ -638,9 +679,11 @@
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground13" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\Generated\NoiseBlitStrata.shader" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Default" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders" />
      <Folder Include="Assets\MenezesMenu\SettingsGenerator\Resources\Connections" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Profiles\TropicalForest" />
      <Folder Include="Assets\PolygonKnights\Prefabs\Characters" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Content" />
      <Folder Include="Assets\QuickOutline\Scripts" />
@@ -649,15 +692,19 @@
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintHeight.shader" />
      <Folder Include="Assets\SimpleToon\Material" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\Transparent\AzureFogCore.cginc" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Scripts" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
      <Folder Include="Assets\Scripts\Canvas" />
      <Folder Include="Assets\fonts\Fonts4P" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scenes" />
      <Folder Include="Assets\Scripts\BuildSystemScripts\Environment" />
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Icons\Scene" />
      <Folder Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.22" />
      <Folder Include="Assets\Materiais_E_Modelos\ADG_Textures\ground_vol1\ground12" />
      <Folder Include="Assets\Scripts\Plant\Pimenta" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scripts" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\Mars" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
      <Folder Include="Assets\Scenes" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\API\XboxOne.hlsl" />
@@ -704,6 +751,7 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Material" />
      <Folder Include="Assets\Materiais_E_Modelos\Modelos\textures\Casas\CasaQuadrada" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs\Tables" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Scenes\_Utilities" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\PaintTexture.shader" />
      <Folder Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Textures\BlueNoise64px" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseHeightTool.shader" />
@@ -722,6 +770,7 @@
      <Folder Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Material\Textures" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\package.json" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\FaceHighlight.shader" />
+     <None Include="Assets\Azure[Sky] Dynamic Skybox\Shaders\Transparent\ParticleAdd.shader" />
      <Folder Include="Assets\Meshtint Free Chicken Mega Toon Series\PPP" />
      <None Include="Library\PackageCache\com.unity.postprocessing@3.2.2\PostProcessing\Shaders\Colors.hlsl" />
      <Folder Include="Assets\Marketplace Cute Series\Prefabs" />
@@ -731,6 +780,7 @@
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Tests" />
      <Folder Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\NoiseLib\Templates" />
+     <Folder Include="Assets\Azure[Sky] Dynamic Skybox\Textures" />
      <None Include="Library\PackageCache\com.unity.terrain-tools@5.0.4\Shaders\SlopeFlatten.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Library\PackageCache\com.unity.probuilder@5.1.1\Content\Shader\HideVertices.shader" />
@@ -1364,6 +1414,9 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualEffectGraph.Runtime">
+     <HintPath>Z:\Unity\TI-4\T4-Simulador\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
      <HintPath>Z:\Unity\TI-4\T4-Simulador\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
@@ -1372,6 +1425,9 @@
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
      <HintPath>Z:\Unity\TI-4\T4-Simulador\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualEffectGraph.Editor">
+     <HintPath>Z:\Unity\TI-4\T4-Simulador\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
      <HintPath>Z:\Unity\TI-4\T4-Simulador\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
@@ -1461,13 +1517,13 @@
       <Project>{0ff796b5-8ff3-c6d4-cc52-6b3970d31bde}</Project>
       <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
-      <Project>{d1d19988-218d-0009-430b-09ccb6117ab9}</Project>
-      <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{1204d40e-664f-3eb5-088e-2b2c7adca6d7}</Project>
       <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
+      <Project>{d1d19988-218d-0009-430b-09ccb6117ab9}</Project>
+      <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TerrainTools.Editor.csproj">
       <Project>{ae2f41d5-99f6-22bb-42f7-43d85c5d7f00}</Project>
@@ -1533,21 +1589,21 @@
       <Project>{a21b8723-8c80-6816-2cac-d9db321b844c}</Project>
       <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="LocalizationsForSettingsEditor.csproj">
-      <Project>{8b086628-95ec-b460-1e58-7f272862d366}</Project>
-      <Name>LocalizationsForSettingsEditor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.csproj">
       <Project>{a7e6287a-5dc5-fb94-e647-c09afd26cd2b}</Project>
       <Name>Unity.InputSystem</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{0444b45b-7332-f416-e36b-ec601e58b355}</Project>
-      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
+    <ProjectReference Include="LocalizationsForSettingsEditor.csproj">
+      <Project>{8b086628-95ec-b460-1e58-7f272862d366}</Project>
+      <Name>LocalizationsForSettingsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InputSystem.ForUI.csproj">
       <Project>{159a4e98-6722-931a-45cf-6cca2859018b}</Project>
       <Name>Unity.InputSystem.ForUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
+      <Project>{0444b45b-7332-f416-e36b-ec601e58b355}</Project>
+      <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="LocalizationsForSettings.csproj">
       <Project>{b732fbf2-1a8d-5856-c3ad-69991650c9cc}</Project>

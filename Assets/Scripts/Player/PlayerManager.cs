@@ -5,6 +5,7 @@ using StarterAssets;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.VFX;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -31,9 +32,13 @@ public class PlayerManager : MonoBehaviour
     private bool cursorActive = false;
     public Database database;
     public InventoryItemData Balde;
+    [SerializeField] private VisualEffect hitVisualEffect;
+
+
     private void Awake()
     {
-        Balde = database.GetItem(270);
+    
+        
         if (playerManager != null && playerManager != this)
         {
             Destroy(gameObject);
@@ -50,31 +55,32 @@ public class PlayerManager : MonoBehaviour
 
     public void Start()
     {
-        database.GetItem(270).currentWater = 0;
-        if (database != null)
-        {
-            InventoryItemData itemWithID270 = database.GetItem(270);
-
-            if (itemWithID270 != null)
-            {
-                itemWithID270.currentWater = 0;
-            }
-            else
-            {
-                Debug.LogError("Item with ID 270 not found in the database.");
-            }
-        }
-        else
-        {
-            Debug.LogError("Database not found.");
-        }
+        Balde = database.GetItem(270);
+        //database.GetItem(270).currentWater = 0;
+        // if (database != null)
+        // {
+        //     InventoryItemData itemWithID270 = database.GetItem(270);
+        //
+        //     if (itemWithID270 != null)
+        //     {
+        //         itemWithID270.currentWater = 0;
+        //     }
+        //     else
+        //     {
+        //         Debug.LogError("Item with ID 270 not found in the database.");
+        //     }
+        // }
+        // else
+        // {
+        //     Debug.LogError("Database not found.");
+        // }
     }
 
 
     public void bater(int id, InventoryItemData item)
     {
         animator.SetTrigger("Bater");
-        Debug.Log(id);
+//        Debug.Log(id);
             if (id.Equals(2927270) && terraArada != null) terraArada.ArarTerra();
             if (id.Equals(27290)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.Tree, hitInfo);
             if (id.Equals(2729290)) systemQuebrarComponent?.Quebrar(hitInfo.collider.gameObject, Opcoes.rock, hitInfo);
@@ -85,7 +91,13 @@ public class PlayerManager : MonoBehaviour
                 
                     quebrarArvore.Quebrar();
             }
+            if (hitVisualEffect != null && hitInfo.collider != null)
+            {
+                VisualEffect hitEffect = Instantiate(hitVisualEffect, hitInfo.point, Quaternion.identity);
 
+                // Destrua o efeito visual após 1 segundo
+                Destroy(hitEffect.gameObject, 1f);
+            }
     }
     void VerificarScriptNoAvoo(GameObject objeto, int id)
     {
@@ -230,7 +242,8 @@ public class PlayerManager : MonoBehaviour
                     if (plantT.aguadaplanta < 100 && Balde.currentWater > 0) 
                     {
                         Balde.currentWater -= 25;
-                        Debug.Log("total " + Balde.currentWater);
+                        UIController.instancia.ShowNotification("Regou a planta [Balde " + Balde.currentWater + "%]");
+                        //Debug.Log("total " + Balde.currentWater);
                         plantT.AdicionarAgua();
                         
                     }
@@ -244,12 +257,12 @@ public class PlayerManager : MonoBehaviour
                     if (Balde != null)
                     {
                         Balde.currentWater = Mathf.Min(Balde.currentWater + 10, 100);
-                        Debug.Log("Coloquei " + Balde.currentWater);
+                        //Debug.Log("Coloquei " + Balde.currentWater);
                     }
                 }
             if (itemPick != null)
             {
-                Debug.Log(HotbarDisplay.Display.IsHotbarFull());
+               // Debug.Log(HotbarDisplay.Display.IsHotbarFull());
                 if (!HotbarDisplay.Display.IsHotbarFull())
                 {
                     itemPick.OnItemInventory();
@@ -348,6 +361,8 @@ public class PlayerManager : MonoBehaviour
             {
                 buildHouseComponent.hud();
             }
+            // Ative o sistema de partículas quando o raio atingir o objeto
+            
         }
     }
 

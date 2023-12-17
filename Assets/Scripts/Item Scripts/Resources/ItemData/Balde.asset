@@ -21,8 +21,8 @@ MonoBehaviour:
   ItemPrefab: {fileID: 100000, guid: 6a0462221a6bfb44c87b72c0cf8afcb6, type: 3}
   ItemData: {fileID: 0}
   data: {fileID: 0}
-  _building: 1
-  semente: 1
+  _building: 0
+  semente: 0
   isBucket: 1
   maxWater: 0
   currentWater: 0

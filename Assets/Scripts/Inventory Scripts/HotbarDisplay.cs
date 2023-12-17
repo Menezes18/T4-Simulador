@@ -19,18 +19,14 @@ public class HotbarDisplay : StaticInventoryDisplay
     public BuildingData ItemData;
     public InventoryItemData _ivItemData;
     public BuildTool _buildTools;
-    
 
+    public GameObject spawnedObject;
     private PlayerManager _playerManager;
     
 
 
     private void Awake()
     {
-        _playerManager = FindObjectOfType<PlayerManager>();
-        _playerControls = new PlayerControls();
-       // _itemPickUp = FindObjectOfType<ItemPickUp>();
-        _buildTools = FindObjectOfType<BuildTool>();
         if (Display != null && Display != this)
         {
             Destroy(gameObject);
@@ -39,8 +35,10 @@ public class HotbarDisplay : StaticInventoryDisplay
         {
             Display = this;
         }
-        
-        
+        _playerManager = FindObjectOfType<PlayerManager>();
+        _playerControls = new PlayerControls();
+       // _itemPickUp = FindObjectOfType<ItemPickUp>();
+        _buildTools = FindObjectOfType<BuildTool>();
     }
 
     protected override void Start()
@@ -154,7 +152,7 @@ public class HotbarDisplay : StaticInventoryDisplay
     public bool IsHotbarFull()
     {
         int emptySlots = CountEmptySlots();
-        Debug.Log("Número de slots vazios: " + emptySlots);
+        //Debug.Log("Número de slots vazios: " + emptySlots);
         return (emptySlots == 0);
     }
     public int CountEmptySlots()
@@ -186,7 +184,7 @@ public class HotbarDisplay : StaticInventoryDisplay
             slots[_currentIndex].UpdateUISlot();
 
             // Remover o item atualmente instanciado na mão, se houver
-            Destroy(spawnObject2);
+            //Destroy(spawnObject2);
             hasSpawned = true;
         }
     }
@@ -413,6 +411,7 @@ public class HotbarDisplay : StaticInventoryDisplay
     
     public void FixedUpdate()
     {
+        DesativarBuild();
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {
             itemId = slots[_currentIndex].AssignedInventorySlot.ItemData.ID;
@@ -456,25 +455,25 @@ public class HotbarDisplay : StaticInventoryDisplay
     public void InstantiateItemInHand(int itemId)
     {
         var db = Resources.Load<Database>("Database");
-        string itemName = db.GetItemNameById(itemId);
-        InventoryItemData item = db.GetItem(itemId);
+        //string itemName = db.GetItemNameById(itemId);
+        var item = db.GetItem(itemId);
 
         if (item != null)
         {
-            GameObject spawnedObject = Instantiate(item.ItemPrefab, itemPrefab.transform.position, Quaternion.identity);
+             spawnedObject = Instantiate(item.ItemPrefab, itemPrefab.transform.position, Quaternion.identity);
             
             // Obter a rotação da câmera principal
-            Quaternion cameraRotation = Camera.main.transform.rotation;
 
             // Calcular a rotação desejada, adicionando um desvio de 60 graus no eixo Y
-            Quaternion desiredRotation = Quaternion.Euler(0, cameraRotation.eulerAngles.y + 60, 0);
+            var cameraRotation = Camera.main.transform.rotation;
+            var desiredRotation = Quaternion.Euler(0, cameraRotation.eulerAngles.y + 60, 0);
         
             spawnedObject.transform.rotation = desiredRotation;
-            MeshCollider MeshcolliderItem = spawnedObject.GetComponentInChildren<MeshCollider>();
-            Collider colliderDoItem = spawnedObject.GetComponent<Collider>();
-            SphereCollider sphereCollider = spawnedObject.GetComponent<SphereCollider>();
-            MeshCollider filhodomesh = FindMeshColliderInChildren(spawnedObject.transform);
-            BoxCollider filhodobox = FindBoxColliderInChildren(spawnedObject.transform);
+            var meshcolliderItem = spawnedObject.GetComponentInChildren<MeshCollider>();
+            var colliderDoItem = spawnedObject.GetComponent<Collider>();
+            var sphereCollider = spawnedObject.GetComponent<SphereCollider>();
+            var filhodomesh = FindMeshColliderInChildren(spawnedObject.transform);
+            var filhodobox = FindBoxColliderInChildren(spawnedObject.transform);
 
             //MeshCollider itemfilho = item.GetComponentInChildren<MeshCollider>();
             
@@ -482,7 +481,7 @@ public class HotbarDisplay : StaticInventoryDisplay
            // if(itemfilho != null) itemfilho.enabled = false;
            if (filhodobox != null) filhodobox.enabled = false; 
             if (filhodomesh != null) filhodomesh.enabled = false;
-            if (MeshcolliderItem != null) MeshcolliderItem.enabled = false;
+            if (meshcolliderItem != null) meshcolliderItem.enabled = false;
             if (sphereCollider != null) sphereCollider.enabled = false;
             if (colliderDoItem != null) colliderDoItem.enabled = false;
             
@@ -566,8 +565,11 @@ public class HotbarDisplay : StaticInventoryDisplay
     }
 
 // Método para lidar com o uso de um item da barra de atalho
+    public bool menu = true;
     public void UseItem(InputAction.CallbackContext obj)
     {
+        if (menu)
+        {
         if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
         {
            
@@ -581,8 +583,23 @@ public class HotbarDisplay : StaticInventoryDisplay
             itemId = -1;
             _playerManager.bater(itemId, null);
         }
+            
+        }
     }
-    
+
+    public void DesativarBuild()
+    {
+        if (slots[_currentIndex].AssignedInventorySlot.ItemData != null)
+        {
+            InventoryItemData item = slots[_currentIndex].AssignedInventorySlot.ItemData;
+            if (!item._building)
+            {
+                BuildTool.instancia.DisableObjectPreview();
+                BuildTool.instancia.buildAtivar = false;
+                
+            }
+        }
+    }
     // Verifica se você tem recursos suficientes na barra de atalho para uma construção
     private bool HasSufficientResource(int itemId, int requiredAmount)
     {

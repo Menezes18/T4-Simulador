@@ -87,9 +87,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.AI.Navigation.Updater
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.ProBuilder.Stl", "Unity.ProBuilder.Stl.csproj", "{8201ea13-318e-1173-b296-ec98dabc5ec0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Settings.Editor", "Unity.Settings.Editor.csproj", "{8fa1c4ed-dda5-29fa-c422-292ad01a2501}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kamgam.SettingsGeneratorExamples", "Kamgam.SettingsGeneratorExamples.csproj", "{a6b90a46-3543-6b04-55f6-9c6b21b73c44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Settings.Editor", "Unity.Settings.Editor.csproj", "{8fa1c4ed-dda5-29fa-c422-292ad01a2501}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sc.stylizedwater2.runtime", "sc.stylizedwater2.runtime.csproj", "{c23c63a1-dda0-ce0f-f99d-ffa31fbb8ee2}"
 EndProject
@@ -296,10 +296,10 @@ Global
 		{94b4b745-bad2-6adc-da29-4fa88dda2775}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8201ea13-318e-1173-b296-ec98dabc5ec0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8201ea13-318e-1173-b296-ec98dabc5ec0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8fa1c4ed-dda5-29fa-c422-292ad01a2501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8fa1c4ed-dda5-29fa-c422-292ad01a2501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{a6b90a46-3543-6b04-55f6-9c6b21b73c44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{a6b90a46-3543-6b04-55f6-9c6b21b73c44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8fa1c4ed-dda5-29fa-c422-292ad01a2501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8fa1c4ed-dda5-29fa-c422-292ad01a2501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c23c63a1-dda0-ce0f-f99d-ffa31fbb8ee2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{c23c63a1-dda0-ce0f-f99d-ffa31fbb8ee2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{c4932d94-6953-b26d-b60a-0df383a899f0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

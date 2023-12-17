@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.AzureSky;
 
 public enum Estacao
 {
@@ -26,10 +27,12 @@ public class CicloDiaNoite : MonoBehaviour
     [Header("0 - Primavera, 1 - Verao, 2 - Outono, 3 - Inverno")]
     [SerializeField] private GameObject[] gameObjectsEstacao;
     [SerializeField] private GameObject[] SoleDia;
-    private float segundos;
+    public float segundos;
     public float multiplacador;
     private float soma = 86400f;
-
+    public AzureTimeController azureTimeController;
+    public float tempoNoiteDia;
+    public float tempoEmHoras;
     private void Awake()
     {
         if (ciclo != null && ciclo != this)
@@ -42,6 +45,7 @@ public class CicloDiaNoite : MonoBehaviour
         }
         
     }
+    
     void Start()
     {
         
@@ -83,7 +87,7 @@ public class CicloDiaNoite : MonoBehaviour
                 AtualizarEstacao();
                 SubjectPlant.inst.NotifyPlantaAll(estacaoAtual);
             }
-
+            
 
         }
         ProcessarCeu();
@@ -108,7 +112,15 @@ public class CicloDiaNoite : MonoBehaviour
             SoleDia[1].SetActive(false);
            
         }
+        
+        if (azureTimeController != null)
+        {
+             tempoNoiteDia = segundos / soma; // Calcule o tempo no formato esperado pelo AzureTimeController
+             tempoEmHoras = tempoNoiteDia * 24f; // Converta para horas (0 a 24)
 
+            // Configurar o tempo no AzureTimeController
+            azureTimeController.SetTimeline(tempoEmHoras);
+        }
 
     }
 
@@ -147,6 +159,7 @@ public class CicloDiaNoite : MonoBehaviour
     private void CalcularHorario()
     {
         horarioText.text = TimeSpan.FromSeconds(segundos).ToString(@"hh\:mm");
+        
     }
 
     private void CalcularAno()

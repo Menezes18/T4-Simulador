@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using Cinemachine;
 public class BuildTool : MonoBehaviour
 {
+    public static BuildTool instancia;
     [SerializeField] private float _rotateSnapAngle = 10f;
     [SerializeField] private float _rayDistance;
     [SerializeField] public LayerMask _buildModeLayerMask;
@@ -39,6 +40,19 @@ public class BuildTool : MonoBehaviour
     
 
     public bool plantio;
+
+    private void Awake()
+    {
+        if (instancia != null && instancia != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instancia = this;
+        }
+    }
+
     private void Start()
     {
         ConfigurarCamadas();

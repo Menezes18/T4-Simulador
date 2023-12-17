@@ -53,6 +53,7 @@ public class UIController : MonoBehaviour
     private void Update()
     {
         if (Keyboard.current.escapeKey.wasPressedThisFrame) _shopKeeperDisplay.gameObject.SetActive(false);
+        
     }
 
     private void DisplayShopWindow(ShopSystem shopSystem, PlayerInventoryHolder playerInventory)
