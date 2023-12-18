@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Item Scripts\ItemPickUp.cs" />
+     <Compile Include="Assets\Scripts\TutorialScript.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\StaticInventoryDisplay.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\ShopKeeperDisplay.cs" />
      <Compile Include="Assets\Scripts\UI Scripts\DynamicInventoryDisplay.cs" />

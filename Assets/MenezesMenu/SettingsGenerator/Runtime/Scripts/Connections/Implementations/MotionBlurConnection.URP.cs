@@ -48,11 +48,11 @@ namespace Kamgam.SettingsGenerator
             {
                 var name = GetType().Name;
                 var effectName = "MotionBlur";
-                Logger.LogWarning(
-                    name + ": There was no '" + effectName + "' PostProcessing Component found on any volume. " +
-                    "Please add a PostPro Volume with a profile containing '" + effectName + "'.\n\n" +
-                    "Find out more here: https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@10.0/manual/Volumes.html"
-                    );
+                // Logger.LogWarning(
+                //     name + ": There was no '" + effectName + "' PostProcessing Component found on any volume. " +
+                //     "Please add a PostPro Volume with a profile containing '" + effectName + "'.\n\n" +
+                //     "Find out more here: https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@10.0/manual/Volumes.html"
+                //     );
             }
 #endif
         }

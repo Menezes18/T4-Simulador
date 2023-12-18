@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
@@ -48,6 +49,7 @@ public class AzureFogScatteringFeature : ScriptableRendererFeature
             m_ProfilerTag = tag;
         }
 
+        [Obsolete("Obsolete")]
         public override void OnCameraSetup(CommandBuffer cmd, ref RenderingData renderingData)
         {
             RenderTextureDescriptor blitTargetDescriptor = renderingData.cameraData.cameraTargetDescriptor;
